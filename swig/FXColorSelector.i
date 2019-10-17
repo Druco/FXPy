@@ -1,5 +1,9 @@
 /* FXColorSelector.i */
 
+%pythonappend FX::FXColorSelector::FXColorSelector %{
+  self.thisown = False
+%}
+
 
 %module FXColorSelector
 

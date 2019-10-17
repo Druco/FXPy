@@ -1,5 +1,9 @@
 /* FXObjectList.i */
 
+%pythonappend FX::FXObjectList::FXObjectList %{
+  self.thisown = False
+%}
+
 
 %module FXObjectList
 

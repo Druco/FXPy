@@ -1,5 +1,9 @@
 /* FXDocument.i */
 
+%pythonappend FX::FXDocument::FXDocument %{
+  self.thisown = False
+%}
+
 
 %module FXDocument
 

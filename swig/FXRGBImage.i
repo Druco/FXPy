@@ -1,5 +1,9 @@
 /* FXRGBImage.i */
 
+%pythonappend FX::FXRGBImage::FXRGBImage %{
+  self.thisown = False
+%}
+
 
 %module FXRGBImage
 

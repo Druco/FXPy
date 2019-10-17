@@ -1,5 +1,9 @@
 /* FXSize.i */
 
+%pythonappend FX::FXSize::FXSize %{
+  self.thisown = False
+%}
+
 
 %module FXSize
 

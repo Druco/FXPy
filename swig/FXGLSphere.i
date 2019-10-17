@@ -1,5 +1,9 @@
 /* FXGLSphere.i */
 
+%pythonappend FX::FXGLSphere::FXGLSphere %{
+  self.thisown = False
+%}
+
 
 %module FXGLSphere
 

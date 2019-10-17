@@ -1,13 +1,72 @@
 /* FXSeparator.i */
 
-
-%module FXSeparator
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXSeparator::FXSeparator %{
+  self.thisown = False
 %}
 
+%pythonappend FX::FXHorizontalSeparator::FXHorizontalSeparator %{
+  self.thisown = False
+%}
 
-%include "include/fxdefs2.h"
-%include "include/FXSeparator.h"
+%pythonappend FX::FXVerticalSeparator::FXVerticalSeparator %{
+  self.thisown = False
+%}
+
+#ifndef FXFRAME_H
+#include "FXFrame.h"
+#endif
+
+namespace FX {
+
+
+/// Separator Options
+enum {
+  SEPARATOR_NONE       = 0,               /// Nothing visible
+  SEPARATOR_GROOVE     = 0x00008000,      /// Etched-in looking groove
+  SEPARATOR_RIDGE      = 0x00010000,      /// Embossed looking ridge
+  SEPARATOR_LINE       = 0x00020000       /// Simple line
+  };
+
+
+class FXSeparator : public FXFrame {
+public:
+  long onPaint(FXObject*,FXSelector,void*);
+public:
+
+  /// Constructor
+  FXSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_X,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=0,FXint pb=0);
+
+  /// Return default width
+  virtual FXint getDefaultWidth();
+
+  /// Return default height
+  virtual FXint getDefaultHeight();
+
+  /// Change separator style
+  void setSeparatorStyle(FXuint style);
+
+  /// Get separator style
+  FXuint getSeparatorStyle() const;
+  };
+
+
+
+/// Horizontal separator widget
+class FXHorizontalSeparator : public FXSeparator {
+public:
+
+  /// Constructor
+  FXHorizontalSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_X,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=1,FXint pr=1,FXint pt=0,FXint pb=0);
+  };
+
+
+
+/// Vertical separator widget
+class FXVerticalSeparator : public FXSeparator {
+public:
+
+  /// Constructor
+  FXVerticalSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_Y,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=1,FXint pb=1);
+  };
+
+}

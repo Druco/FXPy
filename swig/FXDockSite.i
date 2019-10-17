@@ -1,5 +1,9 @@
 /* FXDockSite.i */
 
+%pythonappend FX::FXDockSite::FXDockSite %{
+  self.thisown = False
+%}
+
 
 %module FXDockSite
 

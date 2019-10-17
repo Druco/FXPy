@@ -1,5 +1,9 @@
 /* FXStat.i */
 
+%pythonappend FX::FXStat::FXStat %{
+  self.thisown = False
+%}
+
 
 %module FXStat
 

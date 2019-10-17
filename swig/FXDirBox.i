@@ -1,5 +1,9 @@
 /* FXDirBox.i */
 
+%pythonappend FX::FXDirBox::FXDirBox %{
+  self.thisown = False
+%}
+
 
 %module FXDirBox
 

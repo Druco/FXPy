@@ -1,5 +1,9 @@
 /* FXToggleButton.i */
 
+%pythonappend FX::FXToggleButton::FXToggleButton %{
+  self.thisown = False
+%}
+
 
 %module FXToggleButton
 

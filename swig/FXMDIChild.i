@@ -1,5 +1,9 @@
 /* FXMDIChild.i */
 
+%pythonappend FX::FXMDIChild::FXMDIChild %{
+  self.thisown = False
+%}
+
 
 %module FXMDIChild
 

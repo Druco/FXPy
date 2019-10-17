@@ -1,5 +1,9 @@
 /* FXSwitcher.i */
 
+%pythonappend FX::FXSwitcher::FXSwitcher %{
+  self.thisown = False
+%}
+
 
 %module FXSwitcher
 

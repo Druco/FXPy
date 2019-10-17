@@ -1,5 +1,9 @@
 /* FXPoint.i */
 
+%pythonappend FX::FXPoint::FXPoint %{
+  self.thisown = False
+%}
+
 
 %module FXPoint
 

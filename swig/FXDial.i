@@ -1,5 +1,9 @@
 /* FXDial.i */
 
+%pythonappend FX::FXDial::FXDial %{
+  self.thisown = False
+%}
+
 
 %module FXDial
 

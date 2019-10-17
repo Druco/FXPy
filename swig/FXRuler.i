@@ -1,5 +1,9 @@
 /* FXRuler.i */
 
+%pythonappend FX::FXRuler::FXRuler %{
+  self.thisown = False
+%}
+
 
 %module FXRuler
 

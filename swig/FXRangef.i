@@ -1,5 +1,9 @@
 /* FXRangef.i */
 
+%pythonappend FX::FXRangef::FXRangef %{
+  self.thisown = False
+%}
+
 
 %module FXRangef
 

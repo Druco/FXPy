@@ -1,5 +1,9 @@
 /* FXTextField.i */
 
+%pythonappend FX::FXTextField::FXTextField %{
+  self.thisown = False
+%}
+
 
 %module FXTextField
 

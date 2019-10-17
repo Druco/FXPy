@@ -1,5 +1,9 @@
 /* FXSpheref.i */
 
+%pythonappend FX::FXSpheref::FXSpheref %{
+  self.thisown = False
+%}
+
 
 %module FXSpheref
 

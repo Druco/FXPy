@@ -1,5 +1,9 @@
 /* FXVisual.i */
 
+%pythonappend FX::FXVisual::FXVisual %{
+  self.thisown = False
+%}
+
 
 %module FXVisual
 

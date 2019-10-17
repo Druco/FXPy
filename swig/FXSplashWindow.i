@@ -1,5 +1,9 @@
 /* FXSplashWindow.i */
 
+%pythonappend FX::FXSplashWindow::FXSplashWindow %{
+  self.thisown = False
+%}
+
 
 %module FXSplashWindow
 

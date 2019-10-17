@@ -1,5 +1,9 @@
 /* FXRealSlider.i */
 
+%pythonappend FX::FXRealSlider::FXRealSlider %{
+  self.thisown = False
+%}
+
 
 %module FXRealSlider
 

@@ -1,5 +1,9 @@
 /* FXGLCanvas.i */
 
+%pythonappend FX::FXGLCanvas::FXGLCanvas %{
+  self.thisown = False
+%}
+
 
 %module FXGLCanvas
 

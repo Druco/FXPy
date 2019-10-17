@@ -1,5 +1,9 @@
 /* FXPipe.i */
 
+%pythonappend FX::FXPipe::FXPipe %{
+  self.thisown = False
+%}
+
 
 %module FXPipe
 

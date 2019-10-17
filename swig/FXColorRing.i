@@ -1,5 +1,9 @@
 /* FXColorRing.i */
 
+%pythonappend FX::FXColorRing::FXColorRing %{
+  self.thisown = False
+%}
+
 
 %module FXColorRing
 

@@ -1,5 +1,9 @@
 /* FXDockHandler.i */
 
+%pythonappend FX::FXDockHandler::FXDockHandler %{
+  self.thisown = False
+%}
+
 
 %module FXDockHandler
 

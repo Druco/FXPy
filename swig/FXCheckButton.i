@@ -1,5 +1,9 @@
 /* FXCheckButton.i */
 
+%pythonappend FX::FXCheckButton::FXCheckButton %{
+  self.thisown = False
+%}
+
 
 %module FXCheckButton
 

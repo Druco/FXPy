@@ -1,5 +1,9 @@
 /* FXDockBar.i */
 
+%pythonappend FX::FXDockBar::FXDockBar %{
+  self.thisown = False
+%}
+
 
 %module FXDockBar
 

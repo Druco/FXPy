@@ -1,5 +1,9 @@
 /* FXRASIcon.i */
 
+%pythonappend FX::FXRASIcon::FXRASIcon %{
+  self.thisown = False
+%}
+
 
 %module FXRASIcon
 

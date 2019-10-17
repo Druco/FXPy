@@ -110,7 +110,7 @@ enum FXDefaultCursor {
 
 
 /// FOX Event
-struct FXEvent {
+struct FXAPI FXEvent {
   FXuint      type;           /// Event type
   FXuint      time;           /// Time of last event
   FXint       win_x;          /// Window-relative x-coord
@@ -137,8 +137,8 @@ struct FXEvent {
 
 
 /// Application Object
-class FXApp : public FXObject {
-  FXDECLARE(FX::FXApp)
+class FXAPI FXApp : public FXObject {
+  FXDECLARE(FXApp)
 
   // We've got many friends
   friend class FXId;

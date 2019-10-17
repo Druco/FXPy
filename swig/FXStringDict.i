@@ -1,5 +1,9 @@
 /* FXStringDict.i */
 
+%pythonappend FX::FXStringDict::FXStringDict %{
+  self.thisown = False
+%}
+
 
 %module FXStringDict
 

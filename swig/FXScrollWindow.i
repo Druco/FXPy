@@ -1,5 +1,9 @@
 /* FXScrollWindow.i */
 
+%pythonappend FX::FXScrollWindow::FXScrollWindow %{
+  self.thisown = False
+%}
+
 
 %module FXScrollWindow
 

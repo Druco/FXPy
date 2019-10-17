@@ -1,5 +1,9 @@
 /* FXIO.i */
 
+%pythonappend FX::FXIO::FXIO %{
+  self.thisown = False
+%}
+
 
 %module FXIO
 

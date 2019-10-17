@@ -1,5 +1,9 @@
 /* FXRex.i */
 
+%pythonappend FX::FXRex::FXRex %{
+  self.thisown = False
+%}
+
 
 %module FXRex
 

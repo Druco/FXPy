@@ -1,5 +1,9 @@
 /* FXHash.i */
 
+%pythonappend FX::FXHash::FXHash %{
+  self.thisown = False
+%}
+
 
 %module FXHash
 

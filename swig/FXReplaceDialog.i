@@ -1,5 +1,9 @@
 /* FXReplaceDialog.i */
 
+%pythonappend FX::FXReplaceDialog::FXReplaceDialog %{
+  self.thisown = False
+%}
+
 
 %module FXReplaceDialog
 

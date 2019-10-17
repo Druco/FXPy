@@ -1,5 +1,9 @@
 /* FXMessageBox.i */
 
+%pythonappend FX::FXMessageBox::FXMessageBox %{
+  self.thisown = False
+%}
+
 
 %module FXMessageBox
 

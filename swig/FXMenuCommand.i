@@ -1,5 +1,9 @@
 /* FXMenuCommand.i */
 
+%pythonappend FX::FXMenuCommand::FXMenuCommand %{
+  self.thisown = False
+%}
+
 
 %module FXMenuCommand
 

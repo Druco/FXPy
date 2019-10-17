@@ -1,5 +1,9 @@
 /* FXGLCube.i */
 
+%pythonappend FX::FXGLCube::FXGLCube %{
+  self.thisown = False
+%}
+
 
 %module FXGLCube
 

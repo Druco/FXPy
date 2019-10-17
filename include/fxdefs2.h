@@ -1,3 +1,6 @@
+#ifndef FXDEFS2_H_INCLUDED
+#define FXDEFS2_H_INCLUDED
+
 /// Macro to set up class declaration
 #define FXDECLARE(classname) \
   public: \
@@ -23,7 +26,38 @@
 
 
 /// Make RGB color
+#ifndef FXRGB
 #define FXRGB(r,g,b)  (((FXuint)(FXuchar)(r)<<24) | ((FXuint)(FXuchar)(g)<<16) | ((FXuint)(FXuchar)(b)<<8) | 0x000000ff)
+#endif
+
+#ifndef FXRGBA
+#define FXRGBA(r,g,b,a)    (((FXuint)(FXuchar)(r)<<24) | ((FXuint)(FXuchar)(g)<<16) | ((FXuint)(FXuchar)(b)<<8) | ((FXuint)(FXuchar)(a)))
+#endif
+
+/// Get red value from RGBA color
+#ifndef FXREDVAL
+#define FXREDVAL(rgba)     ((FXuchar)(((rgba)>>24)&0xff))
+#endif
+
+/// Get green value from RGBA color
+#ifndef FXGREENVAL
+#define FXGREENVAL(rgba)   ((FXuchar)(((rgba)>>16)&0xff))
+#endif
+
+/// Get blue value from RGBA color
+#ifndef FXBLUEVAL
+#define FXBLUEVAL(rgba)    ((FXuchar)(((rgba)>>8)&0xff))
+#endif
+
+/// Get alpha value from RGBA color
+#ifndef FXALPHAVAL
+#define FXALPHAVAL(rgba)   ((FXuchar)((rgba)&0xff))
+#endif
+
+/// Get component value of RGBA color
+#ifndef FXRGBACOMPVAL
+#define FXRGBACOMPVAL(rgba,comp) ((FXuchar)(((rgba)>>((3-(comp))<<3))&0xff))
+#endif
 
 /// Clamp value x to range [lo..hi]
 #define FXCLAMP(lo,x,hi) ((x)<(lo)?(lo):((x)>(hi)?(hi):(x)))
@@ -39,3 +73,5 @@
 
 #undef FXAPI
 #define FXAPI
+
+#endif

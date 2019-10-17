@@ -1,5 +1,9 @@
 /* FXGUISignal.i */
 
+%pythonappend FX::FXGUISignal::FXGUISignal %{
+  self.thisown = False
+%}
+
 
 %module FXGUISignal
 

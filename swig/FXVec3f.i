@@ -1,5 +1,9 @@
 /* FXVec3f.i */
 
+%pythonappend FX::FXVec3f::FXVec3f %{
+  self.thisown = False
+%}
+
 
 %module FXVec3f
 

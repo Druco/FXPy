@@ -1,5 +1,9 @@
 /* FXRegistry.i */
 
+%pythonappend FX::FXRegistry::FXRegistry %{
+  self.thisown = False
+%}
+
 
 %module FXRegistry
 

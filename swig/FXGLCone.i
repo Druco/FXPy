@@ -1,5 +1,9 @@
 /* FXGLCone.i */
 
+%pythonappend FX::FXGLCone::FXGLCone %{
+  self.thisown = False
+%}
+
 
 %module FXGLCone
 

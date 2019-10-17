@@ -1,5 +1,9 @@
 /* FXRanged.i */
 
+%pythonappend FX::FXRanged::FXRanged %{
+  self.thisown = False
+%}
+
 
 %module FXRanged
 

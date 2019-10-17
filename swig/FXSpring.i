@@ -1,5 +1,9 @@
 /* FXSpring.i */
 
+%pythonappend FX::FXSpring::FXSpring %{
+  self.thisown = False
+%}
+
 
 %module FXSpring
 

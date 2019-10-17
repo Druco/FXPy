@@ -1,5 +1,9 @@
 /* FXComboBox.i */
 
+%pythonappend FX::FXComboBox::FXComboBox %{
+  self.thisown = False
+%}
+
 
 %module FXComboBox
 

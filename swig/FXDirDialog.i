@@ -1,5 +1,9 @@
 /* FXDirDialog.i */
 
+%pythonappend FX::FXDirDialog::FXDirDialog %{
+  self.thisown = False
+%}
+
 
 %module FXDirDialog
 

@@ -1,5 +1,9 @@
 /* FXColorDialog.i */
 
+%pythonappend FX::FXColorDialog::FXColorDialog %{
+  self.thisown = False
+%}
+
 
 %module FXColorDialog
 

@@ -1,5 +1,9 @@
 /* FXSettings.i */
 
+%pythonappend FX::FXSettings::FXSettings %{
+  self.thisown = False
+%}
+
 
 %module FXSettings
 

@@ -1,5 +1,9 @@
 /* FXFontSelector.i */
 
+%pythonappend FX::FXFontSelector::FXFontSelector %{
+  self.thisown = False
+%}
+
 
 %module FXFontSelector
 

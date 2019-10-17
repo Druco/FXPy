@@ -1,5 +1,9 @@
 /* FXDirSelector.i */
 
+%pythonappend FX::FXDirSelector::FXDirSelector %{
+  self.thisown = False
+%}
+
 
 %module FXDirSelector
 

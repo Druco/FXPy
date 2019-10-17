@@ -1,5 +1,9 @@
 /* FXCursor.i */
 
+%pythonappend FX::FXCursor::FXCursor %{
+  self.thisown = False
+%}
+
 
 %module FXCursor
 

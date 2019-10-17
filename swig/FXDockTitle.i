@@ -1,5 +1,9 @@
 /* FXDockTitle.i */
 
+%pythonappend FX::FXDockTitle::FXDockTitle %{
+  self.thisown = False
+%}
+
 
 %module FXDockTitle
 

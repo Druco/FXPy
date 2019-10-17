@@ -1,5 +1,9 @@
 /* FXColorWheel.i */
 
+%pythonappend FX::FXColorWheel::FXColorWheel %{
+  self.thisown = False
+%}
+
 
 %module FXColorWheel
 

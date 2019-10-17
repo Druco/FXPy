@@ -1,5 +1,9 @@
 /* FXWizard.i */
 
+%pythonappend FX::FXWizard::FXWizard %{
+  self.thisown = False
+%}
+
 
 %module FXWizard
 

@@ -1,5 +1,9 @@
 /* FXBitmap.i */
 
+%pythonappend FX::FXBitmap::FXBitmap %{
+  self.thisown = False
+%}
+
 
 #define __GNUC__
 %module FXBitmap

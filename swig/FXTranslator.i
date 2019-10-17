@@ -1,5 +1,9 @@
 /* FXTranslator.i */
 
+%pythonappend FX::FXTranslator::FXTranslator %{
+  self.thisown = False
+%}
+
 
 %module FXTranslator
 

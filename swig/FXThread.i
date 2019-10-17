@@ -1,5 +1,9 @@
 /* FXThread.i */
 
+%pythonappend FX::FXThread::FXThread %{
+  self.thisown = False
+%}
+
 
 %module FXThread
 

@@ -1,5 +1,9 @@
 /* FXICOIcon.i */
 
+%pythonappend FX::FXICOIcon::FXICOIcon %{
+  self.thisown = False
+%}
+
 
 %module FXICOIcon
 

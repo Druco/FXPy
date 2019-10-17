@@ -1,5 +1,9 @@
 /* FXPath.i */
 
+%pythonappend FX::FXPath::FXPath %{
+  self.thisown = False
+%}
+
 
 %module FXPath
 

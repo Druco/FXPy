@@ -1,5 +1,9 @@
 /* FXDC.i */
 
+%pythonappend FX::FXDC::FXDC %{
+  self.thisown = False
+%}
+
 
 %module FXDC
 

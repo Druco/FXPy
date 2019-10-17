@@ -1,5 +1,9 @@
 /* FXJPGImage.i */
 
+%pythonappend FX::FXJPGImage::FXJPGImage %{
+  self.thisown = False
+%}
+
 
 %module FXJPGImage
 

@@ -1,5 +1,9 @@
 /* FXQuatf.i */
 
+%pythonappend FX::FXQuatf::FXQuatf %{
+  self.thisown = False
+%}
+
 
 %module FXQuatf
 

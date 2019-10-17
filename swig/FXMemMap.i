@@ -1,5 +1,9 @@
 /* FXMemMap.i */
 
+%pythonappend FX::FXMemMap::FXMemMap %{
+  self.thisown = False
+%}
+
 
 %module FXMemMap
 

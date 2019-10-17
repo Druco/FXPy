@@ -1,5 +1,9 @@
 /* FXSocket.i */
 
+%pythonappend FX::FXSocket::FXSocket %{
+  self.thisown = False
+%}
+
 
 %module FXSocket
 

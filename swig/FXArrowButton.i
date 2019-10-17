@@ -1,5 +1,9 @@
 /* FXArrowButton.i */
 
+%pythonappend FX::FXArrowButton::FXArrowButton %{
+  self.thisown = False
+%}
+
 
 #define __GNUC__
 %module FXArrowButton

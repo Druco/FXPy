@@ -1,5 +1,9 @@
 /* FXMenuCascade.i */
 
+%pythonappend FX::FXMenuCascade::FXMenuCascade %{
+  self.thisown = False
+%}
+
 
 %module FXMenuCascade
 

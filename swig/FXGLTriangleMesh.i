@@ -1,5 +1,9 @@
 /* FXGLTriangleMesh.i */
 
+%pythonappend FX::FXGLTriangleMesh::FXGLTriangleMesh %{
+  self.thisown = False
+%}
+
 
 %module FXGLTriangleMesh
 

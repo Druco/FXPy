@@ -1,29 +1,3 @@
-/********************************************************************************
-*                                                                               *
-*                            I c o n   S o u r c e                              *
-*                                                                               *
-*********************************************************************************
-* Copyright (C) 2005,2006 by Jeroen van der Zijp.   All Rights Reserved.        *
-*********************************************************************************
-* This library is free software; you can redistribute it and/or                 *
-* modify it under the terms of the GNU Lesser General Public                    *
-* License as published by the Free Software Foundation; either                  *
-* version 2.1 of the License, or (at your option) any later version.            *
-*                                                                               *
-* This library is distributed in the hope that it will be useful,               *
-* but WITHOUT ANY WARRANTY; without even the implied warranty of                *
-* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU             *
-* Lesser General Public License for more details.                               *
-*                                                                               *
-* You should have received a copy of the GNU Lesser General Public              *
-* License along with this library; if not, write to the Free Software           *
-* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA.    *
-*********************************************************************************
-* $Id: FXIconSource.h,v 1.13 2006/02/03 00:44:32 fox Exp $                      *
-********************************************************************************/
-#ifndef FXICONSOURCE_H
-#define FXICONSOURCE_H
-
 #ifndef FXOBJECT_H
 #include "FXObject.h"
 #endif
@@ -47,15 +21,6 @@ class FXImage;
 * realizing the icons.
 */
 class FXIconSource : public FXObject {
-  FXDECLARE(FXIconSource)
-protected:
-  FXApp *app;
-protected:
-  FXIconSource():app(NULL){}
-private:
-  FXIconSource(const FXIconSource&);
-  FXIconSource &operator=(const FXIconSource&);
-  FXImage *scaleToSize(FXImage *image,FXint size,FXint qual) const;
 public:
 
   /// Construct an icon source
@@ -149,5 +114,3 @@ public:
 
 
 }
-
-#endif

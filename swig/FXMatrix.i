@@ -1,5 +1,9 @@
 /* FXMatrix.i */
 
+%pythonappend FX::FXMatrix::FXMatrix %{
+  self.thisown = False
+%}
+
 
 %module FXMatrix
 

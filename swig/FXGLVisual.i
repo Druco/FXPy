@@ -1,5 +1,9 @@
 /* FXGLVisual.i */
 
+%pythonappend FX::FXGLVisual::FXGLVisual %{
+  self.thisown = False
+%}
+
 
 %module FXGLVisual
 

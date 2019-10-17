@@ -1,5 +1,9 @@
 /* FXDLL.i */
 
+%pythonappend FX::FXDLL::FXDLL %{
+  self.thisown = False
+%}
+
 
 %module FXDLL
 

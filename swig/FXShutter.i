@@ -1,5 +1,9 @@
 /* FXShutter.i */
 
+%pythonappend FX::FXShutter::FXShutter %{
+  self.thisown = False
+%}
+
 
 %module FXShutter
 

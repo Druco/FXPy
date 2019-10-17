@@ -1,5 +1,9 @@
 /* FXBitmapView.i */
 
+%pythonappend FX::FXBitmapView::FXBitmapView %{
+  self.thisown = False
+%}
+
 
 %module FXBitmapView
 

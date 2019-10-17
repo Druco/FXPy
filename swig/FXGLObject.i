@@ -1,5 +1,9 @@
 /* FXGLObject.i */
 
+%pythonappend FX::FXGLObject::FXGLObject %{
+  self.thisown = False
+%}
+
 
 %module FXGLObject
 

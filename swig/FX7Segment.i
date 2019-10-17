@@ -1,5 +1,9 @@
 /* FX7Segment.i */
 
+%pythonappend FX::FX7Segment::FX7Segment %{
+  self.thisown = False
+%}
+
 %module FX7Segment
 
 %{

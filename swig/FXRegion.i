@@ -1,5 +1,9 @@
 /* FXRegion.i */
 
+%pythonappend FX::FXRegion::FXRegion %{
+  self.thisown = False
+%}
+
 
 %module FXRegion
 

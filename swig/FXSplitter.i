@@ -1,5 +1,9 @@
 /* FXSplitter.i */
 
+%pythonappend FX::FXSplitter::FXSplitter %{
+  self.thisown = False
+%}
+
 
 %module FXSplitter
 

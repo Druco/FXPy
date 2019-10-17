@@ -1,5 +1,9 @@
 /* FXPCXImage.i */
 
+%pythonappend FX::FXPCXImage::FXPCXImage %{
+  self.thisown = False
+%}
+
 
 %module FXPCXImage
 

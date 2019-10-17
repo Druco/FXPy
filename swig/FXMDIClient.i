@@ -1,5 +1,9 @@
 /* FXMDIClient.i */
 
+%pythonappend FX::FXMDIClient::FXMDIClient %{
+  self.thisown = False
+%}
+
 
 %module FXMDIClient
 

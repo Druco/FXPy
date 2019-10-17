@@ -1,5 +1,9 @@
 /* FXId.i */
 
+%pythonappend FX::FXId::FXId %{
+  self.thisown = False
+%}
+
 
 %module FXId
 

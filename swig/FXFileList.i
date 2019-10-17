@@ -1,5 +1,9 @@
 /* FXFileList.i */
 
+%pythonappend FX::FXFileList::FXFileList %{
+  self.thisown = False
+%}
+
 
 %module FXFileList
 

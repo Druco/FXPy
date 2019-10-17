@@ -1,5 +1,9 @@
 /* FXColorList.i */
 
+%pythonappend FX::FXColorList::FXColorList %{
+  self.thisown = False
+%}
+
 
 %module FXColorList
 

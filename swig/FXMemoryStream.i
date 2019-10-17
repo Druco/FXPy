@@ -1,5 +1,9 @@
 /* FXMemoryStream.i */
 
+%pythonappend FX::FXMemoryStream::FXMemoryStream %{
+  self.thisown = False
+%}
+
 
 %module FXMemoryStream
 

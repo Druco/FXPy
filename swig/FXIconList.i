@@ -1,5 +1,9 @@
 /* FXIconList.i */
 
+%pythonappend FX::FXIconList::FXIconList %{
+  self.thisown = False
+%}
+
 
 %module FXIconList
 

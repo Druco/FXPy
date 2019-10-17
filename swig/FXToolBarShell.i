@@ -1,5 +1,9 @@
 /* FXToolBarShell.i */
 
+%pythonappend FX::FXToolBarShell::FXToolBarShell %{
+  self.thisown = False
+%}
+
 
 %module FXToolBarShell
 

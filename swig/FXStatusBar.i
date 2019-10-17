@@ -1,5 +1,9 @@
 /* FXStatusBar.i */
 
+%pythonappend FX::FXStatusBar::FXStatusBar %{
+  self.thisown = False
+%}
+
 
 %module FXStatusBar
 

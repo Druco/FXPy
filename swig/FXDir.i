@@ -1,5 +1,9 @@
 /* FXDir.i */
 
+%pythonappend FX::FXDir::FXDir %{
+  self.thisown = False
+%}
+
 
 %module FXDir
 

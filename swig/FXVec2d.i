@@ -1,5 +1,9 @@
 /* FXVec2d.i */
 
+%pythonappend FX::FXVec2d::FXVec2d %{
+  self.thisown = False
+%}
+
 
 %module FXVec2d
 

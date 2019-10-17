@@ -1,5 +1,9 @@
 /* FXToolTip.i */
 
+%pythonappend FX::FXToolTip::FXToolTip %{
+  self.thisown = False
+%}
+
 
 %module FXToolTip
 

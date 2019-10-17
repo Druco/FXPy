@@ -1,5 +1,9 @@
 /* FXMenuCheck.i */
 
+%pythonappend FX::FXMenuCheck::FXMenuCheck %{
+  self.thisown = False
+%}
+
 
 %module FXMenuCheck
 

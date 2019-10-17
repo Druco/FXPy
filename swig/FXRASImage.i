@@ -1,5 +1,9 @@
 /* FXRASImage.i */
 
+%pythonappend FX::FXRASImage::FXRASImage %{
+  self.thisown = False
+%}
+
 
 %module FXRASImage
 

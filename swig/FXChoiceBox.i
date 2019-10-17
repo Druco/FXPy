@@ -1,5 +1,9 @@
 /* FXChoiceBox.i */
 
+%pythonappend FX::FXChoiceBox::FXChoiceBox %{
+  self.thisown = False
+%}
+
 
 %module FXChoiceBox
 

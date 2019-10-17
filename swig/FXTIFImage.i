@@ -1,5 +1,9 @@
 /* FXTIFImage.i */
 
+%pythonappend FX::FXTIFImage::FXTIFImage %{
+  self.thisown = False
+%}
+
 
 %module FXTIFImage
 

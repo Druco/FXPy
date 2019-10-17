@@ -1,5 +1,9 @@
 /* FXTIFIcon.i */
 
+%pythonappend FX::FXTIFIcon::FXTIFIcon %{
+  self.thisown = False
+%}
+
 
 %module FXTIFIcon
 

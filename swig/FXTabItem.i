@@ -1,5 +1,9 @@
 /* FXTabItem.i */
 
+%pythonappend FX::FXTabItem::FXTabItem %{
+  self.thisown = False
+%}
+
 
 %module FXTabItem
 

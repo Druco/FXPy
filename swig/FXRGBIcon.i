@@ -1,5 +1,9 @@
 /* FXRGBIcon.i */
 
+%pythonappend FX::FXRGBIcon::FXRGBIcon %{
+  self.thisown = False
+%}
+
 
 %module FXRGBIcon
 

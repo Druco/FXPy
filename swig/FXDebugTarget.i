@@ -1,5 +1,9 @@
 /* FXDebugTarget.i */
 
+%pythonappend FX::FXDebugTarget::FXDebugTarget %{
+  self.thisown = False
+%}
+
 
 %module FXDebugTarget
 

@@ -24,6 +24,8 @@
 #ifndef FXSTRING_H
 #define FXSTRING_H
 
+typedef char FXchar;
+
 namespace FX {
 
 
@@ -558,29 +560,29 @@ public:
 
   /// Format a string a-la printf
   friend FXString FXStringFormat(const FXchar* fmt,...) FX_PRINTF(1,2) ;
-  friend FXString FXStringVFormat(const FXchar* fmt,va_list args);
+  // friend FXString FXStringVFormat FXchar* fmt,va_list args);
 
   /**
   * Convert integer number to a string, using the given number
   * base, which must be between 2 and 16.
   */
-  friend FXString FXStringVal(FXint num,FXint base);
-  friend FXString FXStringVal(FXuint num,FXint base);
+//  friend FXString FXStringVal(FXint num,FXint base);
+//  friend FXString FXStringVal(FXuint num,FXint base);
 
   /**
   * Convert long integer number to a string, using the given number
   * base, which must be between 2 and 16.
   */
-  friend FXString FXStringVal(FXlong num,FXint base);
-  friend FXString FXStringVal(FXulong num,FXint base);
+//  friend FXString FXStringVal(FXlong num,FXint base);
+//  friend FXString FXStringVal(FXulong num,FXint base);
 
   /**
   * Convert real number to a string, using the given procision and
   * exponential notation mode, which may be FALSE (never), TRUE (always), or
   * MAYBE (when needed).
   */
-  friend FXString FXStringVal(FXfloat num,FXint prec,FXint exp);
-  friend FXString FXStringVal(FXdouble num,FXint prec,FXint exp);
+//  friend FXString FXStringVal(FXfloat num,FXint prec,FXint exp);
+//  friend FXString FXStringVal(FXdouble num,FXint prec,FXint exp);
 
   /// Convert string to a integer number, assuming given number base
   friend FXint FXIntVal(const FXString& s,FXint base);
@@ -697,12 +699,12 @@ extern FXStream& operator>>(FXStream& store,FXString& s);
 extern FXString FXStringFormat(const FXchar* fmt,...) FX_PRINTF(1,2) ;
 extern FXString FXStringVFormat(const FXchar* fmt,va_list args);
 
-extern FXString FXStringVal(FXint num,FXint base=10);
-extern FXString FXStringVal(FXuint num,FXint base=10);
-extern FXString FXStringVal(FXlong num,FXint base=10);
-extern FXString FXStringVal(FXulong num,FXint base=10);
-extern FXString FXStringVal(FXfloat num,FXint prec=6,FXint exp=MAYBE);
-extern FXString FXStringVal(FXdouble num,FXint prec=6,FXint exp=MAYBE);
+// extern FXString FXStringVal(FXint num,FXint base=10);
+// extern FXString FXStringVal(FXuint num,FXint base=10);
+// extern FXString FXStringVal(FXlong num,FXint base=10);
+// extern FXString FXStringVal(FXulong num,FXint base=10);
+// extern FXString FXStringVal(FXfloat num,FXint prec=6,FXint exp=MAYBE);
+// extern FXString FXStringVal(FXdouble num,FXint prec=6,FXint exp=MAYBE);
 
 extern FXint FXIntVal(const FXString& s,FXint base=10);
 extern FXuint FXUIntVal(const FXString& s,FXint base=10);

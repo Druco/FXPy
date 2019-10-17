@@ -1,5 +1,9 @@
 /* FXMenuSeparator.i */
 
+%pythonappend FX::FXMenuSeparator::FXMenuSeparator %{
+  self.thisown = False
+%}
+
 
 %module FXMenuSeparator
 

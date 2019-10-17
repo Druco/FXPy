@@ -1,5 +1,9 @@
 /* FXExpression.i */
 
+%pythonappend FX::FXExpression::FXExpression %{
+  self.thisown = False
+%}
+
 
 %module FXExpression
 

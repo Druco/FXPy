@@ -1,5 +1,9 @@
 /* FXGLContext.i */
 
+%pythonappend FX::FXGLContext::FXGLContext %{
+  self.thisown = False
+%}
+
 
 %module FXGLContext
 

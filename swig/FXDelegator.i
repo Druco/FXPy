@@ -1,5 +1,9 @@
 /* FXDelegator.i */
 
+%pythonappend FX::FXDelegator::FXDelegator %{
+  self.thisown = False
+%}
+
 
 %module FXDelegator
 

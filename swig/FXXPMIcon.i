@@ -1,5 +1,9 @@
 /* FXXPMIcon.i */
 
+%pythonappend FX::FXXPMIcon::FXXPMIcon %{
+  self.thisown = False
+%}
+
 
 %module FXXPMIcon
 

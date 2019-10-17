@@ -1,5 +1,9 @@
 /* FXComposeContext.i */
 
+%pythonappend FX::FXComposeContext::FXComposeContext %{
+  self.thisown = False
+%}
+
 
 %module FXComposeContext
 

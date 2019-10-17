@@ -1,5 +1,9 @@
 /* FXPicker.i */
 
+%pythonappend FX::FXPicker::FXPicker %{
+  self.thisown = False
+%}
+
 
 %module FXPicker
 

@@ -1,5 +1,9 @@
 /* FXDate.i */
 
+%pythonappend FX::FXDate::FXDate %{
+  self.thisown = False
+%}
+
 
 %module FXDate
 

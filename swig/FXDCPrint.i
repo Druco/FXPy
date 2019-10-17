@@ -1,5 +1,9 @@
 /* FXDCPrint.i */
 
+%pythonappend FX::FXDCPrint::FXDCPrint %{
+  self.thisown = False
+%}
+
 
 %module FXDCPrint
 

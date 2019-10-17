@@ -1,5 +1,9 @@
 /* FXFileSelector.i */
 
+%pythonappend FX::FXFileSelector::FXFileSelector %{
+  self.thisown = False
+%}
+
 
 %module FXFileSelector
 

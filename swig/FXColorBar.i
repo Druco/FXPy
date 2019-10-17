@@ -1,5 +1,9 @@
 /* FXColorBar.i */
 
+%pythonappend FX::FXColorBar::FXColorBar %{
+  self.thisown = False
+%}
+
 
 %module FXColorBar
 

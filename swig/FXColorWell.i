@@ -1,5 +1,9 @@
 /* FXColorWell.i */
 
+%pythonappend FX::FXColorWell::FXColorWell %{
+  self.thisown = False
+%}
+
 
 %module FXColorWell
 

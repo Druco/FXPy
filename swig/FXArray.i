@@ -1,5 +1,9 @@
 /* FXArray.i */
 
+%pythonappend FX::FXArray::FXArray %{
+  self.thisown = False
+%}
+
 
 #define __GNUC__
 %module FXArray

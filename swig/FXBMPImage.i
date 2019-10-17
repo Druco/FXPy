@@ -1,5 +1,13 @@
 /* FXBMPImage.i */
 
+%pythonappend FX::FX::FX %{
+  self.thisown = False
+%}
+
+%pythonappend FX::FXBMPImage::FXBMPImage %{
+  self.thisown = False
+%}
+
 
 #define __GNUC__
 %module FXBMPImage

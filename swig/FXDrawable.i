@@ -1,5 +1,9 @@
 /* FXDrawable.i */
 
+%pythonappend FX::FXDrawable::FXDrawable %{
+  self.thisown = False
+%}
+
 
 %module FXDrawable
 

@@ -1,5 +1,9 @@
 /* FXElement.i */
 
+%pythonappend FX::FXElement::FXElement %{
+  self.thisown = False
+%}
+
 
 %module FXElement
 

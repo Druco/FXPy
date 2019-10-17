@@ -1,6 +1,10 @@
 /* FXAccelTable.i */
 
 
+%pythonappend FX::FXAccelTable::FXAccelTable %{
+  self.thisown = False
+%}
+
 %module FXAccelTable
 
 %{

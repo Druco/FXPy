@@ -1,5 +1,9 @@
 /* FXScrollBar.i */
 
+%pythonappend FX::FXScrollBar::FXScrollBar %{
+  self.thisown = False
+%}
+
 
 %module FXScrollBar
 

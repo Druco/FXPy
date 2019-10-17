@@ -1,5 +1,9 @@
 /* FXRealSpinner.i */
 
+%pythonappend FX::FXRealSpinner::FXRealSpinner %{
+  self.thisown = False
+%}
+
 
 %module FXRealSpinner
 

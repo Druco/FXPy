@@ -1,5 +1,9 @@
 /* FXRectangle.i */
 
+%pythonappend FX::FXRectangle::FXRectangle %{
+  self.thisown = False
+%}
+
 
 %module FXRectangle
 

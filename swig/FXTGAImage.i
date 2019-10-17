@@ -1,5 +1,9 @@
 /* FXTGAImage.i */
 
+%pythonappend FX::FXTGAImage::FXTGAImage %{
+  self.thisown = False
+%}
+
 
 %module FXTGAImage
 

@@ -1,5 +1,9 @@
 /* FXToolBar.i */
 
+%pythonappend FX::FXToolBar::FXToolBar %{
+  self.thisown = False
+%}
+
 
 %module FXToolBar
 

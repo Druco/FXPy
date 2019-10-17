@@ -1,5 +1,9 @@
 /* FXTriStateButton.i */
 
+%pythonappend FX::FXTriStateButton::FXTriStateButton %{
+  self.thisown = False
+%}
+
 
 %module FXTriStateButton
 

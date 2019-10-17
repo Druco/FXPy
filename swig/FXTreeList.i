@@ -1,5 +1,9 @@
 /* FXTreeList.i */
 
+%pythonappend FX::FXTreeList::FXTreeList %{
+  self.thisown = False
+%}
+
 
 %module FXTreeList
 

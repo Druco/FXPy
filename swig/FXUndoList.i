@@ -1,5 +1,9 @@
 /* FXUndoList.i */
 
+%pythonappend FX::FXUndoList::FXUndoList %{
+  self.thisown = False
+%}
+
 
 %module FXUndoList
 

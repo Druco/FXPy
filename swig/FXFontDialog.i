@@ -1,5 +1,9 @@
 /* FXFontDialog.i */
 
+%pythonappend FX::FXFontDialog::FXFontDialog %{
+  self.thisown = False
+%}
+
 
 %module FXFontDialog
 

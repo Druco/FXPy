@@ -1,5 +1,9 @@
 /* FXDCWindow.i */
 
+%pythonappend FX::FXDCWindow::FXDCWindow %{
+  self.thisown = False
+%}
+
 
 %module FXDCWindow
 

@@ -1,5 +1,9 @@
 /* FXMenuRadio.i */
 
+%pythonappend FX::FXMenuRadio::FXMenuRadio %{
+  self.thisown = False
+%}
+
 
 %module FXMenuRadio
 

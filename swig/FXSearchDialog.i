@@ -1,5 +1,9 @@
 /* FXSearchDialog.i */
 
+%pythonappend FX::FXSearchDialog::FXSearchDialog %{
+  self.thisown = False
+%}
+
 
 %module FXSearchDialog
 

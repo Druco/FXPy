@@ -1,5 +1,9 @@
 /* FXPacker.i */
 
+%pythonappend FX::FXPacker::FXPacker %{
+  self.thisown = False
+%}
+
 
 %module FXPacker
 

@@ -1,5 +1,9 @@
 /* FXRadioButton.i */
 
+%pythonappend FX::FXRadioButton::FXRadioButton %{
+  self.thisown = False
+%}
+
 
 %module FXRadioButton
 

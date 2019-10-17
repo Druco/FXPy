@@ -1,5 +1,9 @@
 /* FXGIFCursor.i */
 
+%pythonappend FX::FXGIFCursor::FXGIFCursor %{
+  self.thisown = False
+%}
+
 
 %module FXGIFCursor
 

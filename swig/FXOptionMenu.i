@@ -1,5 +1,9 @@
 /* FXOptionMenu.i */
 
+%pythonappend FX::FXOptionMenu::FXOptionMenu %{
+  self.thisown = False
+%}
+
 
 %module FXOptionMenu
 

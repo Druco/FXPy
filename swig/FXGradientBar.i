@@ -1,5 +1,9 @@
 /* FXGradientBar.i */
 
+%pythonappend FX::FXGradientBar::FXGradientBar %{
+  self.thisown = False
+%}
+
 
 %module FXGradientBar
 

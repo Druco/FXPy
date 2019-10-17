@@ -1,5 +1,9 @@
 /* FXGLCylinder.i */
 
+%pythonappend FX::FXGLCylinder::FXGLCylinder %{
+  self.thisown = False
+%}
+
 
 %module FXGLCylinder
 

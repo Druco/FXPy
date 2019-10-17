@@ -334,8 +334,8 @@ typedef unsigned long long     FXulong;
 typedef long long              FXlong;
 
 // Integral types large enough to hold value of a pointer
-typedef long long              FXival;
-typedef unsigned long long     FXuval;
+typedef long                   FXival;
+typedef unsigned  long         FXuval;
 
 
 // Handle to something in server
@@ -343,8 +343,8 @@ typedef unsigned long          FXID;
 
 typedef unsigned long long     FXulong;
 typedef long long              FXlong;
-typedef long long              FXival;
-typedef unsigned long long     FXuval;
+typedef long                   FXival;
+typedef unsigned long          FXuval;
 typedef wchar_t                FXwchar;
 typedef unsigned short         FXnchar;
 

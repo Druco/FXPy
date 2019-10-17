@@ -1,5 +1,9 @@
 /* FXBMPIcon.i */
 
+%pythonappend FX::FXBMPIcon::FXBMPIcon %{
+  self.thisown = False
+%}
+
 
 #define __GNUC__
 %module FXBMPIcon

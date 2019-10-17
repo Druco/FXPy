@@ -1,5 +1,9 @@
 /* FXDataTarget.i */
 
+%pythonappend FX::FXDataTarget::FXDataTarget %{
+  self.thisown = False
+%}
+
 
 %module FXDataTarget
 

@@ -1,5 +1,9 @@
 /* FXExtentd.i */
 
+%pythonappend FX::FXExtentd::FXExtentd %{
+  self.thisown = False
+%}
+
 
 %module FXExtentd
 

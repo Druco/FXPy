@@ -1,5 +1,9 @@
 /* FXStatusLine.i */
 
+%pythonappend FX::FXStatusLine::FXStatusLine %{
+  self.thisown = False
+%}
+
 
 %module FXStatusLine
 

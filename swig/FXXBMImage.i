@@ -1,5 +1,9 @@
 /* FXXBMImage.i */
 
+%pythonappend FX::FXXBMImage::FXXBMImage %{
+  self.thisown = False
+%}
+
 
 %module FXXBMImage
 

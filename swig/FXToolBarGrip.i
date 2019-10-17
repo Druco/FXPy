@@ -1,5 +1,9 @@
 /* FXToolBarGrip.i */
 
+%pythonappend FX::FXToolBarGrip::FXToolBarGrip %{
+  self.thisown = False
+%}
+
 
 %module FXToolBarGrip
 

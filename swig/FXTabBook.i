@@ -1,5 +1,9 @@
 /* FXTabBook.i */
 
+%pythonappend FX::FXTabBook::FXTabBook %{
+  self.thisown = False
+%}
+
 
 %module FXTabBook
 

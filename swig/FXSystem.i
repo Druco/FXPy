@@ -1,5 +1,9 @@
 /* FXSystem.i */
 
+%pythonappend FX::FXSystem::FXSystem %{
+  self.thisown = False
+%}
+
 
 %module FXSystem
 

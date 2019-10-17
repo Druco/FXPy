@@ -1,5 +1,9 @@
 /* FXTGAIcon.i */
 
+%pythonappend FX::FXTGAIcon::FXTGAIcon %{
+  self.thisown = False
+%}
+
 
 %module FXTGAIcon
 

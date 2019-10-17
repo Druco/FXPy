@@ -1,5 +1,9 @@
 /* FXGLViewer.i */
 
+%pythonappend FX::FXGLViewer::FXGLViewer %{
+  self.thisown = False
+%}
+
 
 %module FXGLViewer
 

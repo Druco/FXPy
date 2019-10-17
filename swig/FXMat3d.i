@@ -1,5 +1,9 @@
 /* FXMat3d.i */
 
+%pythonappend FX::FXMat3d::FXMat3d %{
+  self.thisown = False
+%}
+
 
 %module FXMat3d
 

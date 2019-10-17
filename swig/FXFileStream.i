@@ -1,5 +1,9 @@
 /* FXFileStream.i */
 
+%pythonappend FX::FXFileStream::FXFileStream %{
+  self.thisown = False
+%}
+
 
 %module FXFileStream
 

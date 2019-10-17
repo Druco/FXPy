@@ -1,5 +1,9 @@
 /* FXBitmapFrame.i */
 
+%pythonappend FX::FXBitmapFrame::FXBitmapFrame %{
+  self.thisown = False
+%}
+
 
 %module FXBitmapFrame
 

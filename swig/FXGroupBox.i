@@ -1,5 +1,9 @@
 /* FXGroupBox.i */
 
+%pythonappend FX::FXGroupBox::FXGroupBox %{
+  self.thisown = False
+%}
+
 
 %module FXGroupBox
 
