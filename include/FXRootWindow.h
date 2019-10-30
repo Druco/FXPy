@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Root window
-class FXRootWindow : public FXComposite {
+class FXAPI FXRootWindow : public FXComposite {
   FXDECLARE(FXRootWindow)
 protected:
   FXRootWindow(){}

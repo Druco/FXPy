@@ -3,6 +3,10 @@
 %pythonappend FX::FXProgressBar::FXProgressBar %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyProgressBar::FXPyProgressBar %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXFRAME_H
 #include "FXFrame.h"
@@ -118,4 +122,8 @@ public:
   virtual ~FXProgressBar();
   };
 
+class FXPyProgressBar : public FXProgressBar {
+public:
+    FXPyProgressBar(FXComposite* p,FXObject* target=NULL,FXSelector sel=0,FXuint opts=PROGRESSBAR_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
+};
 }

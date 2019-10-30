@@ -45,7 +45,7 @@ enum {
 * the toolbar tab or, if the toolbar tab is the last widget in the list,
 * the widget immediately preceding the toolbar tab.
 */
-class FXToolBarTab : public FXFrame {
+class FXAPI FXToolBarTab : public FXFrame {
   FXDECLARE(FXToolBarTab)
 protected:
   FXColor  activeColor; // Color when active

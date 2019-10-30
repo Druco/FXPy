@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// OpenGL Cube Object
-class FXGLCube : public FXGLShape {
+class FXAPI FXGLCube : public FXGLShape {
   FXDECLARE(FXGLCube)
 public:
   FXfloat width;

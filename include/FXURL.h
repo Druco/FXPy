@@ -29,19 +29,19 @@ namespace FX {
 namespace FXURL {
 
 /// Return host name
-extern FXString hostname();
+extern FXAPI FXString hostname();
 
 /// Return URL of filename
-extern FXString fileToURL(const FXString& file);
+extern FXAPI FXString fileToURL(const FXString& file);
 
 /// Return filename from URL, empty if url is not a local file
-extern FXString fileFromURL(const FXString& url);
+extern FXAPI FXString fileFromURL(const FXString& url);
 
 /// Decode url string
-extern FXString decode(const FXString& url);
+extern FXAPI FXString decode(const FXString& url);
 
 /// Encode url string
-extern FXString encode(const FXString& url);
+extern FXAPI FXString encode(const FXString& url);
 
 }
 

@@ -46,7 +46,7 @@ enum {
 
 
 /// Directory item
-class FXDirItem : public FXTreeItem {
+class FXAPI FXDirItem : public FXTreeItem {
   FXDECLARE(FXDirItem)
   friend class FXDirList;
 protected:
@@ -119,7 +119,7 @@ public:
 * filter pattern, sorting order, case sensitivity, and hidden file display mode.
 * The Directory list widget supports drags and drops of files.
 */
-class FXDirList : public FXTreeList {
+class FXAPI FXDirList : public FXTreeList {
   FXDECLARE(FXDirList)
 protected:
   FXFileDict   *associations;         // Association table

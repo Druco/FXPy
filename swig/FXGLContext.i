@@ -3,16 +3,18 @@
 %pythonappend FX::FXGLContext::FXGLContext %{
   self.thisown = False
 %}
-
-
-%module FXGLContext
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXGLContext.h"
+%pythonappend FX::FXPyGLContext::FXPyGLContext %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXGLContext.h"
+
+namespace FX {
+class FXPyGLContext : public FXGLContext {
+public:
+    FXPyGLContext(FXApp* a,FXGLVisual *vis);
+    FXPyGLContext(FXApp* a,FXGLVisual *vis,FXGLContext *shared);
+};
+}

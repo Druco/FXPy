@@ -43,7 +43,7 @@ class FXButton;
 * displays a tree-structured view of the file system, and thereby makes up and down
 * navigation through the file system significantly easier.
 */
-class FXDirSelector : public FXPacker {
+class FXAPI FXDirSelector : public FXPacker {
   FXDECLARE(FXDirSelector)
 protected:
   FXDirList     *dirbox;        // Directory list widget

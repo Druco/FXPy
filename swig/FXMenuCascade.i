@@ -3,15 +3,17 @@
 %pythonappend FX::FXMenuCascade::FXMenuCascade %{
   self.thisown = False
 %}
-
-
-%module FXMenuCascade
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyMenuCascade::FXPyMenuCascade %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXMenuCascade.h"
+
+namespace FX {
+class FXPyMenuCascade : public FXMenuCascade {
+public:
+    FXPyMenuCascade(FXComposite* p,const FXString& text,FXIcon* ic=NULL,FXPopup* pup=NULL,FXuint opts=0);
+};
+}

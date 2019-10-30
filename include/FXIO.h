@@ -34,7 +34,7 @@ namespace FX {
 * The various subclasses of FXIO perform i/o on files, sockets,
 * pipes, and possibly other devices.
 */
-class FXIO {
+class FXAPI FXIO {
 protected:
   FXInputHandle device;         // Device (file/pipe/socket/whatever)
   FXuint        access;         // Access being performed

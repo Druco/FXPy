@@ -2,6 +2,12 @@
 %typemap(out) FX::FXString& %{
   return PyString_FromString($1->text());
 %}
+%typemap(out) FX::FXString* %{
+  return PyString_FromString($1->text());
+%}
+%typemap(out) FX::FXString %{
+  return PyString_FromString($1.text());
+%}
 
 %typemap(out) FX::FXint* "return PyLong_FromLong($1);";
 %typemap(out) FXint "return PyLong_FromLong($1);";
@@ -20,6 +26,8 @@
 %typemap(in) FX::FXdouble "$1 = PyFloat_AsDouble($input);";
 %typemap(in) FXColor "$1 = PyLong_AsUnsignedLong($input);";
 %typemap(in) FX::FXColor "$1 = PyLong_AsUnsignedLong($input);";
+// BAA %typemap(in) FXStipplePattern "$1 = reinterpret_cast<FX::FXStipplePattern>(PyLong_AsLong($input));";
+// BAA %typemap(in) FX::FXStipplePattern "$1 = reinterpret_cast<FX::FXStipplePattern>(PyLong_AsLong($input));";
 
 %typemap(in) const void* "$1 = PyBytes_AsString($input);";
 

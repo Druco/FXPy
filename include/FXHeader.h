@@ -47,7 +47,7 @@ enum {
 
 
 /// Header item
-class FXHeaderItem : public FXObject {
+class FXAPI FXHeaderItem : public FXObject {
   FXDECLARE(FXHeaderItem)
   friend class FXHeader;
 protected:
@@ -186,7 +186,7 @@ typedef FXObjectListOf<FXHeaderItem> FXHeaderItemList;
 * the split to fit the contents displayed underneath it.
 * The contents may be scrolled by calling setPosition().
 */
-class FXHeader : public FXFrame {
+class FXAPI FXHeader : public FXFrame {
   FXDECLARE(FXHeader)
 protected:
   FXHeaderItemList items;	// Item list

@@ -3,6 +3,10 @@
 %pythonappend FX::FXFileDialog::FXFileDialog %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyFileDialog::FXPyFileDialog %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXDIALOGBOX_H
 #include "FXDialogBox.h"
@@ -172,5 +176,12 @@ public:
   /// Destructor
   virtual ~FXFileDialog();
   };
+
+class FXPyFileDialog : public FXFileDialog {
+public:
+    FXPyFileDialog(FXWindow* owner,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=500,FXint h=300);
+    FXPyFileDialog(FXApp* a,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=500,FXint h=300);
+};
+
 
 }

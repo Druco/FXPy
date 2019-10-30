@@ -3,15 +3,9 @@
 %pythonappend FX::FXDC::FXDC %{
   self.thisown = False
 %}
-
-
-%module FXDC
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyDC::FXPyDC %{
+  self.thisown = False
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXDC.h"

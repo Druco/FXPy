@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Menu bar
-class FXMenuBar : public FXToolBar {
+class FXAPI FXMenuBar : public FXToolBar {
   FXDECLARE(FXMenuBar)
 protected:
   FXMenuBar(){}

@@ -68,7 +68,7 @@ class FXDCWindow;
 
 
 /// Visual describes pixel format of a drawable
-class FXVisual : public FXId {
+class FXAPI FXVisual : public FXId {
   FXDECLARE(FXVisual)
   friend class FXApp;
   friend class FXWindow;

@@ -34,7 +34,7 @@ class FXIcon;
 
 
 /// MDI Delete button
-class FXMDIDeleteButton : public FXButton {
+class FXAPI FXMDIDeleteButton : public FXButton {
   FXDECLARE(FXMDIDeleteButton)
 protected:
   FXMDIDeleteButton(){}
@@ -52,7 +52,7 @@ public:
 
 
 /// MDI Restore button
-class FXMDIRestoreButton : public FXButton {
+class FXAPI FXMDIRestoreButton : public FXButton {
   FXDECLARE(FXMDIRestoreButton)
 protected:
   FXMDIRestoreButton(){}
@@ -70,7 +70,7 @@ public:
 
 
 /// MDI Maximize button
-class FXMDIMaximizeButton : public FXButton {
+class FXAPI FXMDIMaximizeButton : public FXButton {
   FXDECLARE(FXMDIMaximizeButton)
 protected:
   FXMDIMaximizeButton(){}
@@ -88,7 +88,7 @@ public:
 
 
 /// MDI Minimize button
-class FXMDIMinimizeButton : public FXButton {
+class FXAPI FXMDIMinimizeButton : public FXButton {
   FXDECLARE(FXMDIMinimizeButton)
 protected:
   FXMDIMinimizeButton(){}
@@ -106,7 +106,7 @@ public:
 
 
 /// MDI Window button
-class FXMDIWindowButton : public FXMenuButton {
+class FXAPI FXMDIWindowButton : public FXMenuButton {
   FXDECLARE(FXMDIWindowButton)
 protected:
   FXMDIWindowButton(){}
@@ -124,7 +124,7 @@ public:
 
 
 /// MDI Window Menu
-class FXMDIMenu : public FXMenuPane {
+class FXAPI FXMDIMenu : public FXMenuPane {
   FXDECLARE(FXMDIMenu)
 private:
   FXIcon *closeicon;

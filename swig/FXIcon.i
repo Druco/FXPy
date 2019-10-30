@@ -3,6 +3,10 @@
 %pythonappend FX::FXIcon::FXIcon %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyIcon::FXPyIcon %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXIMAGE_H
 #include "FXImage.h"
@@ -85,4 +89,8 @@ public:
   virtual ~FXIcon();
   };
 
+class FXPyIcon : public FXIcon {
+public:
+    FXPyIcon(FXApp* a,const FXColor *pix=NULL,FXColor clr=0,FXuint opts=0,FXint w=1,FXint h=1);
+};
 }

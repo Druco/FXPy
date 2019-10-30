@@ -35,7 +35,7 @@ class FXFileSelector;
 
 
 /// File selection dialog
-class FXFileDialog : public FXDialogBox {
+class FXAPI FXFileDialog : public FXDialogBox {
   FXDECLARE(FXFileDialog)
 protected:
   FXFileSelector *filebox;

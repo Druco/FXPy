@@ -3,6 +3,10 @@
 %pythonappend FX::FXFileDict::FXFileDict %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyFileDict::FXPyFileDict %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXDICT_H
 #include "FXDict.h"
@@ -181,14 +185,12 @@ public:
   */
   virtual FXFileAssoc* findExecBinding(const FXchar* pathname);
 
-  /// Save to stream
-  virtual void save(FXStream& store) const;
-
-  /// Load from stream
-  virtual void load(FXStream& store);
-
-  /// Destructor
-  virtual ~FXFileDict();
   };
+
+class FXPyFileDict : public FXFileDict {
+public:
+  FXPyFileDict(FXApp* app);
+  FXPyFileDict(FXApp* app,FXSettings* db);
+};
 
 }

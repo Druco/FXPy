@@ -36,7 +36,7 @@ namespace FX {
 * place child-windows vertically from top-to-bottom, or bottom-to-top,
 * depending on the child window's layout hints.
 */
-class FXVerticalFrame : public FXPacker {
+class FXAPI FXVerticalFrame : public FXPacker {
   FXDECLARE(FXVerticalFrame)
 protected:
   FXVerticalFrame(){}

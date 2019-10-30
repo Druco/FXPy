@@ -49,7 +49,7 @@ enum {
 * Holding the Control Key while dragging the grip will prevent
 * the toolbar from docking when it is near a dock site.
 */
-class FXToolBarGrip : public FXDockHandler {
+class FXAPI FXToolBarGrip : public FXDockHandler {
   FXDECLARE(FXToolBarGrip)
 protected:
   FXColor activeColor;  // Color when active

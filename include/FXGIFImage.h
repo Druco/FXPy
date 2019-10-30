@@ -31,7 +31,7 @@
 namespace FX {
 
 /// GIF Image class
-class FXGIFImage : public FXImage {
+class FXAPI FXGIFImage : public FXImage {
   FXDECLARE(FXGIFImage)
 protected:
   FXGIFImage(){}
@@ -63,7 +63,7 @@ public:
 /**
 * Check if stream contains a GIF, return TRUE if so.
 */
-extern bool fxcheckGIF(FXStream& store);
+extern FXAPI bool fxcheckGIF(FXStream& store);
 
 
 /**
@@ -71,13 +71,13 @@ extern bool fxcheckGIF(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadGIF(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadGIF(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an GIF (Graphics Interchange Format) file to a stream.
 */
-extern bool fxsaveGIF(FXStream& store,const FXColor *data,FXint width,FXint height,bool fast=true);
+extern FXAPI bool fxsaveGIF(FXStream& store,const FXColor *data,FXint width,FXint height,bool fast=true);
 
 #endif
 

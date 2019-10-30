@@ -39,7 +39,7 @@ namespace FX {
 * Like the toggle button, it sends a SEL_COMMAND to its target, with the
 * message data set to the current state of the toggle button, of the type FXbool.
 */
-class FXTriStateButton : public FXToggleButton {
+class FXAPI FXTriStateButton : public FXToggleButton {
   FXDECLARE(FXTriStateButton)
 protected:
   FXString  maybelabel;

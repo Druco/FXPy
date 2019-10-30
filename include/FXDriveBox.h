@@ -41,7 +41,7 @@ enum {
 
 
 /// Directory Box
-class FXDriveBox : public FXListBox {
+class FXAPI FXDriveBox : public FXListBox {
   FXDECLARE(FXDriveBox)
 protected:
   FXFileDict *associations;     // Association table

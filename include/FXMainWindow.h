@@ -40,7 +40,7 @@ namespace FX {
 * After the SEL_CLOSE message has been sent and no objection was raised, the main
 * window will delete itself.
 */
-class FXMainWindow : public FXTopWindow {
+class FXAPI FXMainWindow : public FXTopWindow {
   FXDECLARE(FXMainWindow)
 protected:
   FXMainWindow(){}

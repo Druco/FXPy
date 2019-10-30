@@ -37,7 +37,7 @@ namespace FX {
 * the state of the application by graying out, or becoming hidden.
 * When activated, a menu command sends a SEL_COMMAND to its target.
 */
-class FXMenuCommand : public FXMenuCaption {
+class FXAPI FXMenuCommand : public FXMenuCaption {
   FXDECLARE(FXMenuCommand)
 protected:
   FXString     accel;       // Accelerator string

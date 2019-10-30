@@ -35,7 +35,7 @@ namespace FX {
 * A picker button allows you to identify an arbitrary
 * location on the screen.
 */
-class FXPicker : public FXButton {
+class FXAPI FXPicker : public FXButton {
   FXDECLARE(FXPicker)
 protected:
   FXPicker(){}

@@ -35,7 +35,7 @@ class FXPopup;
 
 
 /// Option Menu Button
-class FXOption : public FXLabel {
+class FXAPI FXOption : public FXLabel {
   FXDECLARE(FXOption)
 protected:
   FXColor selbackColor;
@@ -94,7 +94,7 @@ public:
 
 
 /// Option Menu
-class FXOptionMenu : public FXLabel {
+class FXAPI FXOptionMenu : public FXLabel {
   FXDECLARE(FXOptionMenu)
 protected:
   FXPopup  *pane;

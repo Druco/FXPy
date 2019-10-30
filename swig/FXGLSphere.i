@@ -3,23 +3,18 @@
 %pythonappend FX::FXGLSphere::FXGLSphere %{
   self.thisown = False
 %}
-
-
-%module FXGLSphere
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXVec2f.h"
-#include "FXVec3f.h"
-#include "FXVec4f.h"
-#include "FXQuatf.h"
-#include "FXMat4f.h"
-#include "FXRangef.h"
-#include "FXGLViewer.h"
-#include "FXGLSphere.h"
+%pythonappend FX::FXPyGLSphere::FXPyGLSphere %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXGLSphere.h"
+
+namespace FX {
+class FXPyGLSphere : public FXGLSphere {
+public:
+    FXPyGLSphere(FXfloat x,FXfloat y,FXfloat z,FXfloat r=1.0f);
+    FXPyGLSphere(FXfloat x,FXfloat y,FXfloat z,FXfloat r,const FXMaterial& mtl);
+};
+}

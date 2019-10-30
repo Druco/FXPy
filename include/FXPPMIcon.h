@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Portable Pixmap icon
-class FXPPMIcon : public FXIcon {
+class FXAPI FXPPMIcon : public FXIcon {
   FXDECLARE(FXPPMIcon)
 protected:
   FXPPMIcon(){}
@@ -61,7 +61,7 @@ public:
 /**
 * Check if stream contains a PPM, return TRUE if so.
 */
-extern bool fxcheckPPM(FXStream& store);
+extern FXAPI bool fxcheckPPM(FXStream& store);
 
 
 /**
@@ -69,13 +69,13 @@ extern bool fxcheckPPM(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadPPM(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadPPM(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an PPM (Portable Pixmap Format) file to a stream.
 */
-extern bool fxsavePPM(FXStream& store,const FXColor *data,FXint width,FXint height);
+extern FXAPI bool fxsavePPM(FXStream& store,const FXColor *data,FXint width,FXint height);
 
 }
 

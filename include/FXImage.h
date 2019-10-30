@@ -57,7 +57,7 @@ class FXDCWindow;
 * The server-side representation is not directly accessible from the current
 * process as it lives in the process of the X Server or GDI.
 */
-class FXImage : public FXDrawable {
+class FXAPI FXImage : public FXDrawable {
   FXDECLARE(FXImage)
   friend class FXDC;
   friend class FXDCWindow;

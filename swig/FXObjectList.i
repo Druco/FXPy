@@ -3,21 +3,19 @@
 %pythonappend FX::FXObjectList::FXObjectList %{
   self.thisown = False
 %}
-
-
-%module FXObjectList
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXVec2f.h"
-#include "FXVec3f.h"
-#include "FXVec4f.h"
-#include "FXRangef.h"
-#include "FXGLObject.h"
+%pythonappend FX::FXPyObjectList::FXPyObjectList %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXObjectList.h"
 %template(FXGLObjectList) FX::FXObjectListOf<FXGLObject>;
+
+namespace FX {
+class FXPyObjectList : public FXObjectList {
+public:
+    FXPyObjectList(FXObject* object);
+    FXPyObjectList(FXObject** objects,FXint n);
+};
+}

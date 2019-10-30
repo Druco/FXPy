@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// OpenGL Sphere Object
-class FXGLSphere : public FXGLShape {
+class FXAPI FXGLSphere : public FXGLShape {
   FXDECLARE(FXGLSphere)
 public:
   FXfloat radius;   // Radius of sphere

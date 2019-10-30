@@ -74,7 +74,7 @@ class FXImage;
 * The gradient bar is a control that is used to edit color gradient,
 * such as used in texture mapping and shape filling.
 */
-class FXGradientBar : public FXFrame {
+class FXAPI FXGradientBar : public FXFrame {
   FXDECLARE(FXGradientBar)
 protected:
   FXImage     *bar;                     // Image containing colors

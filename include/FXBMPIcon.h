@@ -39,26 +39,26 @@ namespace FX {
 * 1, 4, and 8 bit paletted bitmaps, 16 and 24 bit RGB bitmaps, and
 * 32 bit RGBA bitmaps.
 */
-class FXBMPIcon : public FX::FXIcon {
-  FXDECLARE(FX::FXBMPIcon)
+class FXAPI FXBMPIcon : public FXIcon {
+  FXDECLARE(FXBMPIcon)
 protected:
   FXBMPIcon(){}
 private:
-  FXBMPIcon(const FX::FXBMPIcon&);
-  FXBMPIcon &operator=(const FX::FXBMPIcon&);
+  FXBMPIcon(const FXBMPIcon&);
+  FXBMPIcon &operator=(const FXBMPIcon&);
 public:
-  static const FX::FXchar fileExt[];
-  static const FX::FXchar mimeType[];
+  static const FXchar fileExt[];
+  static const FXchar mimeType[];
 public:
 
   /// Construct icon from memory stream formatted in Microsoft BMP format
-  FXBMPIcon(FX::FXApp* a,const void *pix=NULL,FX::FXColor clr=FXRGB(192,192,192),FX::FXuint opts=0,FX::FXint w=1,FX::FXint h=1);
+  FXBMPIcon(FXApp* a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 
   /// Save pixels into stream in Microsoft bitmap format
-  virtual bool savePixels(FX::FXStream& store) const;
+  virtual bool savePixels(FXStream& store) const;
 
   /// Load pixels from stream in Microsoft bitmap format
-  virtual bool loadPixels(FX::FXStream& store);
+  virtual bool loadPixels(FXStream& store);
 
   /// Destroy icon
   virtual ~FXBMPIcon();
@@ -68,7 +68,7 @@ public:
 /**
 * Check if stream contains a bitmap, return TRUE if so.
 */
-extern bool fxcheckBMP(FX::FXStream& store);
+extern FXAPI bool fxcheckBMP(FXStream& store);
 
 
 /**
@@ -76,13 +76,13 @@ extern bool fxcheckBMP(FX::FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadBMP(FX::FXStream& store,FX::FXColor*& data,FX::FXint& width,FX::FXint& height);
+extern FXAPI bool fxloadBMP(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an BMP (Microsoft Bitmap) file to a stream.
 */
-extern bool fxsaveBMP(FX::FXStream& store,const FX::FXColor *data,FX::FXint width,FX::FXint height);
+extern FXAPI bool fxsaveBMP(FXStream& store,const FXColor *data,FXint width,FXint height);
 
 }
 

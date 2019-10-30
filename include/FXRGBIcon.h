@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// IRIS RGB icon
-class FXRGBIcon : public FXIcon {
+class FXAPI FXRGBIcon : public FXIcon {
   FXDECLARE(FXRGBIcon)
 protected:
   FXRGBIcon(){}
@@ -61,7 +61,7 @@ public:
 /**
 * Check if stream contains a RGB, return TRUE if so.
 */
-extern bool fxcheckRGB(FXStream& store);
+extern FXAPI bool fxcheckRGB(FXStream& store);
 
 
 /**
@@ -69,13 +69,13 @@ extern bool fxcheckRGB(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadRGB(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadRGB(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an RGB (SGI IRIS RGB) file to a stream.
 */
-extern bool fxsaveRGB(FXStream& store,const FXColor *data,FXint width,FXint height);
+extern FXAPI bool fxsaveRGB(FXStream& store,const FXColor *data,FXint width,FXint height);
 
 }
 

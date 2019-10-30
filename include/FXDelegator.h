@@ -40,7 +40,7 @@ namespace FX {
 * delegate in FXDelegator will then reconnect the controls with their
 * new target.
 */
-class FXDelegator : public FXObject {
+class FXAPI FXDelegator : public FXObject {
   FXDECLARE(FXDelegator)
 protected:
   FXObject   *delegate;

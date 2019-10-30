@@ -78,7 +78,7 @@ struct FXPSBounds {
 
 
 /// Describes printer
-struct FXPrinter {
+struct FXAPI FXPrinter {
   FXString name;                          /// Printer name
   FXuint   firstpage;                     /// First page that can be printed
   FXuint   lastpage;                      /// Last page that can be printed
@@ -98,7 +98,7 @@ struct FXPrinter {
 
 
 /// Postscript Printer Device Context
-class FXDCPrint : public FXDC {
+class FXAPI FXDCPrint : public FXDC {
 //  friend class FXGLViewer; // This is TEMPORARY!!!
 protected:
   void      *psout;                   // File Stream for PS output

@@ -39,7 +39,7 @@ class FXDockSite;
 * and adjusts the layout options accordingly.
 * See dock bar widget for more information on the docking behavior.
 */
-class FXToolBar : public FXDockBar {
+class FXAPI FXToolBar : public FXDockBar {
   FXDECLARE(FXToolBar)
 protected:
   FXToolBar(){}

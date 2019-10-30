@@ -3,23 +3,18 @@
 %pythonappend FX::FXGLCylinder::FXGLCylinder %{
   self.thisown = False
 %}
-
-
-%module FXGLCylinder
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXVec2f.h"
-#include "FXVec3f.h"
-#include "FXVec4f.h"
-#include "FXQuatf.h"
-#include "FXMat4f.h"
-#include "FXRangef.h"
-#include "FXGLViewer.h"
-#include "FXGLCylinder.h"
+%pythonappend FX::FXPyGLCylinder::FXPyGLCylinder %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXGLCylinder.h"
+
+namespace FX {
+class FXPyGLCylinder : public FXGLCylinder {
+public:
+    FXPyGLCylinder(FXfloat x,FXfloat y,FXfloat z,FXfloat h=1.0f, FXfloat r=1.0f);
+    FXPyGLCylinder(FXfloat x,FXfloat y,FXfloat z,FXfloat h,FXfloat r,const FXMaterial& mtl);
+};
+}

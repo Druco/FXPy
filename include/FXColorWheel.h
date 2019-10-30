@@ -39,7 +39,7 @@ class FXImage;
 * color.  It is most often used together with a Color Bar which controls the
 * brighness.
 */
-class FXColorWheel : public FXFrame {
+class FXAPI FXColorWheel : public FXFrame {
   FXDECLARE(FXColorWheel)
 protected:
   FXImage  *dial;         // HSV dial image

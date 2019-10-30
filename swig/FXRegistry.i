@@ -3,15 +3,17 @@
 %pythonappend FX::FXRegistry::FXRegistry %{
   self.thisown = False
 %}
-
-
-%module FXRegistry
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyRegistry::FXPyRegistry %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXRegistry.h"
+
+namespace FX {
+class FXPyRegistry : public FXRegistry {
+public:
+    FXPyRegistry(const FXString& akey=FXString::null,const FXString& vkey=FXString::null);
+};
+}

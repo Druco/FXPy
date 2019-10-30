@@ -41,7 +41,7 @@ class FXFont;
 
 
 /// Font selection widget
-class FXFontSelector : public FXPacker {
+class FXAPI FXFontSelector : public FXPacker {
   FXDECLARE(FXFontSelector)
 protected:
   FXTextField   *family;

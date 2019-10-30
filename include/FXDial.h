@@ -51,7 +51,7 @@ enum {
 * An optional notch can be used to indicate the zero-position of
 * the dial; display of the notch is controlled by the DIAL_HAS_NOTCH option.
 */
-class FXDial : public FXFrame {
+class FXAPI FXDial : public FXFrame {
   FXDECLARE(FXDial)
 protected:
   FXint         range[2];       // Reported data range

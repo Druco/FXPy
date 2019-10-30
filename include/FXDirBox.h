@@ -49,7 +49,7 @@ enum {
 * The Directory Box sends SEL_CHANGED and SEL_COMMAND messages, with the string
 * containing the full path to the selected item.
 */
-class FXDirBox : public FXTreeListBox {
+class FXAPI FXDirBox : public FXTreeListBox {
   FXDECLARE(FXDirBox)
 protected:
   FXFileDict *associations;     // Association table

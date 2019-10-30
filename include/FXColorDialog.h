@@ -43,7 +43,7 @@ class FXColorSelector;
 * to be used repeatedly; colors dropped into the small color wells are
 * automatically saved into the registry for future use.
 */
-class FXColorDialog : public FXDialogBox {
+class FXAPI FXColorDialog : public FXDialogBox {
   FXDECLARE(FXColorDialog)
 protected:
   FXColorSelector *colorbox;

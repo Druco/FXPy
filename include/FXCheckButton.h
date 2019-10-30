@@ -54,7 +54,7 @@ enum {
 * Button to a layout manager via the ID_TOGGLE_SHOWN message.  This will give a
 * similar visual element as collapsing folders in a Tree List.
 */
-class FXCheckButton : public FXLabel {
+class FXAPI FXCheckButton : public FXLabel {
   FXDECLARE(FXCheckButton)
 protected:
   FXColor  checkColor;  // Color of check mark

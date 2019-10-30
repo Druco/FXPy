@@ -43,7 +43,7 @@ enum {
 * indicators and timers.  Besides numbers, the seven-segment
 * display widget can also display some letters and punctuations.
 */
-class FX7Segment : public FXFrame {
+class FXAPI FX7Segment : public FXFrame {
   FXDECLARE(FX7Segment)
 protected:
   FXString label;       // Text being shown

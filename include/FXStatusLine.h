@@ -45,7 +45,7 @@ namespace FX {
 * will be displayed in the highlight color, while the part after the newline
 * is shown using the normal text color.
 */
-class FXStatusLine : public FXFrame {
+class FXAPI FXStatusLine : public FXFrame {
   FXDECLARE(FXStatusLine)
 protected:
   FXString  status;             // Current status message

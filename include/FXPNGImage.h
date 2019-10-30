@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Portable Network Graphics (PNG) Image class
-class FXPNGImage : public FXImage {
+class FXAPI FXPNGImage : public FXImage {
   FXDECLARE(FXPNGImage)
 protected:
   FXPNGImage(){}
@@ -64,7 +64,7 @@ public:
 /**
 * Check if stream contains a PNG, return TRUE if so.
 */
-extern bool fxcheckPNG(FXStream& store);
+extern FXAPI bool fxcheckPNG(FXStream& store);
 
 
 /**
@@ -72,13 +72,13 @@ extern bool fxcheckPNG(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadPNG(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadPNG(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an PNG (Portable Network Graphics) file to a stream.
 */
-extern bool fxsavePNG(FXStream& store,const FXColor* data,FXint width,FXint height);
+extern FXAPI bool fxsavePNG(FXStream& store,const FXColor* data,FXint width,FXint height);
 
 }
 

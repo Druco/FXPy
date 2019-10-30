@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// JPEG Icon class
-class FXJPGIcon : public FXIcon {
+class FXAPI FXJPGIcon : public FXIcon {
   FXDECLARE(FXJPGIcon)
 protected:
   FXint quality;
@@ -73,7 +73,7 @@ public:
 /**
 * Check if stream contains a JPG, return TRUE if so.
 */
-extern bool fxcheckJPG(FXStream& store);
+extern FXAPI bool fxcheckJPG(FXStream& store);
 
 
 /**
@@ -81,13 +81,13 @@ extern bool fxcheckJPG(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadJPG(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXint& quality);
+extern FXAPI bool fxloadJPG(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXint& quality);
 
 
 /**
 * Save an JPEG (Joint Photographics Experts Group) file to a stream.
 */
-extern bool fxsaveJPG(FXStream& store,const FXColor* data,FXint width,FXint height,FXint quality);
+extern FXAPI bool fxsaveJPG(FXStream& store,const FXColor* data,FXint width,FXint height,FXint quality);
 
 }
 

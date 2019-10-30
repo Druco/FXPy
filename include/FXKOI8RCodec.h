@@ -11,7 +11,7 @@ namespace FX {
 
 
 /// KOI8-R Codec
-class FXKOI8RCodec : public FXTextCodec {
+class FXAPI FXKOI8RCodec : public FXTextCodec {
   FXDECLARE(FXKOI8RCodec)
 public:
   FXKOI8RCodec(){}

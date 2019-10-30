@@ -31,26 +31,26 @@
 namespace FX {
 
 /// GIF Icon class
-class FXGIFIcon : public FX::FXIcon {
-  FXDECLARE(FX::FXGIFIcon)
+class FXAPI FXGIFIcon : public FXIcon {
+  FXDECLARE(FXGIFIcon)
 protected:
   FXGIFIcon(){}
 private:
-  FXGIFIcon(const FX::FXGIFIcon&);
-  FXGIFIcon &operator=(const FX::FXGIFIcon&);
+  FXGIFIcon(const FXGIFIcon&);
+  FXGIFIcon &operator=(const FXGIFIcon&);
 public:
-  static const FX::FXchar fileExt[];
-  static const FX::FXchar mimeType[];
+  static const FXchar fileExt[];
+  static const FXchar mimeType[];
 public:
 
   /// Construct an icon from memory stream formatted as GIF format
-  FXGIFIcon(FX::FXApp* a,const void *pix=NULL,FX::FXColor clr=FXRGB(192,192,192),FX::FXuint opts=0,FX::FXint w=1,FX::FXint h=1);
+  FXGIFIcon(FXApp* a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 
   /// Save pixels into stream in GIF format
-  virtual bool savePixels(FX::FXStream& store) const;
+  virtual bool savePixels(FXStream& store) const;
 
   /// Load pixels from stream in GIF format
-  virtual bool loadPixels(FX::FXStream& store);
+  virtual bool loadPixels(FXStream& store);
 
   /// Destroy
   virtual ~FXGIFIcon();
@@ -64,7 +64,7 @@ public:
 /**
 * Check if stream contains a GIF, return TRUE if so.
 */
-extern bool fxcheckGIF(FX::FXStream& store);
+extern FXAPI bool fxcheckGIF(FXStream& store);
 
 
 /**
@@ -72,7 +72,7 @@ extern bool fxcheckGIF(FX::FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadGIF(FX::FXStream& store,FX::FXColor*& data,FX::FXint& width,FX::FXint& height);
+extern FXAPI bool fxloadGIF(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
@@ -80,7 +80,7 @@ extern bool fxloadGIF(FX::FXStream& store,FX::FXColor*& data,FX::FXint& width,FX
 * "fast" is used to select the faster Floyd-Steinberg dither method instead
 * of the slower Wu quantization algorithm.
 */
-extern bool fxsaveGIF(FX::FXStream& store,const FX::FXColor *data,FX::FXint width,FX::FXint height,bool fast=true);
+extern FXAPI bool fxsaveGIF(FXStream& store,const FXColor *data,FXint width,FXint height,bool fast=true);
 
 #endif
 

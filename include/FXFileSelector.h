@@ -54,7 +54,7 @@ enum {
 
 
 /// File selection widget
-class FXFileSelector : public FXPacker {
+class FXAPI FXFileSelector : public FXPacker {
   FXDECLARE(FXFileSelector)
 protected:
   FXFileList        *filebox;           // File list widget

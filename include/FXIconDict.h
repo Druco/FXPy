@@ -47,7 +47,7 @@ class FXIconSource;
 * The lifetype of the icons is managed by the icon dictionary, and thus all
 * icons will be deleted when the dictionary is deleted.
 */
-class FXIconDict : public FXDict {
+class FXAPI FXIconDict : public FXDict {
   FXDECLARE(FXIconDict)
 private:
   FXIconSource *source; // Icon source

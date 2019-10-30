@@ -28,7 +28,7 @@ namespace FX {
 
 
 /// Directory enumerator
-class FXDir {
+class FXAPI FXDir {
 private:
   FXuval space[256];
 private:

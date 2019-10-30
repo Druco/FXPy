@@ -38,7 +38,7 @@ class FXVisual;
 * Drawable is an abstract base class for any surface that can be
 * drawn upon, such as a FXWindow, or FXImage.
 */
-class FXDrawable : public FXId {
+class FXAPI FXDrawable : public FXId {
   FXDECLARE_ABSTRACT(FXDrawable)
   friend class FXDC;
   friend class FXDCWindow;

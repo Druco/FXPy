@@ -70,7 +70,7 @@ enum {
 * The SEL_UPDATE message can be used to modify the MDI child's title (via
 * ID_SETSTRINGVALUE), and window icon (via ID_SETICONVALUE).
 */
-class FXMDIChild : public FXComposite {
+class FXAPI FXMDIChild : public FXComposite {
   FXDECLARE(FXMDIChild)
 protected:
   FXString      title;                  // Window title

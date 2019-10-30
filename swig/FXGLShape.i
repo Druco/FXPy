@@ -3,23 +3,18 @@
 %pythonappend FX::FXGLShape::FXGLShape %{
   self.thisown = False
 %}
-
-
-%module FXGLShape
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXVec2f.h"
-#include "FXVec3f.h"
-#include "FXVec4f.h"
-#include "FXRangef.h"
-#include "FXQuatf.h"
-#include "FXMat4f.h"
-#include "FXGLViewer.h"
-#include "FXGLShape.h"
+%pythonappend FX::FXPyGLShape::FXPyGLShape %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXGLShape.h"
+
+namespace FX {
+class FXPyGLShape : public FXGLShape {
+public:
+    FXPyGLShape(FXfloat x,FXfloat y,FXfloat z,FXuint opts);
+    FXPyGLShape(FXfloat x,FXfloat y,FXfloat z,FXuint opts,const FXMaterial& front,const FXMaterial& back);
+};
+}

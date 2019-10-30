@@ -50,7 +50,7 @@ class FXPopup;
 * pointer to the item.  While manipulating the tree list, it may send
 * SEL_CHANGED messages to indicate which item the cursor is hovering over.
 */
-class FXTreeListBox : public FXPacker {
+class FXAPI FXTreeListBox : public FXPacker {
   FXDECLARE(FXTreeListBox)
 protected:
   FXButton      *field;

@@ -52,7 +52,7 @@ enum {
 
 
 /// Cursor class
-class FXCursor : public FXId {
+class FXAPI FXCursor : public FXId {
   FXDECLARE(FXCursor)
 protected:
   FXColor *data;        // Source data

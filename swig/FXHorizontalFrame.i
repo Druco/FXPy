@@ -3,6 +3,10 @@
 %pythonappend FX::FXHorizontalFrame::FXHorizontalFrame %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyHorizontalFrame::FXPyHorizontalFrame %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 
 #ifndef FXPACKER_H
@@ -32,5 +36,10 @@ public:
   /// Return default height
   virtual FXint getDefaultHeight();
   };
+
+class FXPyHorizontalFrame : public FXHorizontalFrame {
+public:
+    FXPyHorizontalFrame(FXComposite *p,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_SPACING,FXint pr=DEFAULT_SPACING,FXint pt=DEFAULT_SPACING,FXint pb=DEFAULT_SPACING,FXint hs=DEFAULT_SPACING,FXint vs=DEFAULT_SPACING);
+};
 
 }

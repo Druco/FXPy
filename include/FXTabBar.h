@@ -53,7 +53,7 @@ enum {
 * is called with notify=TRUE.  Thus causes the tab bar to send a
 * SEL_COMMAND message to its target.
 */
-class FXTabBar : public FXPacker {
+class FXAPI FXTabBar : public FXPacker {
   FXDECLARE(FXTabBar)
 protected:
   FXint current;        // Current tab index

@@ -53,7 +53,7 @@ enum {
 
 
 /// OpenGL Shape Object
-class FXGLShape : public FXGLObject {
+class FXAPI FXGLShape : public FXGLObject {
   FXDECLARE_ABSTRACT(FXGLShape)
 protected:
   FXVec3f       position;             // Middle of the Bounding Box

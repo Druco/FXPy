@@ -3,6 +3,10 @@
 %pythonappend FX::FXDialogBox::FXDialogBox %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyDialogBox::FXPyDialogBox %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 
 #ifndef FXTOPWINDOW_H
@@ -19,6 +23,8 @@ namespace FX {
 * To close the DialogBox when not running modally, simply send it ID_HIDE.
 */
 class FXDialogBox : public FXTopWindow {
+protected:
+    FXDialogBox();
 public:
   long onKeyPress(FXObject*,FXSelector,void*);
   long onKeyRelease(FXObject*,FXSelector,void*);
@@ -42,4 +48,11 @@ public:
   virtual FXuint execute(FXuint placement=PLACEMENT_CURSOR);
   };
 
+class FXPyDialogBox : public FXDialogBox {
+  FXPyDialogBox(FXApp* a,const FXString& name,FXuint opts=DECOR_TITLE|DECOR_BORDER,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=10,FXint pr=10,FXint pt=10,FXint pb=10,FXint hs=4,FXint vs=4);
+
+  FXPyDialogBox(FXWindow* owner,const FXString& name,FXuint opts=DECOR_TITLE|DECOR_BORDER,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=10,FXint pr=10,FXint pt=10,FXint pb=10,FXint hs=4,FXint vs=4);
+};
+
 }
+

@@ -3,6 +3,10 @@
 %pythonappend FX::FXRecentFiles::FXRecentFiles %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyRecentFiles::FXPyRecentFiles %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXOBJECT_H
 #include "FXObject.h"
@@ -110,4 +114,11 @@ public:
   virtual ~FXRecentFiles();
   };
 
+class FXPyRecentFiles : public FXRecentFiles {
+public:
+    FXPyRecentFiles();
+    FXPyRecentFiles(FXApp* a);
+    FXPyRecentFiles(FXApp* a,const FXString& gp,FXObject *tgt=NULL,FXSelector sel=0);
+
+};
 }

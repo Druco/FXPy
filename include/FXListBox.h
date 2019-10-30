@@ -52,7 +52,7 @@ class FXPopup;
 * The List Box is able to receive ID_GETINTVALUE and ID_SETINTVALUE which
 * will retrieve the current option or change the selected option.
 */
-class FXListBox : public FXPacker {
+class FXAPI FXListBox : public FXPacker {
   FXDECLARE(FXListBox)
 protected:
   FXButton      *field;

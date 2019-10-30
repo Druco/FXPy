@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// File Store Definition
-class FXFileStream : public FXStream {
+class FXAPI FXFileStream : public FXStream {
 protected:
   FXFile file;
 protected:
@@ -69,7 +69,7 @@ public:
   FXFileStream& operator<<(const FXdouble& v){ FXStream::operator<<(v); return *this; }
   FXFileStream& operator<<(const FXlong& v){ FXStream::operator<<(v); return *this; }
   FXFileStream& operator<<(const FXulong& v){ FXStream::operator<<(v); return *this; }
-#if 0
+
   /// Save arrays of items to stream
   FXFileStream& save(const FXuchar* p,FXuval n){ FXStream::save(p,n); return *this; }
   FXFileStream& save(const FXchar* p,FXuval n){ FXStream::save(p,n); return *this; }
@@ -81,7 +81,7 @@ public:
   FXFileStream& save(const FXdouble* p,FXuval n){ FXStream::save(p,n); return *this; }
   FXFileStream& save(const FXlong* p,FXuval n){ FXStream::save(p,n); return *this; }
   FXFileStream& save(const FXulong* p,FXuval n){ FXStream::save(p,n); return *this; }
-#endif
+
   /// Load single items from stream
   FXFileStream& operator>>(FXuchar& v){ FXStream::operator>>(v); return *this; }
   FXFileStream& operator>>(FXchar& v){ FXStream::operator>>(v); return *this; }

@@ -42,7 +42,7 @@ enum {
 
 
 /// Progress bar widget
-class FXProgressBar : public FXFrame {
+class FXAPI FXProgressBar : public FXFrame {
   FXDECLARE(FXProgressBar)
 protected:
   FXuint   progress;                      // Integer percentage number

@@ -42,7 +42,7 @@ class FXTopWindow;
 * be preserved during the drawing, and a etch bitmap, which is used to
 * draw the icon when it is disabled.
 */
-class FXIcon : public FXImage {
+class FXAPI FXIcon : public FXImage {
   FXDECLARE(FXIcon)
   friend class FXDC;
   friend class FXWindow;

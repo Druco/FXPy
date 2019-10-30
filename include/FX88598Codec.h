@@ -8,7 +8,7 @@
 namespace FX {
 
 /// ISO-8859-8 Codec
-class FX88598Codec : public FXTextCodec {
+class FXAPI FX88598Codec : public FXTextCodec {
   FXDECLARE(FX88598Codec)
 public:
   FX88598Codec(){}

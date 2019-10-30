@@ -1,5 +1,10 @@
 /* FXObject.i */
 
+%pythonappend FX::FXPyObject::FXPyObject %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
+
 namespace FX {
 
 /// Minimum and maximum message id
@@ -125,9 +130,20 @@ public:
 
   /// Called for unhandled messages
   virtual long onDefault(FXObject*,FXSelector,void*);
+  virtual long handle(FXObject*,FXSelector,void*);
 
+%pythoncode %{
+def _fxmapsearch(self, key):
+        try:
+            for (keylo, keyhi, func) in self.FXMSGMAP:
+                if keylo <= key and keyhi >= key:
+                    return func
+        except:
+            pass
+        return None
+%}
 public:
-
+      
   /// Get class name of some object
   const FXchar* getClassName() const;
 
@@ -144,13 +160,22 @@ public:
   virtual void load(FXStream& store);
 #if 0
   %extend {
-  void connect(uint type, uint id, void (*func)()) {
+  void connect(uint type, uint id, void (*func)()) { printf("type: %d", type);
   }
-  }
+}
+
 #endif    
 
   /// Virtual destructor
   virtual ~FXObject();
   };
 
+}
+
+
+namespace FX {
+class FXPyObject : public FXObject {
+public:
+  FXPyObject();
+};
 }

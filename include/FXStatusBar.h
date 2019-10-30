@@ -42,7 +42,7 @@ class FXStatusLine;
 
 
 /// Status bar
-class FXStatusBar : public FXHorizontalFrame {
+class FXAPI FXStatusBar : public FXHorizontalFrame {
   FXDECLARE(FXStatusBar)
 protected:
   FXDragCorner *corner;

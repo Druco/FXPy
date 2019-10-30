@@ -37,7 +37,7 @@ struct ZBlock;
 
 
 /// GZIP compressed stream
-class FXGZFileStream : public FXFileStream {
+class FXAPI FXGZFileStream : public FXFileStream {
 private:
   ZBlock *z;
   int     f;

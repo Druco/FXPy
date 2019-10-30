@@ -45,7 +45,7 @@ namespace FX {
 * Note that this means that the content window's position is not
 * necessarily equal to the scroll position of the scroll window!
 */
-class FXScrollWindow : public FXScrollArea {
+class FXAPI FXScrollWindow : public FXScrollArea {
   FXDECLARE(FXScrollWindow)
 protected:
   FXScrollWindow(){}

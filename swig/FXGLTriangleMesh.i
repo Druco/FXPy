@@ -3,23 +3,18 @@
 %pythonappend FX::FXGLTriangleMesh::FXGLTriangleMesh %{
   self.thisown = False
 %}
-
-
-%module FXGLTriangleMesh
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXVec2f.h"
-#include "FXVec3f.h"
-#include "FXVec4f.h"
-#include "FXQuatf.h"
-#include "FXMat4f.h"
-#include "FXRangef.h"
-#include "FXGLViewer.h"
-#include "FXGLTriangleMesh.h"
+%pythonappend FX::FXPyGLTriangleMesh::FXPyGLTriangleMesh %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXGLTriangleMesh.h"
+
+namespace FX {
+class FXPyGLTriangleMesh : public FXGLTriangleMesh {
+public:
+    FXPyGLTriangleMesh(FXfloat x,FXfloat y,FXfloat z,FXint nv,FXfloat *v,FXfloat *n=NULL,FXfloat *c=NULL,FXfloat *t=NULL);
+    FXPyGLTriangleMesh(FXfloat x,FXfloat y,FXfloat z,FXint nv,FXfloat *v,FXfloat *n,FXfloat *c,FXfloat *t,const FXMaterial& mtl);
+};
+}

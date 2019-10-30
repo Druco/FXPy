@@ -41,7 +41,7 @@ class FXTextCodec;
 /**
 * The translator class translates a message to another language.
 */
-class FXTranslator : public FXObject {
+class FXAPI FXTranslator : public FXObject {
   FXDECLARE(FXTranslator)
 private:
   FXApp       *app;     // Back link to application object

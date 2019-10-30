@@ -48,7 +48,7 @@ enum {
 * When pressed, the button widget sends a SEL_COMMAND to its target, with the
 * message data set to the current state of the toggle button, of the type FXbool.
 */
-class FXToggleButton : public FXLabel {
+class FXAPI FXToggleButton : public FXLabel {
   FXDECLARE(FXToggleButton)
 protected:
   FXString  altlabel;

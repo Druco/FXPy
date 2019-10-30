@@ -43,7 +43,7 @@ enum {
 
 
 /// Hopefully Helpful Hint message
-class FXToolTip : public FXShell {
+class FXAPI FXToolTip : public FXShell {
   FXDECLARE(FXToolTip)
 protected:
   FXString  label;                      // Text in the tip

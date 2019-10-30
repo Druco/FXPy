@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Canvas, an area drawn by another object
-class FXCanvas : public FXWindow {
+class FXAPI FXCanvas : public FXWindow {
   FXDECLARE(FXCanvas)
 protected:
   FXCanvas();

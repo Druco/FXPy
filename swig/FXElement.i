@@ -8,8 +8,6 @@
 %module FXElement
 
 %{
-#include "fxdefs2.h"
-#include "fx.h"
 %}
 
 

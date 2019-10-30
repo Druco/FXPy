@@ -35,7 +35,7 @@ class FXGLVisual;
 
 
 /// GLCanvas, an area drawn by another object
-class FXGLCanvas : public FXCanvas {
+class FXAPI FXGLCanvas : public FXCanvas {
   FXDECLARE(FXGLCanvas)
 private:
   FXGLCanvas  *sgnext;  // Share group next in share list

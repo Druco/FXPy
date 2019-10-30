@@ -33,7 +33,7 @@ class FXMat4f;
 
 
 /// Single-precision 3-element vector
-class FXVec3f {
+class FXAPI FXVec3f {
 public:
   FXfloat x;
   FXfloat y;
@@ -158,19 +158,19 @@ public:
   friend inline FXVec3f hi(const FXVec3f& a,const FXVec3f& b);
 
   /// Compute normal from three points a,b,c
-  friend FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c);
+  friend FXAPI FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c);
 
   /// Compute approximate normal from four points a,b,c,d
-  friend FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c,const FXVec3f& d);
+  friend FXAPI FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c,const FXVec3f& d);
 
   /// Normalize vector
-  friend FXVec3f normalize(const FXVec3f& v);
+  friend FXAPI FXVec3f normalize(const FXVec3f& v);
 
   /// Save vector to a stream
-  friend FXStream& operator<<(FXStream& store,const FXVec3f& v);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXVec3f& v);
 
   /// Load vector from a stream
-  friend FXStream& operator>>(FXStream& store,FXVec3f& v);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXVec3f& v);
   };
 
 
@@ -197,13 +197,13 @@ inline bool operator>=(FXfloat n,const FXVec3f& a){return n>=a.x && n>=a.y && n>
 inline FXVec3f lo(const FXVec3f& a,const FXVec3f& b){return FXVec3f(FXMIN(a.x,b.x),FXMIN(a.y,b.y),FXMIN(a.z,b.z));}
 inline FXVec3f hi(const FXVec3f& a,const FXVec3f& b){return FXVec3f(FXMAX(a.x,b.x),FXMAX(a.y,b.y),FXMAX(a.z,b.z));}
 
-extern FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c);
-extern FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c,const FXVec3f& d);
+extern FXAPI FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c);
+extern FXAPI FXVec3f normal(const FXVec3f& a,const FXVec3f& b,const FXVec3f& c,const FXVec3f& d);
 
-extern FXVec3f normalize(const FXVec3f& v);
+extern FXAPI FXVec3f normalize(const FXVec3f& v);
 
-extern FXStream& operator<<(FXStream& store,const FXVec3f& v);
-extern FXStream& operator>>(FXStream& store,FXVec3f& v);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXVec3f& v);
+extern FXAPI FXStream& operator>>(FXStream& store,FXVec3f& v);
 
 }
 

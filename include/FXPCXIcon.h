@@ -31,7 +31,7 @@
 namespace FX {
 
 /// PCX icon
-class FXPCXIcon : public FXIcon {
+class FXAPI FXPCXIcon : public FXIcon {
   FXDECLARE(FXPCXIcon)
 protected:
   FXPCXIcon(){}
@@ -60,7 +60,7 @@ public:
 /**
 * Check if stream contains a PCX, return TRUE if so.
 */
-extern bool fxcheckPCX(FXStream& store);
+extern FXAPI bool fxcheckPCX(FXStream& store);
 
 
 /**
@@ -68,13 +68,13 @@ extern bool fxcheckPCX(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadPCX(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadPCX(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an PCX (PC Paintbrush) file to a stream.
 */
-extern bool fxsavePCX(FXStream& store,const FXColor *data,FXint width,FXint height);
+extern FXAPI bool fxsavePCX(FXStream& store,const FXColor *data,FXint width,FXint height);
 
 }
 

@@ -75,7 +75,7 @@ class FXFont;
 * available space, that is to say, the document will always be fitten
 * with given left and right edges substracted from the available space.
 */
-class FXRuler : public FXFrame {
+class FXAPI FXRuler : public FXFrame {
   FXDECLARE(FXRuler)
 protected:
   FXFont  *font;                // Font for numbers

@@ -38,7 +38,7 @@ class FXHorizontalFrame;
 
 
 /// Text replace dialog
-class FXReplaceDialog : public FXDialogBox {
+class FXAPI FXReplaceDialog : public FXDialogBox {
   FXDECLARE(FXReplaceDialog)
 protected:
   FXLabel           *searchlabel;

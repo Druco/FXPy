@@ -3,15 +3,17 @@
 %pythonappend FX::FXMenuTitle::FXMenuTitle %{
   self.thisown = False
 %}
-
-
-%module FXMenuTitle
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyMenuTitle::FXPyMenuTitle %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXMenuTitle.h"
+
+namespace FX {
+class FXPyMenuTitle : public FXMenuTitle {
+public:
+    FXPyMenuTitle(FXComposite* p,const FXString& text,FXIcon* ic=NULL,FXPopup* pup=NULL,FXuint opts=0);
+};
+}

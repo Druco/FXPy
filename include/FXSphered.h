@@ -32,7 +32,7 @@ class FXRanged;
 
 
 /// Spherical bounds
-class FXSphered {
+class FXAPI FXSphered {
 public:
   FXVec3d  center;
   FXdouble radius;
@@ -118,28 +118,28 @@ public:
   bool intersect(const FXVec3d& u,const FXVec3d& v) const;
 
   /// Test if box overlaps with sphere
-  friend bool overlap(const FXRanged& a,const FXSphered& b);
+  friend FXAPI bool overlap(const FXRanged& a,const FXSphered& b);
 
   /// Test if sphere overlaps with box
-  friend bool overlap(const FXSphered& a,const FXRanged& b);
+  friend FXAPI bool overlap(const FXSphered& a,const FXRanged& b);
 
   /// Test if spheres overlap
-  friend bool overlap(const FXSphered& a,const FXSphered& b);
+  friend FXAPI bool overlap(const FXSphered& a,const FXSphered& b);
 
   /// Save object to a stream
-  friend FXStream& operator<<(FXStream& store,const FXSphered& sphere);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXSphered& sphere);
 
   /// Load object from a stream
-  friend FXStream& operator>>(FXStream& store,FXSphered& sphere);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXSphered& sphere);
   };
 
 
-extern bool overlap(const FXRanged& a,const FXSphered& b);
-extern bool overlap(const FXSphered& a,const FXRanged& b);
-extern bool overlap(const FXSphered& a,const FXSphered& b);
+extern FXAPI bool overlap(const FXRanged& a,const FXSphered& b);
+extern FXAPI bool overlap(const FXSphered& a,const FXRanged& b);
+extern FXAPI bool overlap(const FXSphered& a,const FXSphered& b);
 
-extern FXStream& operator<<(FXStream& store,const FXSphered& sphere);
-extern FXStream& operator>>(FXStream& store,FXSphered& sphere);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXSphered& sphere);
+extern FXAPI FXStream& operator>>(FXStream& store,FXSphered& sphere);
 
 }
 

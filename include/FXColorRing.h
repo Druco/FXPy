@@ -42,7 +42,7 @@ class FXImage;
 * triangle goes from a fully saturated "pure" color to "pastel" color;
 * the brightness goes from black to a bright color.
 */
-class FXColorRing : public FXFrame {
+class FXAPI FXColorRing : public FXFrame {
   FXDECLARE(FXColorRing)
 protected:
   FXImage  *dial;         // HSV dial image

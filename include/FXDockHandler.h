@@ -35,7 +35,7 @@ namespace FX {
 * The dock handler exists as a common base class for tool bar grip
 * and dock title.
 */
-class FXDockHandler : public FXFrame {
+class FXAPI FXDockHandler : public FXFrame {
   FXDECLARE_ABSTRACT(FXDockHandler)
 protected:
   FXString  tip;        // Tool tip

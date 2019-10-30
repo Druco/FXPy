@@ -3,15 +3,18 @@
 %pythonappend FX::FXDelegator::FXDelegator %{
   self.thisown = False
 %}
-
-
-%module FXDelegator
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyDelegator::FXPyDelegator %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXDelegator.h"
+
+namespace FX {
+class FXPyDelegator : public FXDelegator {
+public:
+    FXPyDelegator(FXObject* target=NULL);
+};
+
+}

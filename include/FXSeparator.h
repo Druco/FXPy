@@ -47,7 +47,7 @@ enum {
 * SEPARATOR_RIDGE, and SEPARATOR_LINE options.  Since its derived from Frame,
 * it can also have the frame's border styles.
 */
-class FXSeparator : public FXFrame {
+class FXAPI FXSeparator : public FXFrame {
   FXDECLARE(FXSeparator)
 protected:
   FXSeparator(){}
@@ -77,7 +77,7 @@ public:
 
 
 /// Horizontal separator widget
-class FXHorizontalSeparator : public FXSeparator {
+class FXAPI FXHorizontalSeparator : public FXSeparator {
   FXDECLARE(FXHorizontalSeparator)
 protected:
   FXHorizontalSeparator(){}
@@ -93,7 +93,7 @@ public:
 
 
 /// Vertical separator widget
-class FXVerticalSeparator : public FXSeparator {
+class FXAPI FXVerticalSeparator : public FXSeparator {
   FXDECLARE(FXVerticalSeparator)
 protected:
   FXVerticalSeparator(){}

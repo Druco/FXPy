@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Text search dialog
-class FXSearchDialog : public FXReplaceDialog {
+class FXAPI FXSearchDialog : public FXReplaceDialog {
   FXDECLARE(FXSearchDialog)
 protected:
   FXSearchDialog(){}

@@ -55,7 +55,7 @@ class FXTabBar;
 * In the tab book, activating a tab item also causes
 * the corresponding panel to be raised to the top.
 */
-class FXTabItem : public FXLabel {
+class FXAPI FXTabItem : public FXLabel {
   FXDECLARE(FXTabItem)
 protected:
   FXTabItem(){}

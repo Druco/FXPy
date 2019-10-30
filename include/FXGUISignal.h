@@ -54,7 +54,7 @@ class FXApp;
 * then notifies the main user-interface thread (via the FXGUISignal) to update
 * the user interface and perform some appropriate action.
 */
-class FXGUISignal : public FXObject {
+class FXAPI FXGUISignal : public FXObject {
   FXDECLARE(FXGUISignal)
 private:
   FXApp     *app;       // Application

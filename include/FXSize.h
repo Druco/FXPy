@@ -29,7 +29,7 @@ namespace FX {
 
 
 /// Size
-class FXSize {
+class FXAPI FXSize {
 public:
   FXshort w;
   FXshort h;
@@ -89,10 +89,10 @@ public:
   friend inline FXSize operator/(FXshort c,const FXSize& s);
 
   /// Save object to a stream
-  friend FXStream& operator<<(FXStream& store,const FXSize& s);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXSize& s);
 
   /// Load object from a stream
-  friend FXStream& operator>>(FXStream& store,FXSize& s);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXSize& s);
   };
 
 inline FXSize operator*(const FXSize& s,FXshort c){ return FXSize(s.w*c,s.h*c); }
@@ -100,8 +100,8 @@ inline FXSize operator*(FXshort c,const FXSize& s){ return FXSize(c*s.w,c*s.h); 
 inline FXSize operator/(const FXSize& s,FXshort c){ return FXSize(s.w/c,s.h/c); }
 inline FXSize operator/(FXshort c,const FXSize& s){ return FXSize(c/s.w,c/s.h); }
 
-extern FXStream& operator<<(FXStream& store,const FXSize& s);
-extern FXStream& operator>>(FXStream& store,FXSize& s);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXSize& s);
+extern FXAPI FXStream& operator>>(FXStream& store,FXSize& s);
 
 }
 

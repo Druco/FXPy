@@ -42,7 +42,7 @@ namespace FX {
 * to a variable.  In this case, the new value of the connected variable is computed
 * by subtracting ID_OPTION from the message ID.
 */
-class FXDataTarget : public FXObject {
+class FXAPI FXDataTarget : public FXObject {
   FXDECLARE(FXDataTarget)
 protected:
   FXObject     *target;                 // Target object

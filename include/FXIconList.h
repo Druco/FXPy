@@ -55,7 +55,7 @@ class FXFileList;
 
 
 /// Icon item
-class FXIconItem : public FXObject {
+class FXAPI FXIconItem : public FXObject {
   FXDECLARE(FXIconItem)
   friend class FXIconList;
   friend class FXFileList;
@@ -192,7 +192,7 @@ typedef FXObjectListOf<FXIconItem> FXIconItemList;
 * In each of these cases, the index to the item, if any, is passed in the
 * 3rd argument of the message.
 */
-class FXIconList : public FXScrollArea {
+class FXAPI FXIconList : public FXScrollArea {
   FXDECLARE(FXIconList)
 protected:
   FXHeader          *header;            // Header control

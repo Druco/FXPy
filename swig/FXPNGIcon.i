@@ -3,16 +3,10 @@
 %pythonappend FX::FXPNGIcon::FXPNGIcon %{
   self.thisown = False
 %}
-
-
-%module FXPNGIcon
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXPNGIcon.h"
+%pythonappend FX::FXPyPNGIcon::FXPyPNGIcon %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 #ifndef FXICON_H
@@ -65,4 +59,8 @@ extern bool fxloadPNG(FXStream& store,FXColor*& data,FXint& width,FXint& height)
 */
 extern bool fxsavePNG(FXStream& store,const FXColor* data,FXint width,FXint height);
 
+class FXPyPNGIcon : public FXPNGIcon {
+public:
+    FXPyPNGIcon(FXApp *a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
+};
 }

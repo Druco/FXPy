@@ -65,7 +65,7 @@ class FXPopup;
 * on, which will behave similar to Text Field in that they will retrieve or update
 * the value of the field.
 */
-class FXComboBox : public FXPacker {
+class FXAPI FXComboBox : public FXPacker {
   FXDECLARE(FXComboBox)
 protected:
   FXTextField   *field;

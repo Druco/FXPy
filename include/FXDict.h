@@ -38,7 +38,7 @@ namespace FX {
 * the createData() and deleteData() members allows any type of data to
 * be indexed by strings.
 */
-class FXDict : public FXObject {
+class FXAPI FXDict : public FXObject {
   FXDECLARE(FXDict)
 protected:
   struct FXDictEntry {

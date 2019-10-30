@@ -41,7 +41,7 @@ class FXGLCanvas;
 
 
 /// Visual describes pixel format of a drawable
-class FXGLVisual : public FXVisual {
+class FXAPI FXGLVisual : public FXVisual {
   FXDECLARE(FXGLVisual)
   friend class FXWindow;
   friend class FXImage;
@@ -148,7 +148,7 @@ public:
 
 
 /// Create a display list of bitmaps from font glyphs in a font
-extern void glUseFXFont(FXFont* font,int first,int count,int list);
+extern FXAPI void glUseFXFont(FXFont* font,int first,int count,int list);
 
 }
 

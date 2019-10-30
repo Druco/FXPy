@@ -37,7 +37,7 @@ class FXArrowButton;
 * It is useful when menus are populated programmatically and it is not
 * known in advance how many entries will be added.
 */
-class FXScrollPane : public FXMenuPane {
+class FXAPI FXScrollPane : public FXMenuPane {
   FXDECLARE(FXScrollPane)
 protected:
   FXArrowButton *dn;            // Button to scroll down

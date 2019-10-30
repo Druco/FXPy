@@ -43,7 +43,7 @@ class FXGLVisual;
 * GL visual.
 * However, display lists may be shared between different GL contexts.
 */
-class FXGLContext : public FXId {
+class FXAPI FXGLContext : public FXId {
   FXDECLARE(FXGLContext)
 private:
   FXGLVisual     *visual;     // Visual for this context

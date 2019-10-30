@@ -45,7 +45,7 @@ class FXApp;
 * When adding or removing file names, the recent files object automatically
 * updates the system registry to record these changes.
 */
-class FXRecentFiles : public FXObject {
+class FXAPI FXRecentFiles : public FXObject {
   FXDECLARE(FXRecentFiles)
 private:
   FXApp      *app;            // Backlink to application

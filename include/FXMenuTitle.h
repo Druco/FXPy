@@ -38,7 +38,7 @@ class FXPopup;
 * A menu title is a child of a menu bar which is responsible
 * for popping up a pulldown menu.
 */
-class FXMenuTitle : public FXMenuCaption {
+class FXAPI FXMenuTitle : public FXMenuCaption {
   FXDECLARE(FXMenuTitle)
 protected:
   FXPopup *pane;        // Pane to pop up

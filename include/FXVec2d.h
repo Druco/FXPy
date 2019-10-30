@@ -32,7 +32,7 @@ class FXMat3d;
 
 
 /// Double-precision 2-element vector
-class FXVec2d {
+class FXAPI FXVec2d {
 public:
   FXdouble x;
   FXdouble y;
@@ -141,13 +141,13 @@ public:
   friend inline FXVec2d hi(const FXVec2d& a,const FXVec2d& b);
 
   /// Normalize vector
-  friend FXVec2d normalize(const FXVec2d& v);
+  friend FXAPI FXVec2d normalize(const FXVec2d& v);
 
   /// Save vector to a stream
-  friend FXStream& operator<<(FXStream& store,const FXVec2d& v);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXVec2d& v);
 
   /// Load vector from a stream
-  friend FXStream& operator>>(FXStream& store,FXVec2d& v);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXVec2d& v);
   };
 
 
@@ -174,10 +174,10 @@ inline bool operator>=(FXdouble n,const FXVec2d& a){return n>=a.x && n>=a.y;}
 inline FXVec2d lo(const FXVec2d& a,const FXVec2d& b){return FXVec2d(FXMIN(a.x,b.x),FXMIN(a.y,b.y));}
 inline FXVec2d hi(const FXVec2d& a,const FXVec2d& b){return FXVec2d(FXMAX(a.x,b.x),FXMAX(a.y,b.y));}
 
-extern FXVec2d normalize(const FXVec2d& v);
+extern FXAPI FXVec2d normalize(const FXVec2d& v);
 
-extern FXStream& operator<<(FXStream& store,const FXVec2d& v);
-extern FXStream& operator>>(FXStream& store,FXVec2d& v);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXVec2d& v);
+extern FXAPI FXStream& operator>>(FXStream& store,FXVec2d& v);
 
 }
 

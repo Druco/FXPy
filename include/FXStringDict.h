@@ -34,7 +34,7 @@ namespace FX {
 * String dictionary maps a character string to a character string.
 * The inserted strings are copied when they're inserted.
 */
-class FXStringDict : public FXDict {
+class FXAPI FXStringDict : public FXDict {
   FXDECLARE(FXStringDict)
 protected:
   virtual void *createData(const void*);

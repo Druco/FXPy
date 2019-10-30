@@ -4,13 +4,17 @@
 %pythonappend FX::FXAccelTable::FXAccelTable %{
   self.thisown = False
 %}
-
-%module FXAccelTable
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyAccelTable::FXPyAccelTable %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
 
 %include "include/fxdefs2.h"
 %include "include/FXAccelTable.h"
+
+namespace FX {
+class FXPyAccelTable : public FXAccelTable {
+  FXPyAccelTable();
+  };
+
+}

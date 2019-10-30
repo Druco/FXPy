@@ -131,7 +131,7 @@ class FXDCWindow;
 
 
 /// Font class
-class FXFont : public FXId {
+class FXAPI FXFont : public FXId {
   friend class FXDCWindow;
   FXDECLARE(FXFont)
 protected:

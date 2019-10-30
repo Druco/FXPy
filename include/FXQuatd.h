@@ -32,7 +32,7 @@ class FXMat3d;
 
 
 /// Double-precision quaternion
-class FXQuatd : public FXVec4d {
+class FXAPI FXQuatd : public FXVec4d {
 public:
 
   /// Constructors

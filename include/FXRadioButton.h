@@ -51,7 +51,7 @@ enum {
 * to a common data target.  Alternatively, an application can implement a
 * common SEL_UPDATED handler to check and uncheck radio buttons as appropriate.
 */
-class FXRadioButton : public FXLabel {
+class FXAPI FXRadioButton : public FXLabel {
   FXDECLARE(FXRadioButton)
 protected:
   FXColor  radioColor;  // Color of radio ball

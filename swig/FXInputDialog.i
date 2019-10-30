@@ -3,6 +3,10 @@
 %pythonappend FX::FXInputDialog::FXInputDialog %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyInputDialog::FXPyInputDialog %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXDIALOGBOX_H
 #include "FXDialogBox.h"
@@ -96,4 +100,9 @@ public:
   static FXbool getReal(FXdouble& result,FXApp* app,const FXString& caption,const FXString& label,FXIcon* icon=NULL,FXdouble lo=-1.797693134862315e+308,FXdouble hi=1.797693134862315e+308);
   };
 
+class FXPyInputDialog : public FXInputDialog {
+public:
+    FXPyInputDialog(FXWindow* owner,const FXString& caption,const FXString& label,FXIcon* icon=NULL,FXuint opts=INPUTDIALOG_STRING,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+    FXPyInputDialog(FXApp* app,const FXString& caption,const FXString& label,FXIcon* icon=NULL,FXuint opts=INPUTDIALOG_STRING,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
 }

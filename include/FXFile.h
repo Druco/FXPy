@@ -35,7 +35,7 @@ namespace FX {
 /**
 * Low level file access.
 */
-class FXFile : public FXIO {
+class FXAPI FXFile : public FXIO {
 private:
   FXFile(const FXFile&);
   FXFile &operator=(const FXFile&);

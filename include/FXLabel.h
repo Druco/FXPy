@@ -64,7 +64,7 @@ class FXFont;
 * by the icon relationship options.  A large number of arrangements is
 * possible.
 */
-class FXLabel : public FXFrame {
+class FXAPI FXLabel : public FXFrame {
   FXDECLARE(FXLabel)
 protected:
   FXString label;       // Text on the label

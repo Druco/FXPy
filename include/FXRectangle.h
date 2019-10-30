@@ -34,7 +34,7 @@ namespace FX {
 
 
 /// Rectangle
-class FXRectangle {
+class FXAPI FXRectangle {
 public:
   FXshort x;
   FXshort y;
@@ -112,17 +112,17 @@ public:
   FXRectangle operator*(const FXRectangle& r) const;
 
   /// Save object to a stream
-  friend FXStream& operator<<(FXStream& store,const FXRectangle& r);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXRectangle& r);
 
   /// Load object from a stream
-  friend FXStream& operator>>(FXStream& store,FXRectangle& r);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXRectangle& r);
   };
 
 
 inline bool overlap(const FXRectangle& a,const FXRectangle& b){ return b.x<a.x+a.w && b.y<a.y+a.h && a.x<b.x+b.w && a.y<b.y+b.h; }
 
-extern FXStream& operator<<(FXStream& store,const FXRectangle& r);
-extern FXStream& operator>>(FXStream& store,FXRectangle& r);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXRectangle& r);
+extern FXAPI FXStream& operator>>(FXStream& store,FXRectangle& r);
 
 }
 

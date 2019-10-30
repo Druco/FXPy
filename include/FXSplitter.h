@@ -62,7 +62,7 @@ enum {
 * In a vertically oriented splitter, children with LAYOUT_FILL_Y and
 * LAYOUT_FIX_HEIGHT behave analogously.
 */
-class FXSplitter : public FXComposite {
+class FXAPI FXSplitter : public FXComposite {
   FXDECLARE(FXSplitter)
 private:
   FXWindow *window;         // Window being resized

@@ -3,6 +3,10 @@
 %pythonappend FX::FXHeader::FXHeader %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyHeader::FXPyHeader %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXFRAME_H
 #include "FXFrame.h"
@@ -362,5 +366,10 @@ public:
   /// Destructor
   virtual ~FXHeader();
   };
+
+class FXPyHeader : public FXHeader {
+public:
+    FXHeaderItem(const FXString& text,FXIcon* ic=NULL,FXint s=0,void* ptr=NULL);
+};
 
 }

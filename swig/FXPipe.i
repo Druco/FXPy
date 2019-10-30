@@ -3,15 +3,9 @@
 %pythonappend FX::FXPipe::FXPipe %{
   self.thisown = False
 %}
-
-
-%module FXPipe
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyPipe::FXPyPipe %{
+  self.thisown = False
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXPipe.h"

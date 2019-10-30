@@ -82,7 +82,7 @@ struct FXFileAssoc {
 * to execute the application in the shown directory; the second one is meant
 * to indicate that the application is to be ran inside a new terminal.
 */
-class FXFileDict : public FXDict {
+class FXAPI FXFileDict : public FXDict {
   FXDECLARE(FXFileDict)
 private:
   FXSettings *settings; // Settings database where to get bindings

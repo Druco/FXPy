@@ -57,7 +57,7 @@ struct FXViewport {
 
 
 // OpenGL Light Source
-struct FXLight {
+struct FXAPI FXLight {
   FXVec4f    ambient;           // Ambient light color
   FXVec4f    diffuse;           // Diffuse light color
   FXVec4f    specular;          // Specular light color
@@ -72,7 +72,7 @@ struct FXLight {
 
 
 // OpenGL Material Description
-struct FXMaterial {
+struct FXAPI FXMaterial {
   FXVec4f    ambient;           // Ambient material color
   FXVec4f    diffuse;           // Diffuse material color
   FXVec4f    specular;          // Specular material color
@@ -89,7 +89,7 @@ typedef FXbool (*FXZSortFunc)(FXfloat*& buffer,FXint& used,FXint& size);
 
 
 /// OpenGL viewer widget
-class FXGLViewer : public FXGLCanvas {
+class FXAPI FXGLViewer : public FXGLCanvas {
   FXDECLARE(FXGLViewer)
   friend class FXGLObject;
 protected:

@@ -52,7 +52,7 @@ namespace FX {
 * Since the spring widget is derived from the packer layout manager,
 * it provides the same layout behavior as packer.
 */
-class FXSpring : public FXPacker {
+class FXAPI FXSpring : public FXPacker {
   FXDECLARE(FXSpring)
 protected:
   FXint   relWidth;     // Relative width

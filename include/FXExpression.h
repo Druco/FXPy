@@ -41,7 +41,7 @@ enum FXExpressionError {
 
 
 /// Expression
-class FXExpression {
+class FXAPI FXExpression {
 private:
   FXuchar *code;
 private:

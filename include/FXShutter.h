@@ -43,7 +43,7 @@ class FXShutterItem;
 * the content widget.  The content widget is itself embedded in a scroll
 * window to allow unlimited room for all the contents.
 */
-class FXShutterItem : public FXVerticalFrame {
+class FXAPI FXShutterItem : public FXVerticalFrame {
   FXDECLARE(FXShutterItem)
   friend class FXShutter;
 protected:
@@ -96,7 +96,7 @@ public:
 * consists of a Shutter Item which contains a button and some contents.
 * A sub panel can be unfolded by pressing on that panel's button.
 */
-class FXShutter : public FXVerticalFrame {
+class FXAPI FXShutter : public FXVerticalFrame {
   FXDECLARE(FXShutter)
   friend class FXShutterItem;
 protected:

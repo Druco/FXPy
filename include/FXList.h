@@ -48,7 +48,7 @@ class FXList;
 
 
 /// List item
-class FXListItem : public FXObject {
+class FXAPI FXListItem : public FXObject {
   FXDECLARE(FXListItem)
   friend class FXList;
 protected:
@@ -166,7 +166,7 @@ typedef FXObjectListOf<FXListItem> FXListItemList;
 * In each of these cases, the index to the item, if any, is passed in the
 * 3rd argument of the message.
 */
-class FXList : public FXScrollArea {
+class FXAPI FXList : public FXScrollArea {
   FXDECLARE(FXList)
 protected:
   FXListItemList items;             // Item list

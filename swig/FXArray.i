@@ -8,13 +8,6 @@
 #define __GNUC__
 %module FXArray
 
-%{
-#include "include/fxdefs.h"
-#include "include/FXObject.h"
-#include "include/FXArray.h"
-%}
-
-
 %include "include/FXArray.h"
 
 

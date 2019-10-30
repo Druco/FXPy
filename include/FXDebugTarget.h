@@ -36,7 +36,7 @@ namespace FX {
 * To use it, simply make the DebugTarget a target of the widget
 * whose messages you want to see,
 */
-class FXDebugTarget : public FXObject {
+class FXAPI FXDebugTarget : public FXObject {
   FXDECLARE(FXDebugTarget)
 protected:
   FXObject   *lastsender;

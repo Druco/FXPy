@@ -3,6 +3,10 @@
 %pythonappend FX::FXIconDict::FXIconDict %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyIconDict::FXPyIconDict %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXDICT_H
 #include "FXDict.h"
@@ -72,5 +76,9 @@ public:
   virtual ~FXIconDict();
   };
 
+class FXPyIconDict : public FXIconDict {
+public:
+    FXPyIconDict(FXApp* app,const FXString& p=defaultIconPath);
+};
 
 }

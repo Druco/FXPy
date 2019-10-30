@@ -45,7 +45,7 @@ class FXSwitcher;
 * For example, a Wizard may be used to install software components,
 * and ask various questions at each step in the installation.
 */
-class FXWizard : public FXDialogBox {
+class FXAPI FXWizard : public FXDialogBox {
   FXDECLARE(FXWizard)
 protected:
   FXHorizontalFrame *buttons;           // Button frame

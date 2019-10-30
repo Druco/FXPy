@@ -3,15 +3,17 @@
 %pythonappend FX::FXStringDict::FXStringDict %{
   self.thisown = False
 %}
-
-
-%module FXStringDict
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyStringDict::FXPyStringDict %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXStringDict.h"
+
+namespace FX {
+class FXPyStringDict : public FXStringDict {
+public:
+    FXPyStringDict();
+};
+}

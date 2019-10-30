@@ -3,6 +3,10 @@
 %pythonappend FX::FXGIFImage::FXGIFImage %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyGIFImage::FXPyGIFImage %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXIMAGE_H
 #include "FXImage.h"
@@ -54,5 +58,10 @@ extern bool fxloadGIF(FXStream& store,FXColor*& data,FXint& width,FXint& height)
 extern bool fxsaveGIF(FXStream& store,const FXColor *data,FXint width,FXint height,bool fast=true);
 
 #endif
+
+class FXPyGIFImage : public FXGIFImage {
+public:
+    FXPyGIFImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
+};
 
 }

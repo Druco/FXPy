@@ -63,7 +63,7 @@ enum {
 * TEXTFIELD_ENTER_ONLY can be passed to suppress this feature. Typically, this
 * flag is used in dialogs that close when ENTER is hit in a text field.
 */
-class FXTextField : public FXFrame {
+class FXAPI FXTextField : public FXFrame {
   FXDECLARE(FXTextField)
 protected:
   FXString      contents;       // Edited text

@@ -41,7 +41,7 @@ class FXDockSite;
 * a SEL_FLOATED message.  In either case the dock site involved is passed
 * in the void* pointer argument of the message.
 */
-class FXDockBar : public FXPacker {
+class FXAPI FXDockBar : public FXPacker {
   FXDECLARE(FXDockBar)
 protected:
   FXComposite *drydock;	        // Parent when docked

@@ -35,7 +35,7 @@ class FXFontSelector;
 
 
 /// Font selection dialog
-class FXFontDialog : public FXDialogBox {
+class FXAPI FXFontDialog : public FXDialogBox {
   FXDECLARE(FXFontDialog)
 protected:
   FXFontSelector *fontbox;

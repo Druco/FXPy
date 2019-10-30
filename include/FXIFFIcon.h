@@ -34,7 +34,7 @@ namespace FX {
 /**
 * The IFF Icon provides support for the EA/Amiga Image File Format.
 */
-class FXIFFIcon : public FXIcon {
+class FXAPI FXIFFIcon : public FXIcon {
   FXDECLARE(FXIFFIcon)
 protected:
   FXIFFIcon(){}
@@ -67,7 +67,7 @@ public:
 /**
 * Check if stream contains a IFF, return TRUE if so.
 */
-extern bool fxcheckIFF(FXStream& store);
+extern FXAPI bool fxcheckIFF(FXStream& store);
 
 
 /**
@@ -75,7 +75,7 @@ extern bool fxcheckIFF(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadIFF(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadIFF(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 #endif

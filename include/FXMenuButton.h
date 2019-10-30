@@ -69,7 +69,7 @@ enum {
 * the popup is set to appear; this can be turned off by passing the option
 * MENUBUTTON_NOARROWS.
 */
-class FXMenuButton : public FXLabel {
+class FXAPI FXMenuButton : public FXLabel {
   FXDECLARE(FXMenuButton)
 protected:
   FXPopup *pane;                  // Pane to pop up

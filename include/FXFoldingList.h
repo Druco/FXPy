@@ -52,7 +52,7 @@ enum {
 
 
 /// Tree list Item
-class FXFoldingItem : public FXObject {
+class FXAPI FXFoldingItem : public FXObject {
   FXDECLARE(FXFoldingItem)
   friend class FXFoldingList;
   friend class FXDirList;
@@ -241,7 +241,7 @@ typedef FXint (*FXFoldingListSortFunc)(const FXFoldingItem*,const FXFoldingItem*
 * In each of these cases, a pointer to the item, if any, is passed in the
 * 3rd argument of the message.
 */
-class FXFoldingList : public FXScrollArea {
+class FXAPI FXFoldingList : public FXScrollArea {
   FXDECLARE(FXFoldingList)
 protected:
   FXHeader          *header;            // Tree header

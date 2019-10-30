@@ -42,7 +42,7 @@ class FXCondition;
 * FXMutex provides a mutex which can be used to enforce critical
 * sections around updates of data shared by multiple threads.
 */
-class FXMutex {
+class FXAPI FXMutex {
   friend class FXCondition;
 private:
   FXuval data[24];
@@ -78,7 +78,7 @@ public:
 * The mutex will be automatically released when the scope is
 * left (either by natural means or by means of an exception.
 */
-class FXMutexLock {
+class FXAPI FXMutexLock {
 private:
   FXMutex& mtx;
 private:
@@ -117,7 +117,7 @@ public:
 * condition becomes signaled, the associated mutex is
 * locked and the thread(s) are reawakened.
 */
-class FXCondition {
+class FXAPI FXCondition {
 private:
   FXuval data[12];
 private:
@@ -162,7 +162,7 @@ public:
 * A semaphore allows for protection of a resource that can
 * be accessed by a fixed number of simultaneous threads.
 */
-class FXSemaphore {
+class FXAPI FXSemaphore {
 private:
   FXuval data[16];
 private:
@@ -194,7 +194,7 @@ public:
 * The storage of the FXThread object is to be managed by the
 * calling thread, not by the thread itself.
 */
-class FXThread {
+class FXAPI FXThread {
 private:
   volatile FXThreadID tid;
 private:

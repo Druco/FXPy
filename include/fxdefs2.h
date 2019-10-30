@@ -68,7 +68,9 @@
 /// Return the minimum of a or b
 #define FXMIN(a,b) (((a)>(b))?(b):(a))
 
+#undef FX_PRINTF
 #define FX_PRINTF(fmt,arg) ;
+#undef FX_SCANF
 #define FX_SCANF(fmt,arg) ;
 
 #undef FXAPI

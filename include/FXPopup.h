@@ -41,7 +41,7 @@ enum {
 
 
 /// Popup window
-class FXPopup : public FXShell {
+class FXAPI FXPopup : public FXShell {
   FXDECLARE(FXPopup)
 private:
   FXPopup  *prevActive;         // Popup below this one in stack

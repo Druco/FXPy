@@ -50,7 +50,7 @@ enum {
 * elsewhere.  Thus, a single bitmap image can be displayed inside multiple bitmap
 * view widgets.
 */
-class FXBitmapView : public FXScrollArea {
+class FXAPI FXBitmapView : public FXScrollArea {
   FXDECLARE(FXBitmapView)
 protected:
   FXBitmap *bitmap;     // Image to view

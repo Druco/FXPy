@@ -34,7 +34,7 @@ class FXApp;
 
 
 /// Encapsulates server side resource
-class FXId : public FXObject {
+class FXAPI FXId : public FXObject {
   FXDECLARE_ABSTRACT(FXId)
 private:
   FXApp *app;             // Back link to application object

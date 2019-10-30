@@ -3,6 +3,10 @@
 %pythonappend FX::FXDict::FXDict %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyDict::FXPyDict %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXOBJECT_H
 #include "FXObject.h"
@@ -121,5 +125,10 @@ public:
   /// Destructor
   virtual ~FXDict();
   };
+
+class FXPyDict : public FXDict {
+public:
+    FXPyDict();
+};
 
 }

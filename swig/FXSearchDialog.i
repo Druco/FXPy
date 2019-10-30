@@ -3,15 +3,18 @@
 %pythonappend FX::FXSearchDialog::FXSearchDialog %{
   self.thisown = False
 %}
-
-
-%module FXSearchDialog
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPySearchDialog::FXPySearchDialog %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXSearchDialog.h"
+
+
+namespace FX {
+class FXPySearchDialog : public FXSearchDialog {
+public:
+    FXPySearchDialog(FXWindow* owner,const FXString& caption,FXIcon* ic=NULL,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+}

@@ -38,7 +38,7 @@ namespace FX {
 /**
 * Socket i/o device.
 */
-class FXSocket : public FXIO {
+class FXAPI FXSocket : public FXIO {
 private:
   FXSocket(const FXSocket&);
   FXSocket &operator=(const FXSocket&);

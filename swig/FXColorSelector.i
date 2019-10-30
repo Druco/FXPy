@@ -3,15 +3,18 @@
 %pythonappend FX::FXColorSelector::FXColorSelector %{
   self.thisown = False
 %}
-
-
-%module FXColorSelector
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyColorSelector::FXPYColorSelector %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXColorSelector.h"
+
+namespace FX {
+class FXPyColorSelector : public FXColorSelector {
+public:
+  FXPyColorSelector(FXComposite *p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+}

@@ -39,7 +39,7 @@ class FXWindow;
 * Compose Context manages the state of an input method
 * if input method support is enabled.
 */
-class FXComposeContext : public FXId {
+class FXAPI FXComposeContext : public FXId {
   FXDECLARE(FXComposeContext)
 protected:
   FXWindow  *window;            // Window we belong to

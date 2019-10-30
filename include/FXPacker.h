@@ -48,7 +48,7 @@ enum { DEFAULT_SPACING = 4 };
 * The last child may have both LAYOUT_FILL_X and LAYOUT_FILL_Y, in which
 * case it will be placed to take all remaining space.
 */
-class FXPacker : public FXComposite {
+class FXAPI FXPacker : public FXComposite {
   FXDECLARE(FXPacker)
 protected:
   FXColor baseColor;        // Base color

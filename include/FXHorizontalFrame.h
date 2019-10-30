@@ -36,7 +36,7 @@ namespace FX {
 * place child-windows horizontally from left-to-right, or right-to-left,
 * depending on the child window's layout hints.
 */
-class FXHorizontalFrame : public FXPacker {
+class FXAPI FXHorizontalFrame : public FXPacker {
   FXDECLARE(FXHorizontalFrame)
 protected:
   FXHorizontalFrame(){}

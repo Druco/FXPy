@@ -57,7 +57,7 @@ enum {
 * at the end of the interaction, a SEL_COMMAND message is sent.
 * The message data represents the current slider value, of type pointer to FXdouble.
 */
-class FXRealSlider : public FXFrame {
+class FXAPI FXRealSlider : public FXFrame {
   FXDECLARE(FXRealSlider)
 protected:
   FXdouble      range[2];                 // Reported data range

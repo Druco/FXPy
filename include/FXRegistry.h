@@ -52,7 +52,7 @@ namespace FX {
 * The registry is read when FXApp::init() is called, and written back to the
 * system when FXApp::exit() is called.
 */
-class FXRegistry : public FXSettings {
+class FXAPI FXRegistry : public FXSettings {
   FXDECLARE(FXRegistry)
 protected:
   FXString applicationkey;  // Application key

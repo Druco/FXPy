@@ -57,7 +57,7 @@ enum {
 * at the end of the interaction, a SEL_COMMAND message is sent.
 * The message data represents the current slider value, of type FXint.
 */
-class FXSlider : public FXFrame {
+class FXAPI FXSlider : public FXFrame {
   FXDECLARE(FXSlider)
 protected:
   FXint         range[2];                 // Reported data range

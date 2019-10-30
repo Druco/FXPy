@@ -1,6 +1,24 @@
 /* FXTable.i */
 
+%pythonappend FX::FXTableItem::FXTableItem %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyTableItem::FXPyTableItem %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
+
+%pythonappend FX::FXComboTableItem::FXComboTableItem %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyComboTableItem::FXPyComboTableItem %{
+  self.thisown = False
+%}
+
 %pythonappend FX::FXTable::FXTable %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyTable::FXPyTable %{
   self.thisown = False
 %}
 
@@ -16,7 +34,7 @@ class FXFont;
 class FXTable;
 class FXHeader;
 class FXButton;
-
+enum FXStipplePattern;
 
 /// Default cell margin
 enum { DEFAULT_MARGIN = 2 };
@@ -922,4 +940,21 @@ public:
   virtual ~FXTable();
   };
 
+
+class FXPyTableItem : public FXTableItem {
+public:
+    FXPyTableItem(const FXString& text,FXIcon* ic=NULL,void* ptr=NULL);
+};
+
+class FXPyComboTableItem : public FXComboTableItem {
+public:
+    FXPyComboTableItem(const FXString& text,FXIcon* ic=NULL,void* ptr=NULL);
+    %pragma(python) addtomethod = "__init__:FXPyRegister(self)"
+};
+
+class FXPyTable : public FXTable {
+public:
+    FXPyTable(FXComposite *p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_MARGIN,FXint pr=DEFAULT_MARGIN,FXint pt=DEFAULT_MARGIN,FXint pb=DEFAULT_MARGIN);
+    %pragma(python) addtomethod = "__init__:FXPyRegister(self)"
+};
 }

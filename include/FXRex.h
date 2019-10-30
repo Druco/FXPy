@@ -96,7 +96,7 @@ enum {
 * or line end. The flag REX_NOT_EMPTY causes a match to fail if
 * the empty string was matched.
 */
-class FXRex {
+class FXAPI FXRex {
 private:
   FXint *code;
 private:
@@ -164,16 +164,16 @@ public:
   bool operator!=(const FXRex& rex) const;
 
   /// Saving and loading
-  friend FXStream& operator<<(FXStream& store,const FXRex& s);
-  friend FXStream& operator>>(FXStream& store,FXRex& s);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXRex& s);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXRex& s);
 
   /// Delete
  ~FXRex();
   };
 
 
-extern FXStream& operator<<(FXStream& store,const FXRex& s);
-extern FXStream& operator>>(FXStream& store,FXRex& s);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXRex& s);
+extern FXAPI FXStream& operator>>(FXStream& store,FXRex& s);
 
 }
 

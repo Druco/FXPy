@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// TIFF Image class
-class FXTIFImage : public FXImage {
+class FXAPI FXTIFImage : public FXImage {
   FXDECLARE(FXTIFImage)
 protected:
   FXushort codec;
@@ -72,7 +72,7 @@ public:
 /**
 * Check if stream contains a TIFF, return TRUE if so.
 */
-extern bool fxcheckTIF(FXStream& store);
+extern FXAPI bool fxcheckTIF(FXStream& store);
 
 
 /**
@@ -80,13 +80,13 @@ extern bool fxcheckTIF(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadTIF(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXushort& codec);
+extern FXAPI bool fxloadTIF(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXushort& codec);
 
 
 /**
 * Save an TIFF (Tagged Image File Format) file to a stream.
 */
-extern bool fxsaveTIF(FXStream& store,const FXColor* data,FXint width,FXint height,FXushort codec);
+extern FXAPI bool fxsaveTIF(FXStream& store,const FXColor* data,FXint width,FXint height,FXushort codec);
 
 }
 

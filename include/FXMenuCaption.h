@@ -46,7 +46,7 @@ class FXFont;
 * The menu caption is a widget which can be used as a caption
 * above a number of menu commands in a menu.
 */
-class FXMenuCaption : public FXWindow {
+class FXAPI FXMenuCaption : public FXWindow {
   FXDECLARE(FXMenuCaption)
 protected:
   FXString     label;

@@ -56,7 +56,7 @@ enum {
 * Empty cells can be obtained by simply placing a borderless FXFrame widget
 * as a space-holder.
 */
-class FXMatrix : public FXPacker {
+class FXAPI FXMatrix : public FXPacker {
   FXDECLARE(FXMatrix)
 protected:
   FXint  num;

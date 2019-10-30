@@ -49,7 +49,7 @@ enum {
 /**
 * The Image View widget display a scrollable view of an image.
 */
-class FXImageView : public FXScrollArea {
+class FXAPI FXImageView : public FXScrollArea {
   FXDECLARE(FXImageView)
 protected:
   FXImage *image;         // Image to view

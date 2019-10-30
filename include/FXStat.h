@@ -32,7 +32,7 @@ class FXFile;
 
 
 /// Statistics about a file or directory
-class FXStat {
+class FXAPI FXStat {
   friend class FXFile;
 private:
   FXuint  modeFlags;            /// Mode bits

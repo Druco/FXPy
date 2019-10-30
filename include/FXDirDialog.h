@@ -40,7 +40,7 @@ class FXDirSelector;
 * the Directory Dialog displays a tree-structured view of the file system, and
 * thereby makes up and down navigation through the file system significantly easier.
 */
-class FXDirDialog : public FXDialogBox {
+class FXAPI FXDirDialog : public FXDialogBox {
   FXDECLARE(FXDirDialog)
 protected:
   FXDirSelector *dirbox;          // Directory selection widget

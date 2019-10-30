@@ -29,7 +29,7 @@ namespace FX {
 
 
 /// Double-precision 4x4 matrix
-class FXMat4d {
+class FXAPI FXMat4d {
 protected:
   FXVec4d m[4];
 public:
@@ -86,10 +86,10 @@ public:
   FXMat4d operator*(const FXMat4d& w) const;
 
   /// Matrix and scalar
-  friend FXMat4d operator*(FXdouble x,const FXMat4d& a);
-  friend FXMat4d operator*(const FXMat4d& a,FXdouble x);
-  friend FXMat4d operator/(const FXMat4d& a,FXdouble x);
-  friend FXMat4d operator/(FXdouble x,const FXMat4d& a);
+  friend FXAPI FXMat4d operator*(FXdouble x,const FXMat4d& a);
+  friend FXAPI FXMat4d operator*(const FXMat4d& a,FXdouble x);
+  friend FXAPI FXMat4d operator/(const FXMat4d& a,FXdouble x);
+  friend FXAPI FXMat4d operator/(FXdouble x,const FXMat4d& a);
 
   /// Multiply matrix and vector
   FXVec4d operator*(const FXVec4d& v) const;
@@ -150,19 +150,19 @@ public:
   FXMat4d invert() const;
 
   /// Save to a stream
-  friend FXStream& operator<<(FXStream& store,const FXMat4d& m);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXMat4d& m);
 
   /// Load from a stream
-  friend FXStream& operator>>(FXStream& store,FXMat4d& m);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXMat4d& m);
   };
 
-extern FXMat4d operator*(FXdouble x,const FXMat4d& a);
-extern FXMat4d operator*(const FXMat4d& a,FXdouble x);
-extern FXMat4d operator/(const FXMat4d& a,FXdouble x);
-extern FXMat4d operator/(FXdouble x,const FXMat4d& a);
+extern FXAPI FXMat4d operator*(FXdouble x,const FXMat4d& a);
+extern FXAPI FXMat4d operator*(const FXMat4d& a,FXdouble x);
+extern FXAPI FXMat4d operator/(const FXMat4d& a,FXdouble x);
+extern FXAPI FXMat4d operator/(FXdouble x,const FXMat4d& a);
 
-extern FXStream& operator<<(FXStream& store,const FXMat4d& m);
-extern FXStream& operator>>(FXStream& store,FXMat4d& m);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXMat4d& m);
+extern FXAPI FXStream& operator>>(FXStream& store,FXMat4d& m);
 
 }
 

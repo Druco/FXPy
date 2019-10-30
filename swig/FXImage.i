@@ -3,6 +3,10 @@
 %pythonappend FX::FXImage::FXImage %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyImage::FXPyImage %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXDRAWABLE_H
 #include "FXDrawable.h"
@@ -207,4 +211,8 @@ public:
   virtual ~FXImage();
   };
 
+class FXPyImage : public FXImage {
+public:
+    FXPyImage(FXApp* a,const FXColor *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
+};
 }

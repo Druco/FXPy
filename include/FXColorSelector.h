@@ -46,7 +46,7 @@ class FXLabel;
 
 
 /// Color selection widget
-class FXColorSelector : public FXPacker {
+class FXAPI FXColorSelector : public FXPacker {
   FXDECLARE(FXColorSelector)
 protected:
   FXTabBook    *panels;               // Color panes

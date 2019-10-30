@@ -47,7 +47,7 @@ class FXDial;
 
 
 /// Spinner control
-class FXRealSpinner : public FXPacker {
+class FXAPI FXRealSpinner : public FXPacker {
   FXDECLARE(FXRealSpinner)
 protected:
   FXTextField   *textField;         // Text field

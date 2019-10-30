@@ -3,6 +3,10 @@
 %pythonappend FX::FXImageFrame::FXImageFrame %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyImageFrame::FXPyImageFrame %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 
 #ifndef FXFRAME_H
@@ -56,4 +60,9 @@ public:
   virtual ~FXImageFrame();
   };
 
+class FXPyImageFrame : public FXImageFrame {
+public:
+    FXPyImageFrame(FXComposite* p,FXImage *img,FXuint opts=FRAME_SUNKEN|FRAME_THICK,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=0,FXint pb=0);
+};
 }
+

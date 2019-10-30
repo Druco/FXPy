@@ -3,15 +3,18 @@
 %pythonappend FX::FXScrollWindow::FXScrollWindow %{
   self.thisown = False
 %}
-
-
-%module FXScrollWindow
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyScrollWindow::FXPyScrollWindow %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXScrollWindow.h"
+
+
+namespace FX {
+class FXPyScrollWindow : public FXScrollWindow {
+public:
+    FXPyScrollWindow(FXComposite* p,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+}

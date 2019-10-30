@@ -47,7 +47,7 @@ namespace FX {
 * is called with notify=TRUE.  Thus causes the tab book to send a
 * SEL_COMMAND message to its target.
 */
-class FXTabBook : public FXTabBar {
+class FXAPI FXTabBook : public FXTabBar {
   FXDECLARE(FXTabBook)
 protected:
   FXTabBook(){}

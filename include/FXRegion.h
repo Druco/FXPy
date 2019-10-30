@@ -27,7 +27,7 @@
 namespace FX {
 
 /// Region
-class FXRegion {
+class FXAPI FXRegion {
   friend class FXDC;
   friend class FXDCWindow;
   friend class FXWindow;

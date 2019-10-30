@@ -52,7 +52,7 @@ enum {
 * to its target; at the end of the change, it sends a SEL_COMMAND.
 * The message data represents the current color value, of the type FXColor.
 */
-class FXColorWell : public FXFrame {
+class FXAPI FXColorWell : public FXFrame {
   FXDECLARE(FXColorWell)
 protected:
   FXColor   wellColor[2];             // Pixel value of RGBA over black and white

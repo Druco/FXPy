@@ -48,7 +48,7 @@ class FXLabel;
 * keep a user informed of the progress of a lengthy operation
 * in a program and that the program is in fact still working.
 */
-class FXProgressDialog : public FXDialogBox {
+class FXAPI FXProgressDialog : public FXDialogBox {
   FXDECLARE(FXProgressDialog)
 protected:
   FXProgressBar         *progress;    // Progress bar

@@ -52,37 +52,36 @@ enum {
 * during the resizing of the panes; at the end of the resize interaction,
 * it sends a SEL_COMMAND to signify that the resize operation is complete.
 */
-class FX4Splitter : public FX::FXComposite {
-  FXDECLARE(FX::FX4Splitter)
-public:
+class FXAPI FX4Splitter : public FXComposite {
+  FXDECLARE(FX4Splitter)
 private:
-  FX::FXint     splitx;         // Current x split
-  FX::FXint     splity;         // Current y split
-  FX::FXint     barsize;        // Size of the splitter bar
-  FX::FXint     fhor;           // Horizontal split fraction
-  FX::FXint     fver;           // Vertical split fraction
-  FX::FXint     offx;
-  FX::FXint     offy;
-  FX::FXuchar   mode;
+  FXint     splitx;         // Current x split
+  FXint     splity;         // Current y split
+  FXint     barsize;        // Size of the splitter bar
+  FXint     fhor;           // Horizontal split fraction
+  FXint     fver;           // Vertical split fraction
+  FXint     offx;
+  FXint     offy;
+  FXuchar   mode;
 protected:
   FX4Splitter();
-  FX::FXuchar getMode(FX::FXint x,FX::FXint y);
-  void moveSplit(FX::FXint x,FX::FXint y);
-  void drawSplit(FX::FXint x,FX::FXint y,FX::FXuint m);
+  FXuchar getMode(FXint x,FXint y);
+  void moveSplit(FXint x,FXint y);
+  void drawSplit(FXint x,FXint y,FXuint m);
   void adjustLayout();
 private:
-  FX4Splitter(const FX::FX4Splitter&);
-  FX4Splitter &operator=(const FX::FX4Splitter&);
+  FX4Splitter(const FX4Splitter&);
+  FX4Splitter &operator=(const FX4Splitter&);
 public:
-  long onLeftBtnPress(FX::FXObject*,FX::FXSelector,void*);
-  long onLeftBtnRelease(FX::FXObject*,FX::FXSelector,void*);
-  long onMotion(FX::FXObject*,FX::FXSelector,void*);
-  long onFocusUp(FX::FXObject*,FX::FXSelector,void*);
-  long onFocusDown(FX::FXObject*,FX::FXSelector,void*);
-  long onFocusLeft(FX::FXObject*,FX::FXSelector,void*);
-  long onFocusRight(FX::FXObject*,FX::FXSelector,void*);
-  long onCmdExpand(FX::FXObject*,FX::FXSelector,void*);
-  long onUpdExpand(FX::FXObject*,FX::FXSelector,void*);
+  long onLeftBtnPress(FXObject*,FXSelector,void*);
+  long onLeftBtnRelease(FXObject*,FXSelector,void*);
+  long onMotion(FXObject*,FXSelector,void*);
+  long onFocusUp(FXObject*,FXSelector,void*);
+  long onFocusDown(FXObject*,FXSelector,void*);
+  long onFocusLeft(FXObject*,FXSelector,void*);
+  long onFocusRight(FXObject*,FXSelector,void*);
+  long onCmdExpand(FXObject*,FXSelector,void*);
+  long onUpdExpand(FXObject*,FXSelector,void*);
 public:
   enum {
     ExpandNone        = 0,                                  /// None expanded
@@ -98,7 +97,7 @@ public:
     };
 public:
   enum {
-    ID_EXPAND_NONE=FX::FXComposite::ID_LAST+ExpandNone,
+    ID_EXPAND_NONE=FXComposite::ID_LAST+ExpandNone,
     ID_EXPAND_TOP=ID_EXPAND_NONE+ExpandTop,
     ID_EXPAND_BOTTOM=ID_EXPAND_NONE+ExpandBottom,
     ID_EXPAND_LEFT=ID_EXPAND_NONE+ExpandLeft,
@@ -113,67 +112,67 @@ public:
 public:
 
   /// Create 4-way splitter, initially shown as four unexpanded panes
-  FX4Splitter(FX::FXComposite* p,FX::FXuint opts=FOURSPLITTER_NORMAL,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+  FX4Splitter(FXComposite* p,FXuint opts=FOURSPLITTER_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 
   /// Create 4-way splitter, initially shown as four unexpanded panes; notifies target about size changes
-  FX4Splitter(FX::FXComposite* p,FX::FXObject* tgt,FX::FXSelector sel,FX::FXuint opts=FOURSPLITTER_NORMAL,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+  FX4Splitter(FXComposite* p,FXObject* tgt,FXSelector sel,FXuint opts=FOURSPLITTER_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 
   /// Get top left child, if any
-  FX::FXWindow *getTopLeft() const;
+  FXWindow *getTopLeft() const;
 
   /// Get top right child, if any
-  FX::FXWindow *getTopRight() const;
+  FXWindow *getTopRight() const;
 
   /// Get bottom left child, if any
-  FX::FXWindow *getBottomLeft() const;
+  FXWindow *getBottomLeft() const;
 
   /// Get bottom right child, if any
-  FX::FXWindow *getBottomRight() const;
+  FXWindow *getBottomRight() const;
 
   /// Get horizontal split fraction
-  FX::FXint getHSplit() const { return fhor; }
+  FXint getHSplit() const { return fhor; }
 
   /// Get vertical split fraction
-  FX::FXint getVSplit() const { return fver; }
+  FXint getVSplit() const { return fver; }
 
   /// Change horizontal split fraction
-  void setHSplit(FX::FXint s);
+  void setHSplit(FXint s);
 
   /// Change vertical split fraction
-  void setVSplit(FX::FXint s);
+  void setVSplit(FXint s);
 
   /// Perform layout
   virtual void layout();
 
   /// Get default width
-  virtual FX::FXint getDefaultWidth();
+  virtual FXint getDefaultWidth();
 
   /// Get default height
-  virtual FX::FXint getDefaultHeight();
+  virtual FXint getDefaultHeight();
 
   /// Return current splitter style
-  FX::FXuint getSplitterStyle() const;
+  FXuint getSplitterStyle() const;
 
   /// Change splitter style
-  void setSplitterStyle(FX::FXuint style);
+  void setSplitterStyle(FXuint style);
 
   /// Change splitter bar width
-  void setBarSize(FX::FXint bs);
+  void setBarSize(FXint bs);
 
   /// Get splitter bar width
-  FX::FXint getBarSize() const { return barsize; }
+  FXint getBarSize() const { return barsize; }
 
   /// Change set of expanded children
-  void setExpanded(FX::FXuint set=FX::FX4Splitter::ExpandAll);
+  void setExpanded(FXuint set=FX4Splitter::ExpandAll);
 
   /// Get set of expanded children
-  FX::FXuint getExpanded() const;
+  FXuint getExpanded() const;
 
   /// Save to stream
-  virtual void save(FX::FXStream& store) const;
+  virtual void save(FXStream& store) const;
 
   /// Load from stream
-  virtual void load(FX::FXStream& store);
+  virtual void load(FXStream& store);
   };
 
 }

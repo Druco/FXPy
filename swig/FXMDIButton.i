@@ -1,7 +1,46 @@
 /* FXMDIButton.i */
 
-%pythonappend FX::FXMDIButton::FXMDIButton %{
+%pythonappend FX::FXMDIDeleteMenu::FXMDIDeleteMenu %{
   self.thisown = False
+%}
+%pythonappend FX::FXPyMDIDeleteMenu::FXPyMDIDeleteMenu %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
+%pythonappend FX::FXMDIRestoreMenu::FXMDIRestoreMenu %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyMDIRestoreMenu::FXPyMDIRestoreMenu %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
+%pythonappend FX::FXMDIMaximizeMenu::FXMDIMaximizeMenu %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyMDIMaximizeMenu::FXPyMDIMaximizeMenu %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
+%pythonappend FX::FXMDIMinimizeMenu::FXMDIMinimizeMenu %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyMDIMinimizeMenu::FXPyMDIMinimizeMenu %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
+%pythonappend FX::FXMDIWindowMenu::FXMDIWindowMenu %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyMDIWindowMenu::FXPyMDIWindowMenu %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
+%pythonappend FX::FXMDIMenu::FXMDIMenu %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyMDIMenu::FXPyMDIMenu %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
 
 #ifndef FXBUTTON_H
@@ -119,4 +158,33 @@ public:
   virtual ~FXMDIMenu();
   };
 
+class FXPyMDIDeleteButton  : public FXMDIDeleteButton {
+public:
+    FXPyMDIDeleteButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+class FXPyMDIRestoreButton  : public FXMDIRestoreButton {
+public:
+    FXPyMDIRestoreButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+class FXPyMDIMaximizeButton  : public FXMDIMaximizeButton {
+public:
+    FXPyMDIMaximizeButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+class FXPyMDIMinimizeButton  : public FXMDIMinimizeButton {
+public:
+    FXPyMDIMinimizeButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+class FXPyMDIWindowButton  : public FXMDIWindowButton {
+public:
+    FXPyMDIWindowButton(FXComposite* p,FXPopup* pup,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+class FXPyMDIMenu  : public FXMDIMenu {
+public:
+    FXPyMDIMenu(FXWindow *owner,FXObject* tgt=NULL);
+};
 }

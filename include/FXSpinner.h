@@ -46,7 +46,7 @@ class FXArrowButton;
 
 
 /// Spinner control
-class FXSpinner : public FXPacker {
+class FXAPI FXSpinner : public FXPacker {
   FXDECLARE(FXSpinner)
 protected:
   FXTextField   *textField;         // Text field

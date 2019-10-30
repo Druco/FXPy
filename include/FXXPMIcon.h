@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// X Pixmap icon
-class FXXPMIcon : public FXIcon {
+class FXAPI FXXPMIcon : public FXIcon {
   FXDECLARE(FXXPMIcon)
 protected:
   FXXPMIcon(){}
@@ -64,7 +64,7 @@ public:
 /**
 * Check if stream contains a XPM, return TRUE if so.
 */
-extern bool fxcheckXPM(FXStream& store);
+extern FXAPI bool fxcheckXPM(FXStream& store);
 
 
 /**
@@ -72,7 +72,7 @@ extern bool fxcheckXPM(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadXPM(const FXchar **pix,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadXPM(const FXchar **pix,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
@@ -80,13 +80,13 @@ extern bool fxloadXPM(const FXchar **pix,FXColor*& data,FXint& width,FXint& heig
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadXPM(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadXPM(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an XPM (X Pixmap) file to a stream.
 */
-extern bool fxsaveXPM(FXStream& store,const FXColor *data,FXint width,FXint height,bool fast=true);
+extern FXAPI bool fxsaveXPM(FXStream& store,const FXColor *data,FXint width,FXint height,bool fast=true);
 
 #endif
 

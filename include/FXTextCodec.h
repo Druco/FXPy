@@ -35,7 +35,7 @@ namespace FX {
 /**
  * Abstract base class for a stateless coder/decoder.
  */
-class FXTextCodec : public FXObject {
+class FXAPI FXTextCodec : public FXObject {
   FXDECLARE_ABSTRACT(FXTextCodec)
 public:
 

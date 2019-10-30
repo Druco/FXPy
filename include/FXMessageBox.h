@@ -66,7 +66,7 @@ enum {
 * Message boxes are usually ran modally: the question must be answered
 * before the program may continue.
 */
-class FXMessageBox : public FXDialogBox {
+class FXAPI FXMessageBox : public FXDialogBox {
   FXDECLARE(FXMessageBox)
 protected:
   FXMessageBox(){}

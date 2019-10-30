@@ -91,7 +91,7 @@ class FXIcon;
 * windows. The lifetime of an owned window should not exceed that of
 * the owner.
 */
-class FXTopWindow : public FXShell {
+class FXAPI FXTopWindow : public FXShell {
   FXDECLARE_ABSTRACT(FXTopWindow)
 protected:
   FXString  title;                    // Window title

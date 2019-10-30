@@ -3,6 +3,10 @@
 %pythonappend FX::FXKnob::FXKnob %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyKnob::FXPyKnob %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXFRAME_H
 #include "FXFrame.h"
@@ -153,4 +157,9 @@ public:
   virtual ~FXKnob();
   };
 
+class FXPyKnob : public FXKnob {
+public:
+    FXPyKnob(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=KNOB_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
+};
 }
+

@@ -3,22 +3,18 @@
 %pythonappend FX::FXGLObject::FXGLObject %{
   self.thisown = False
 %}
-
-
-%module FXGLObject
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-#include "FXVec2f.h"
-#include "FXVec3f.h"
-#include "FXVec4f.h"
-#include "FXRangef.h"
-#include "FXObjectList.h"
-#include "FXGLObject.h"
+%pythonappend FX::FXPyGLObject::FXPyGLObject %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXGLObject.h"
 
+namespace FX {
+class FXPyGLObject : public FXGLObject {
+public:
+    FXPyGLObject();
+    FXPyGLObject(const FXGLObject& orig);
+};
+}

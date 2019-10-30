@@ -33,7 +33,7 @@ namespace FX {
 
 
 /// Codec for UTF-32BE
-class FXUTF32BECodec : public FXTextCodec {
+class FXAPI FXUTF32BECodec : public FXTextCodec {
   FXDECLARE(FXUTF32BECodec)
 public:
   FXUTF32BECodec(){}
@@ -48,7 +48,7 @@ public:
 
 
 /// Codec for UTF-32LE
-class FXUTF32LECodec : public FXTextCodec {
+class FXAPI FXUTF32LECodec : public FXTextCodec {
   FXDECLARE(FXUTF32LECodec)
 public:
   FXUTF32LECodec(){}
@@ -63,7 +63,7 @@ public:
 
 
 /// Codec for UTF-32
-class FXUTF32Codec : public FXTextCodec {
+class FXAPI FXUTF32Codec : public FXTextCodec {
   FXDECLARE(FXUTF32Codec)
 public:
   FXUTF32Codec(){}

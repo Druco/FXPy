@@ -32,7 +32,7 @@ class FXMat3f;
 
 
 /// Single-precision quaternion
-class FXQuatf : public FXVec4f {
+class FXAPI FXQuatf : public FXVec4f {
 public:
 
   /// Construct

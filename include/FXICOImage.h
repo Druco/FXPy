@@ -31,7 +31,7 @@
 namespace FX {
 
 /// ICO (Microsoft icon format) graphics file
-class FXICOImage : public FXImage {
+class FXAPI FXICOImage : public FXImage {
   FXDECLARE(FXICOImage)
 protected:
   FXICOImage(){}
@@ -63,7 +63,7 @@ public:
 /**
 * Check if stream contains a ICO, return TRUE if so.
 */
-extern bool fxcheckICO(FXStream& store);
+extern FXAPI bool fxcheckICO(FXStream& store);
 
 
 /**
@@ -71,14 +71,14 @@ extern bool fxcheckICO(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadICO(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXint& xspot,FXint& yspot);
+extern FXAPI bool fxloadICO(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXint& xspot,FXint& yspot);
 
 
 /**
 * Save an ICO (Microsoft icon format) file to a stream.
 * If no hot-spot given, save as an ICO instead of a CUR resource.
 */
-extern bool fxsaveICO(FXStream& store,const FXColor *data,FXint width,FXint height,FXint xspot=-1,FXint yspot=-1);
+extern FXAPI bool fxsaveICO(FXStream& store,const FXColor *data,FXint width,FXint height,FXint xspot=-1,FXint yspot=-1);
 
 #endif
 

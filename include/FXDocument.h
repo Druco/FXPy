@@ -36,7 +36,7 @@ class FXWindow;
 
 
 /// Abstract base class for documents
-class FXDocument : public FXObject {
+class FXAPI FXDocument : public FXObject {
   FXDECLARE(FXDocument)
 private:
   FXString     title;             // Title to appear above windows

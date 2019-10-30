@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// OpenGL Cylinder Object
-class FXGLCylinder : public FXGLShape {
+class FXAPI FXGLCylinder : public FXGLShape {
   FXDECLARE(FXGLCylinder)
 public:
   FXfloat height;

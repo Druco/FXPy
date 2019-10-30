@@ -40,7 +40,7 @@ class FXIcon;
 
 
 /// Printer selection dialog
-class FXPrintDialog : public FXDialogBox {
+class FXAPI FXPrintDialog : public FXDialogBox {
   FXDECLARE(FXPrintDialog)
 protected:
   FXRadioButton *sendtoprinter;

@@ -36,59 +36,63 @@ namespace FX {
 * target object when the indicated key and modifier combination
 * is pressed.
 */
-class FXAccelTable : public FX::FXObject {
-  FXDECLARE(FX::FXAccelTable)
+class FXAPI FXAccelTable : public FXObject {
+  FXDECLARE(FXAccelTable)
 protected:
   struct FXAccelKey {
-    FX::FXObject    *target;    // Target object of message
-    FX::FXSelector   messagedn; // Message being sent
-    FX::FXSelector   messageup; // Message being sent
-    FX::FXHotKey     code;      // Keysym and modifier mask to match
+    FXObject    *target;    // Target object of message
+    FXSelector   messagedn; // Message being sent
+    FXSelector   messageup; // Message being sent
+    FXHotKey     code;      // Keysym and modifier mask to match
     };
 private:
-  void resize(FX::FXuint m);
+  FXAccelKey *key;          // Accelerator table
+  FXuint      max;          // Largest table index
+  FXuint      num;          // Number of entries
 private:
-  FXAccelTable(const FX::FXAccelTable&);
-  FXAccelTable &operator=(const FX::FXAccelTable&);
+  void resize(FXuint m);
+private:
+  FXAccelTable(const FXAccelTable&);
+  FXAccelTable &operator=(const FXAccelTable&);
 public:
-  long onKeyPress(FX::FXObject*,FX::FXSelector,void*);
-  long onKeyRelease(FX::FXObject*,FX::FXSelector,void*);
+  long onKeyPress(FXObject*,FXSelector,void*);
+  long onKeyRelease(FXObject*,FXSelector,void*);
 public:
 
   /// Construct empty accelerator table
   FXAccelTable();
 
   /// Add an accelerator into the table
-  void addAccel(FX::FXHotKey hotkey,FX::FXObject* target=NULL,FX::FXSelector seldn=0,FX::FXSelector selup=0);
+  void addAccel(FXHotKey hotkey,FXObject* target=NULL,FXSelector seldn=0,FXSelector selup=0);
 
   /// Remove an accelerator from the table
-  void removeAccel(FX::FXHotKey hotkey);
+  void removeAccel(FXHotKey hotkey);
 
   /// Return true if accelerator specified
-  bool hasAccel(FX::FXHotKey hotkey) const;
+  bool hasAccel(FXHotKey hotkey) const;
 
   /// Return target object of the given accelerator
-  FX::FXObject* targetOfAccel(FX::FXHotKey hotkey) const;
+  FXObject* targetOfAccel(FXHotKey hotkey) const;
 
   /**
   * Parse accelerator from string, yielding modifier and
   * key code.  For example, parseAccel("Ctl+Shift+X")
   * yields MKUINT(KEY_X,CONTROLMASK|SHIFTMASK).
   */
-  friend FX::FXHotKey parseAccel(const FX::FXString& string);
+  friend FXAPI FXHotKey parseAccel(const FXString& string);
 
   /**
   * Unparse hot key comprising modifier and key code back
   * into a string suitable for parsing with fxparseHotKey.
   */
-  friend FX::FXString unparseAccel(FX::FXHotKey key);
+  friend FXAPI FXString unparseAccel(FXHotKey key);
 
   /**
   * Parse hot key from string, yielding modifier and
   * key code.  For example, parseHotKey(""Salt && &Pepper!"")
   * yields MKUINT(KEY_p,ALTMASK).
   */
-  friend FX::FXHotKey parseHotKey(const FX::FXString& string);
+  friend FXAPI FXHotKey parseHotKey(const FXString& string);
 
   /**
   * Obtain hot key offset in string, or -1 if not found.
@@ -96,31 +100,31 @@ public:
   * Note that this is the byte-offset, not the character
   * index!
   */
-  friend FX::FXint findHotKey(const FX::FXString& string);
+  friend FXAPI FXint findHotKey(const FXString& string);
 
   /**
   * Strip hot key combination from the string.
   * For example, stripHotKey("Salt && &Pepper") should
   * yield "Salt & Pepper".
   */
-  friend FX::FXString stripHotKey(const FX::FXString& string);
+  friend FXAPI FXString stripHotKey(const FXString& string);
 
   /// Save table to a stream
-  virtual void save(FX::FXStream& store) const;
+  virtual void save(FXStream& store) const;
 
   /// Load table from a stream
-  virtual void load(FX::FXStream& store);
+  virtual void load(FXStream& store);
 
   /// Destructor
   virtual ~FXAccelTable();
   };
 
 
-extern FX::FXHotKey parseAccel(const FX::FXString& string);
-extern FX::FXString unparseAccel(FX::FXHotKey key);
-extern FX::FXHotKey parseHotKey(const FX::FXString& string);
-extern FX::FXint findHotKey(const FX::FXString& string);
-extern FX::FXString stripHotKey(const FX::FXString& string);
+extern FXAPI FXHotKey parseAccel(const FXString& string);
+extern FXAPI FXString unparseAccel(FXHotKey key);
+extern FXAPI FXHotKey parseHotKey(const FXString& string);
+extern FXAPI FXint findHotKey(const FXString& string);
+extern FXAPI FXString stripHotKey(const FXString& string);
 
 }
 

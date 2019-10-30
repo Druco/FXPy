@@ -65,7 +65,7 @@ class FXScrollCorner;
 * For content which is time-consuming to repaint, continuous
 * scrolling may be turned off.
 */
-class FXScrollArea : public FXComposite {
+class FXAPI FXScrollArea : public FXComposite {
   FXDECLARE(FXScrollArea)
 protected:
   FXScrollBar    *horizontal;   // Horizontal scroll bar

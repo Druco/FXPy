@@ -90,7 +90,7 @@ struct FXTextChange {
 * by editing the text via syntax-based highlighting engine which
 * colors the text based on syntactical patterns.
 */
-class FXText : public FXScrollArea {
+class FXAPI FXText : public FXScrollArea {
   FXDECLARE(FXText)
 protected:
   FXchar        *buffer;              // Text buffer being edited

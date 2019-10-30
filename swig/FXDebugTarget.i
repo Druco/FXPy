@@ -8,8 +8,6 @@
 %module FXDebugTarget
 
 %{
-#include "fxdefs2.h"
-#include "fx.h"
 %}
 
 

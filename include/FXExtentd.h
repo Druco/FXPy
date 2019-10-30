@@ -29,7 +29,7 @@ namespace FX {
 
 
 /// Extent
-class FXExtentd {
+class FXAPI FXExtentd {
 public:
   FXVec2d lower;
   FXVec2d upper;
@@ -106,32 +106,32 @@ public:
   FXExtentd& include(const FXExtentd& ext);
 
   /// Test if bounds overlap
-  friend bool overlap(const FXExtentd& a,const FXExtentd& b);
+  friend FXAPI bool overlap(const FXExtentd& a,const FXExtentd& b);
 
   /// Get corner number 0..3
   FXVec2d corner(FXint c) const { return FXVec2d((&lower)[c&1].x, (&lower)[(c>>1)&1].y); }
 
   /// Union of two boxes
-  friend FXExtentd unite(const FXExtentd& a,const FXExtentd& b);
+  friend FXAPI FXExtentd unite(const FXExtentd& a,const FXExtentd& b);
 
   /// Intersection of two boxes
-  friend FXExtentd intersect(const FXExtentd& a,const FXExtentd& b);
+  friend FXAPI FXExtentd intersect(const FXExtentd& a,const FXExtentd& b);
 
   /// Save object to a stream
-  friend FXStream& operator<<(FXStream& store,const FXExtentd& ext);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXExtentd& ext);
 
   /// Load object from a stream
-  friend FXStream& operator>>(FXStream& store,FXExtentd& ext);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXExtentd& ext);
   };
 
 
-extern bool overlap(const FXExtentd& a,const FXExtentd& b);
+extern FXAPI bool overlap(const FXExtentd& a,const FXExtentd& b);
 
-extern FXExtentd unite(const FXExtentd& a,const FXExtentd& b);
-extern FXExtentd intersect(const FXExtentd& a,const FXExtentd& b);
+extern FXAPI FXExtentd unite(const FXExtentd& a,const FXExtentd& b);
+extern FXAPI FXExtentd intersect(const FXExtentd& a,const FXExtentd& b);
 
-extern FXStream& operator<<(FXStream& store,const FXExtentd& ext);
-extern FXStream& operator>>(FXStream& store,FXExtentd& ext);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXExtentd& ext);
+extern FXAPI FXStream& operator>>(FXStream& store,FXExtentd& ext);
 
 }
 

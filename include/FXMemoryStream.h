@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Memory Store Definition
-class FXMemoryStream : public FXStream {
+class FXAPI FXMemoryStream : public FXStream {
 protected:
   virtual FXuval writeBuffer(FXuval count);
   virtual FXuval readBuffer(FXuval count);
@@ -73,7 +73,7 @@ public:
   FXMemoryStream& operator<<(const FXdouble& v){ FXStream::operator<<(v); return *this; }
   FXMemoryStream& operator<<(const FXlong& v){ FXStream::operator<<(v); return *this; }
   FXMemoryStream& operator<<(const FXulong& v){ FXStream::operator<<(v); return *this; }
-#if 0
+
   /// Save arrays of items to stream
   FXMemoryStream& save(const FXuchar* p,FXuval n){ FXStream::save(p,n); return *this; }
   FXMemoryStream& save(const FXchar* p,FXuval n){ FXStream::save(p,n); return *this; }
@@ -85,7 +85,7 @@ public:
   FXMemoryStream& save(const FXdouble* p,FXuval n){ FXStream::save(p,n); return *this; }
   FXMemoryStream& save(const FXlong* p,FXuval n){ FXStream::save(p,n); return *this; }
   FXMemoryStream& save(const FXulong* p,FXuval n){ FXStream::save(p,n); return *this; }
-#endif
+
   /// Load single items from stream
   FXMemoryStream& operator>>(FXuchar& v){ FXStream::operator>>(v); return *this; }
   FXMemoryStream& operator>>(FXchar& v){ FXStream::operator>>(v); return *this; }

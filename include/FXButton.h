@@ -70,7 +70,7 @@ enum {
 * multiple document interface, where the ultimaye destination of a message
 * can be changed.
 */
-class FXButton : public FXLabel {
+class FXAPI FXButton : public FXLabel {
   FXDECLARE(FXButton)
 protected:
   FXuchar  state;

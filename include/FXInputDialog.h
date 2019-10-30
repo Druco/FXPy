@@ -48,7 +48,7 @@ class FXTextField;
 * to obtain a text string, integer, or real number from the user.
 * A password mode allows the key-in to remain hidden.
 */
-class FXInputDialog : public FXDialogBox {
+class FXAPI FXInputDialog : public FXDialogBox {
   FXDECLARE(FXInputDialog)
 protected:
   FXTextField *input;       // Text field widget

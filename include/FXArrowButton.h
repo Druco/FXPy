@@ -55,40 +55,40 @@ enum {
 * The option ARROW_AUTO together with ARROW_REPEAT makes the arrow
 * button work in repeat mode simply by hovering the cursor over it.
 */
-class FXArrowButton : public FX::FXFrame {
-  FXDECLARE(FX::FXArrowButton)
+class FXAPI FXArrowButton : public FXFrame {
+  FXDECLARE(FXArrowButton)
 protected:
-  FX::FXColor   arrowColor;     // Arrow color
-  FX::FXint     arrowSize;      // Arrow size
-  FX::FXString  tip;            // Tooltip value
-  FX::FXString  help;           // Help value
-  FX::FXbool    state;          // State of button
-  FX::FXbool    fired;          // Timer has fired
+  FXColor   arrowColor;     // Arrow color
+  FXint     arrowSize;      // Arrow size
+  FXString  tip;            // Tooltip value
+  FXString  help;           // Help value
+  FXbool    state;          // State of button
+  FXbool    fired;          // Timer has fired
 protected:
   FXArrowButton();
 private:
-  FXArrowButton(const FX::FXArrowButton&);
-  FXArrowButton &operator=(const FX::FXArrowButton&);
+  FXArrowButton(const FXArrowButton&);
+  FXArrowButton &operator=(const FXArrowButton&);
 public:
-  long onPaint(FX::FXObject*,FX::FXSelector,void*);
-  long onUpdate(FX::FXObject*,FX::FXSelector,void*);
-  long onEnter(FX::FXObject*,FX::FXSelector,void*);
-  long onLeave(FX::FXObject*,FX::FXSelector,void*);
-  long onLeftBtnPress(FX::FXObject*,FX::FXSelector,void*);
-  long onLeftBtnRelease(FX::FXObject*,FX::FXSelector,void*);
-  long onUngrabbed(FX::FXObject*,FX::FXSelector,void*);
-  long onRepeat(FX::FXObject*,FX::FXSelector,void*);
-  long onAuto(FX::FXObject*,FX::FXSelector,void*);
-  long onKeyPress(FX::FXObject*,FX::FXSelector,void*);
-  long onKeyRelease(FX::FXObject*,FX::FXSelector,void*);
-  long onHotKeyPress(FX::FXObject*,FX::FXSelector,void*);
-  long onHotKeyRelease(FX::FXObject*,FX::FXSelector,void*);
-  long onCmdSetHelp(FX::FXObject*,FX::FXSelector,void*);
-  long onCmdGetHelp(FX::FXObject*,FX::FXSelector,void*);
-  long onCmdSetTip(FX::FXObject*,FX::FXSelector,void*);
-  long onCmdGetTip(FX::FXObject*,FX::FXSelector,void*);
-  long onQueryHelp(FX::FXObject*,FX::FXSelector,void*);
-  long onQueryTip(FX::FXObject*,FX::FXSelector,void*);
+  long onPaint(FXObject*,FXSelector,void*);
+  long onUpdate(FXObject*,FXSelector,void*);
+  long onEnter(FXObject*,FXSelector,void*);
+  long onLeave(FXObject*,FXSelector,void*);
+  long onLeftBtnPress(FXObject*,FXSelector,void*);
+  long onLeftBtnRelease(FXObject*,FXSelector,void*);
+  long onUngrabbed(FXObject*,FXSelector,void*);
+  long onRepeat(FXObject*,FXSelector,void*);
+  long onAuto(FXObject*,FXSelector,void*);
+  long onKeyPress(FXObject*,FXSelector,void*);
+  long onKeyRelease(FXObject*,FXSelector,void*);
+  long onHotKeyPress(FXObject*,FXSelector,void*);
+  long onHotKeyRelease(FXObject*,FXSelector,void*);
+  long onCmdSetHelp(FXObject*,FXSelector,void*);
+  long onCmdGetHelp(FXObject*,FXSelector,void*);
+  long onCmdSetTip(FXObject*,FXSelector,void*);
+  long onCmdGetTip(FXObject*,FXSelector,void*);
+  long onQueryHelp(FXObject*,FXSelector,void*);
+  long onQueryTip(FXObject*,FXSelector,void*);
 public:
   enum {
     ID_REPEAT=FXFrame::ID_LAST,
@@ -98,13 +98,13 @@ public:
 public:
 
   /// Construct arrow button
-  FXArrowButton(FX::FXComposite* p,FX::FXObject* tgt=NULL,FX::FXSelector sel=0,FX::FXuint opts=ARROW_NORMAL,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0,FX::FXint pl=DEFAULT_PAD,FX::FXint pr=DEFAULT_PAD,FX::FXint pt=DEFAULT_PAD,FX::FXint pb=DEFAULT_PAD);
+  FXArrowButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=ARROW_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
 
   /// Get default width
-  virtual FX::FXint getDefaultWidth();
+  virtual FXint getDefaultWidth();
 
   /// Get default height
-  virtual FX::FXint getDefaultHeight();
+  virtual FXint getDefaultHeight();
 
   /// Enable the button
   virtual void enable();
@@ -116,52 +116,52 @@ public:
   virtual bool canFocus() const;
 
   /// Set the button state (where TRUE means the button is down)
-  void setState(FX::FXbool s);
+  void setState(FXbool s);
 
   /// Get the button state (where TRUE means the button is down)
-  FX::FXbool getState() const { return state; }
+  FXbool getState() const { return state; }
 
   /// Set status line help text for this arrow button
-  void setHelpText(const FX::FXString& text){ help=text; }
+  void setHelpText(const FXString& text){ help=text; }
 
   /// Get status line help text for this arrow button
-  const FX::FXString& getHelpText() const { return help; }
+  const FXString& getHelpText() const { return help; }
 
   /// Set tool tip message for this arrow button
-  void setTipText(const FX::FXString& text){ tip=text; }
+  void setTipText(const FXString& text){ tip=text; }
 
   /// Get tool tip message for this arrow button
-  const FX::FXString& getTipText() const { return tip; }
+  const FXString& getTipText() const { return tip; }
 
   /// Set the arrow style flags
-  void setArrowStyle(FX::FXuint style);
+  void setArrowStyle(FXuint style);
 
   /// Get the arrow style flags
-  FX::FXuint getArrowStyle() const;
+  FXuint getArrowStyle() const;
 
   /// Set the default arrow size
-  void setArrowSize(FX::FXint size);
+  void setArrowSize(FXint size);
 
   /// Get the default arrow size
-  FX::FXint getArrowSize() const { return arrowSize; }
+  FXint getArrowSize() const { return arrowSize; }
 
   /// Set the current justification mode.
-  void setJustify(FX::FXuint mode);
+  void setJustify(FXuint mode);
 
   /// Get the current justification mode.
-  FX::FXuint getJustify() const;
+  FXuint getJustify() const;
 
   /// Get the fill color for the arrow
-  FX::FXColor getArrowColor() const { return arrowColor; }
+  FXColor getArrowColor() const { return arrowColor; }
 
   /// Set the fill color for the arrow
-  void setArrowColor(FX::FXColor clr);
+  void setArrowColor(FXColor clr);
 
   /// Save label to a stream
-  virtual void save(FX::FXStream& store) const;
+  virtual void save(FXStream& store) const;
 
   /// Load label from a stream
-  virtual void load(FX::FXStream& store);
+  virtual void load(FXStream& store);
 
   /// Destructor
   virtual ~FXArrowButton();

@@ -62,7 +62,7 @@ enum {
 * a top level window using LAYOUT_SIDE_TOP or LAYOUT_SIDE_BOTTOM, and
 * vertically oriented if placed with LAYOUT_SIDE_LEFT or LAYOUT_SIDE_RIGHT.
 */
-class FXDockSite : public FXPacker {
+class FXAPI FXDockSite : public FXPacker {
   FXDECLARE(FXDockSite)
 protected:
   FXDockSite(){}

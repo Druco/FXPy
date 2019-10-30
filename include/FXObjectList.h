@@ -31,7 +31,7 @@
 namespace FX {
 
 /// List of pointers to objects
-class FXObjectList {
+class FXAPI FXObjectList {
 protected:
   FXObject **ptr;
 public:

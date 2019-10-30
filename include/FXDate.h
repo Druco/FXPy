@@ -31,7 +31,7 @@ namespace FX {
 /**
 * Gregorian date object.
 */
-class FXDate {
+class FXAPI FXDate {
 private:
   FXuint julian;
 private:
@@ -151,10 +151,10 @@ public:
   friend inline FXint operator-(const FXDate& a,const FXDate& b);
 
   /// save to stream
-  friend FXStream& operator<<(FXStream& store,const FXDate& d);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXDate& d);
 
   /// load from stream
-  friend FXStream& operator>>(FXStream& store,FXDate& d);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXDate& d);
   };
 
 
@@ -162,8 +162,8 @@ inline FXDate operator+(const FXDate& d,FXint x){ return FXDate(d.julian+x); }
 inline FXDate operator+(FXint x,const FXDate& d){ return FXDate(x+d.julian); }
 inline FXint operator-(const FXDate& a,const FXDate& b){return a.julian-b.julian; }
 
-extern FXStream& operator<<(FXStream& store,const FXDate& d);
-extern FXStream& operator>>(FXStream& store,FXDate& d);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXDate& d);
+extern FXAPI FXStream& operator>>(FXStream& store,FXDate& d);
 
 }
 

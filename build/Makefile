@@ -203,25 +203,32 @@ FXGLSRCS = 	FXObjectList.i \
 
 vpath %.i ../swig
 vpath %.h ../include
+vpath %.cpp ../src
 
-OBJS = $(patsubst %.i,%_wrap.o,${SRCS})
+OBJS = $(patsubst %.i,%_wrap.o,${SRCS}) FXPy.o
 
 default: _FXPy.so
 
 %_wrap.cxx: %.i %.h
 	swig -c++ -python -keyword -I.. -o $@ $< 
 
-FXPy_wrap.cxx: FXPy.i FXStream.i FXStream.h FXString.h FXString.i Makefile
+FXPy_wrap.cxx: ${SRCS} ${AUXSRCS} Makefile
 	swig -c++ -python -keyword -I.. -o $@ $< 
 
 %.o: %.cxx
 	g++ -g -fPIC -I/usr/include/python3.7m -I../include -I../include -I.. -lFOX-1.6 -c $< -o $@
 
+%.o: %.cpp
+	g++ -g -fPIC -I/usr/include/python3.7m -I../include -I../include -I.. -lFOX-1.6 -c $< -o $@
+
 %.pre: %.cxx
 	g++ -fPIC -I/usr/include/python3.7m -I../include -I.. -E $< -o $@
 
-_FXPy.so: ${OBJS}
-	gcc -g -shared $< -Xlinker -rpath -Xlinker /usr/local/lib64/libFOX-1.6 -L/usr/local/lib64 -lFOX-1.6 -lpython3 -lstdc++ -o _FXPy.so
+%.pre: %.cpp
+	g++ -fPIC -I/usr/include/python3.7m -I../include -I.. -E $< -o $@
+
+_FXPy.so: ${OBJS} FXPy.o
+	gcc -g -shared $< FXPy.o -Xlinker -rpath -Xlinker /usr/local/lib64/libFOX-1.6 -L/usr/local/lib64 -lFOX-1.6 -lpython3 -lstdc++ -o _FXPy.so
 
 clean:
 	rm *_wrap.cxx *_wrap.o

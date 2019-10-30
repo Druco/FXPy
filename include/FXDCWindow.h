@@ -49,7 +49,7 @@ class FXVisual;
 * Because certain hardware resources are locked down, only one FXDCWindow may be
 * locked on a drawable at any one time.
 */
-class FXDCWindow : public FXDC {
+class FXAPI FXDCWindow : public FXDC {
   friend class FXFont;
 protected:
   FXDrawable *surface;        // Drawable surface

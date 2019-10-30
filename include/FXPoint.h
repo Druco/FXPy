@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// Point
-class FXPoint {
+class FXAPI FXPoint {
 public:
   FXshort x;
   FXshort y;
@@ -80,10 +80,10 @@ public:
   friend inline FXPoint operator/(FXshort c,const FXPoint& p);
 
   /// Save object to a stream
-  friend FXStream& operator<<(FXStream& store,const FXPoint& p);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXPoint& p);
 
   /// Load object from a stream
-  friend FXStream& operator>>(FXStream& store,FXPoint& p);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXPoint& p);
   };
 
 
@@ -92,8 +92,8 @@ inline FXPoint operator*(FXshort c,const FXPoint& p){ return FXPoint(c*p.x,c*p.y
 inline FXPoint operator/(const FXPoint& p,FXshort c){ return FXPoint(p.x/c,p.y/c); }
 inline FXPoint operator/(FXshort c,const FXPoint& p){ return FXPoint(c/p.x,c/p.y); }
 
-extern FXStream& operator<<(FXStream& store,const FXPoint& p);
-extern FXStream& operator>>(FXStream& store,FXPoint& p);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXPoint& p);
+extern FXAPI FXStream& operator>>(FXStream& store,FXPoint& p);
 
 }
 

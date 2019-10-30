@@ -42,7 +42,7 @@ namespace FX {
 
 
 /// OpenGL Triangle Mesh Object
-class FXGLTriangleMesh : public FXGLShape {
+class FXAPI FXGLTriangleMesh : public FXGLShape {
   FXDECLARE(FXGLTriangleMesh)
 private:
   FXfloat   *vertexBuffer;

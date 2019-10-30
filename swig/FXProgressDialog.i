@@ -3,6 +3,10 @@
 %pythonappend FX::FXProgressDialog::FXProgressDialog %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyProgressDialog::FXPyProgressDialog %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXDIALOGBOX_H
 #include "FXDialogBox.h"
@@ -78,4 +82,8 @@ public:
   virtual ~FXProgressDialog();
   };
 
+class FXPyProgressDialog : public FXProgressDialog {
+public:
+    FXPyProgressDialog(FXWindow* owner,const FXString& caption,const FXString& label,FXuint opts=PROGRESSDIALOG_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
 }

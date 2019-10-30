@@ -3,6 +3,10 @@
 %pythonappend FX::FXPopup::FXPopup %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyPopup::FXPyPopup %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXSHELL_H
 #include "FXShell.h"
@@ -144,4 +148,8 @@ public:
   virtual ~FXPopup();
   };
 
+class FXPyPopup : public FXPopup {
+public:
+    FXPyPopup(FXWindow* owner,FXuint opts=POPUP_VERTICAL|FRAME_RAISED|FRAME_THICK,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
 }

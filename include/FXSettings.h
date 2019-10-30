@@ -41,7 +41,7 @@ class FXStringDict;
 * String values can contain any character, and will be escaped when written
 * to the file.
 */
-class FXSettings : public FXDict {
+class FXAPI FXSettings : public FXDict {
   FXDECLARE(FXSettings)
 protected:
   bool modified;

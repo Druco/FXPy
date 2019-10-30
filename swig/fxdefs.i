@@ -1,11 +1,5 @@
 %module fxdefs
 
-%{
-#include "fxdefs.h"
-#include "fxdefs2.h"
-#include "fx.h"
-%}
-
 #include "fxdefs2.h"
 /********************************  Definitions  ********************************/
 
@@ -276,7 +270,7 @@ static FXushort _FXSELTYPE(FXuint s){
   }
 
 static FXushort _FXSELID(FXuint s){
-  return ((FX::FXushort)(((s)>>16)&0xffff));
+  return ((FX::FXushort)(s&0xffff));
   }
 %}
 

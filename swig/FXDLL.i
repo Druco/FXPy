@@ -1,17 +1,11 @@
 /* FXDLL.i */
 
-%pythonappend FX::FXDLL::FXDLL %{
-  self.thisown = False
-%}
+namespace FX {
+
+extern void* fxdllOpen(const FXchar *dllname);
+extern void fxdllClose(void* dllhandle);
+extern void* fxdllSymbol(void* dllhandle,const FXchar* dllsymbol);
+extern FXString fxdllError();
 
 
-%module FXDLL
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-%}
-
-
-%include "include/fxdefs2.h"
-%include "include/FXDLL.h"
+}

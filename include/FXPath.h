@@ -35,39 +35,39 @@ namespace FXPath {
   * Windows, this is "\\" or "C:\".  Returns the empty string
   * if the given path is not absolute.
   */
-  FXString root(const FXString& file);
+  FXString FXAPI root(const FXString& file);
 
   /**
   * Return the directory part of the path name.
   * Note that directory("/bla/bla/") is "/bla/bla" and NOT "/bla".
   * However, directory("/bla/bla") is "/bla" as we expect!
   */
-  FXString directory(const FXString& file);
+  FXString FXAPI directory(const FXString& file);
 
   /**
   * Return name and extension part of the path name.
   * Note that name("/bla/bla/") is "" and NOT "bla".
   * However, name("/bla/bla") is "bla" as we expect!
   */
-  FXString name(const FXString& file);
+  FXString FXAPI name(const FXString& file);
 
   /// Return file title, i.e. document name only
-  FXString title(const FXString& file);
+  FXString FXAPI title(const FXString& file);
 
   /// Return extension part of the file name
-  FXString extension(const FXString& file);
+  FXString FXAPI extension(const FXString& file);
 
   /// Return file name less the extension
-  FXString stripExtension(const FXString& file);
+  FXString FXAPI stripExtension(const FXString& file);
 
   /// Return the drive letter prefixing this file name (if any).
-  FXString drive(const FXString& file);
+  FXString FXAPI drive(const FXString& file);
 
   /// Perform tilde or environment variable expansion
-  FXString expand(const FXString& file);
+  FXString FXAPI expand(const FXString& file);
 
   /// Contract path based on user name and environment variable
-  FXString contract(const FXString& file,const FXString& user=FXString::null,const FXString& var=FXString::null);
+  FXString FXAPI contract(const FXString& file,const FXString& user=FXString::null,const FXString& var=FXString::null);
 
   /**
   * Simplify a file path; the path will remain relative if it was relative,
@@ -75,40 +75,40 @@ namespace FXPath {
   * as this is important in other functions.
   * For example, simplify("..//aaa/./bbb//../c/") becomes "../aaa/c/".
   */
-  FXString simplify(const FXString& file);
+  FXString FXAPI simplify(const FXString& file);
 
   /// Return absolute path from current directory and file name
-  FXString absolute(const FXString& file);
+  FXString FXAPI absolute(const FXString& file);
 
   /// Return absolute path from base directory and file name
-  FXString absolute(const FXString& base,const FXString& file);
+  FXString FXAPI absolute(const FXString& base,const FXString& file);
 
   /// Return relative path of file to the current directory
-  FXString relative(const FXString& file);
+  FXString FXAPI relative(const FXString& file);
 
   /// Return relative path of file to given base directory
-  FXString relative(const FXString& base,const FXString& file);
+  FXString FXAPI relative(const FXString& base,const FXString& file);
 
   /// Return path following local path separator conventions
-  FXString convert(const FXString& path);
+  FXString FXAPI convert(const FXString& path);
 
   /// Return path to directory above input directory name
-  FXString upLevel(const FXString& file);
+  FXString FXAPI upLevel(const FXString& file);
 
   /// Return true if file name is absolute
-  bool isAbsolute(const FXString& file);
+  bool FXAPI isAbsolute(const FXString& file);
 
   /// Return true if input directory is a top-level directory
-  bool isTopDirectory(const FXString& file);
+  bool FXAPI isTopDirectory(const FXString& file);
 
   /// Return true if input path is a file share
-  bool isShare(const FXString& file);
+  bool FXAPI isShare(const FXString& file);
 
   /// Enquote filename to make safe for shell
-  FXString enquote(const FXString& file,bool forcequotes=false);
+  FXString FXAPI enquote(const FXString& file,bool forcequotes=false);
 
   /// Dequote filename to get original again
-  FXString dequote(const FXString& file);
+  FXString FXAPI dequote(const FXString& file);
 
   /**
   * Perform wildcard match of a filename against a wildcard pattern.
@@ -137,19 +137,19 @@ namespace FXPath {
   *  FILEMATCH_LEADING_DIR       Ignore /... after a match
   *  FILEMATCH_CASEFOLD          Compare without regard to case
   */
-  bool match(const FXString& pattern,const FXString& file,FXuint flags=(FILEMATCH_NOESCAPE|FILEMATCH_FILE_NAME));
+  bool FXAPI match(const FXString& pattern,const FXString& file,FXuint flags=(FILEMATCH_NOESCAPE|FILEMATCH_FILE_NAME));
 
   /**
   * Generate unique filename of the form pathnameXXX.ext, where
   * pathname.ext is the original input file, and XXX is a number,
   * possibly empty, that makes the file unique.
   */
-  FXString unique(const FXString& file);
+  FXString FXAPI unique(const FXString& file);
 
   /**
   * Search path list for this file, return full path name for first occurrence.
   */
-  FXString search(const FXString& pathlist,const FXString& file);
+  FXString FXAPI search(const FXString& pathlist,const FXString& file);
 
   }
 

@@ -31,7 +31,7 @@
 namespace FX {
 
 /// Popup menu pane
-class FXMenuPane : public FXPopup {
+class FXAPI FXMenuPane : public FXPopup {
   FXDECLARE(FXMenuPane)
 protected:
   FXMenuPane(){}

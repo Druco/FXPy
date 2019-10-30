@@ -28,7 +28,7 @@
 namespace FX {
 
 /// Generic catch-all exception
-class FXException {
+class FXAPI FXException {
 private:
   const FXchar *message;
 private:
@@ -42,7 +42,7 @@ public:
 
 
 /// Generic error exception
-class FXErrorException : public FXException {
+class FXAPI FXErrorException : public FXException {
 private:
   static const FXchar exceptionName[];
 public:
@@ -52,7 +52,7 @@ public:
 
 
 /// Index out of range
-class FXRangeException : public FXErrorException {
+class FXAPI FXRangeException : public FXErrorException {
 private:
   static const FXchar exceptionName[];
 public:
@@ -62,7 +62,7 @@ public:
 
 
 /// Invalid pointer
-class FXPointerException : public FXErrorException {
+class FXAPI FXPointerException : public FXErrorException {
 private:
   static const FXchar exceptionName[];
 public:
@@ -72,7 +72,7 @@ public:
 
 
 /// Generic resource exception
-class FXResourceException : public FXException {
+class FXAPI FXResourceException : public FXException {
 private:
   static const FXchar exceptionName[];
 public:
@@ -82,7 +82,7 @@ public:
 
 
 /// Out of memory
-class FXMemoryException : public FXResourceException {
+class FXAPI FXMemoryException : public FXResourceException {
 private:
   static const FXchar exceptionName[];
 public:
@@ -92,7 +92,7 @@ public:
 
 
 /// Window exception
-class FXWindowException : public FXResourceException {
+class FXAPI FXWindowException : public FXResourceException {
 private:
   static const FXchar exceptionName[];
 public:
@@ -102,7 +102,7 @@ public:
 
 
 /// Image, cursor, bitmap exception
-class FXImageException : public FXResourceException {
+class FXAPI FXImageException : public FXResourceException {
 private:
   static const FXchar exceptionName[];
 public:
@@ -112,7 +112,7 @@ public:
 
 
 /// Font exception
-class FXFontException : public FXResourceException {
+class FXAPI FXFontException : public FXResourceException {
 private:
   static const FXchar exceptionName[];
 public:

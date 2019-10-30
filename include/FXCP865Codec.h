@@ -8,7 +8,7 @@
 namespace FX {
 
 /// CP865 Codec
-class FXCP865Codec : public FXTextCodec {
+class FXAPI FXCP865Codec : public FXTextCodec {
   FXDECLARE(FXCP865Codec)
 public:
   FXCP865Codec(){}

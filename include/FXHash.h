@@ -30,7 +30,7 @@ namespace FX {
 /**
 * A hash table for associating pointers to pointers.
 */
-class  FXHash {
+class FXAPI FXHash {
 private:
   struct FXEntry {
     void* key;

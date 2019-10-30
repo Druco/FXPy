@@ -36,7 +36,7 @@ class FXGLObject;
 
 
 /// Basic OpenGL object
-class FXGLObject : public FXObject {
+class FXAPI FXGLObject : public FXObject {
   FXDECLARE(FXGLObject)
 public:
   enum {
@@ -84,7 +84,7 @@ typedef FXObjectListOf<FXGLObject> FXGLObjectList;
 
 
 /// Group object
-class FXGLGroup : public FXGLObject {
+class FXAPI FXGLGroup : public FXGLObject {
   FXDECLARE(FXGLGroup)
 protected:
   FXGLObjectList list;    // List of all objects
@@ -157,7 +157,7 @@ public:
 
 
 /// OpenGL Point Object
-class FXGLPoint : public FXGLObject {
+class FXAPI FXGLPoint : public FXGLObject {
   FXDECLARE(FXGLPoint)
 public:
   FXVec3f pos;
@@ -193,7 +193,7 @@ public:
 
 
 /// OpenGL Line Object
-class FXGLLine : public FXGLObject {
+class FXAPI FXGLLine : public FXGLObject {
   FXDECLARE(FXGLLine)
 public:
   FXGLPoint fm,to;

@@ -3,6 +3,10 @@
 %pythonappend FX::FXButton::FXButton %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyButton::FXPyButton %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXLABEL_H
 #include "FXLabel.h"
@@ -53,35 +57,16 @@ public:
   long onCmdSetIntValue(FXObject*,FXSelector,void*);
   long onCmdGetIntValue(FXObject*,FXSelector,void*);
 public:
-
-  /// Construct button with text and icon
   FXButton(FXComposite* p,const FXString& text,FXIcon* ic=NULL,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=BUTTON_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
-
-  /// Returns true because a button can receive focus
-  virtual bool canFocus() const;
-
-  /// Move the focus to this window
-  virtual void setFocus();
-
-  /// Remove the focus from this window
-  virtual void killFocus();
-
-  /// Set as default button
-  virtual void setDefault(FXbool enable=TRUE);
-
-  /// Set the button state
   void setState(FXuint s);
-
-  /// Get the button state
   FXuint getState() const { return state; }
-
-  /// Set the button style flags
   void setButtonStyle(FXuint style);
-
-  /// Get the button style flags
   FXuint getButtonStyle() const;
-
   };
 
+class FXPyButton : public FXButton {
+public:
+  FXPyButton(FXComposite* p,const FXString& text,FXIcon* ic=NULL,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=BUTTON_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
+  };
 
 }

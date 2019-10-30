@@ -37,7 +37,7 @@ namespace FX {
 * modal loop and returns FALSE or TRUE, respectively.
 * To close the DialogBox when not running modally, simply send it ID_HIDE.
 */
-class FXDialogBox : public FXTopWindow {
+class FXAPI FXDialogBox : public FXTopWindow {
   FXDECLARE(FXDialogBox)
 protected:
   FXDialogBox(){}

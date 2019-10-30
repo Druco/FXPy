@@ -36,7 +36,7 @@ namespace FX {
 * image; the bitmap is not owned by the bitmap frame so it must be explicitly
 * deleted elsewhere.
 */
-class FXBitmapFrame : public FXFrame {
+class FXAPI FXBitmapFrame : public FXFrame {
   FXDECLARE(FXBitmapFrame)
 protected:
   FXBitmap *bitmap;     // The bitmap being displayed

@@ -38,7 +38,7 @@ namespace FX {
 /**
 * Pipe i/o device.
 */
-class FXPipe : public FXIO {
+class FXAPI FXPipe : public FXIO {
 private:
   FXPipe(const FXPipe&);
   FXPipe &operator=(const FXPipe&);

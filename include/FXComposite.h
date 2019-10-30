@@ -32,25 +32,25 @@ namespace FX {
 
 
 /// Base composite
-class FXComposite : public FXWindow {
-  FXDECLARE(FX::FXComposite)
+class FXAPI FXComposite : public FXWindow {
+  FXDECLARE(FXComposite)
 protected:
   FXComposite(){}
-  FXComposite(FX::FXApp* a,FX::FXVisual *vis);
-  FXComposite(FX::FXApp* a,FX::FXWindow* own,FX::FXuint opts,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
+  FXComposite(FXApp* a,FXVisual *vis);
+  FXComposite(FXApp* a,FXWindow* own,FXuint opts,FXint x,FXint y,FXint w,FXint h);
 private:
-  FXComposite(const FX::FXComposite&);
-  FXComposite &operator=(const FX::FXComposite&);
+  FXComposite(const FXComposite&);
+  FXComposite &operator=(const FXComposite&);
 public:
-  long onKeyPress(FX::FXObject*,FX::FXSelector,void*);
-  long onKeyRelease(FX::FXObject*,FX::FXSelector,void*);
-  long onFocusNext(FX::FXObject*,FX::FXSelector,void*);
-  long onFocusPrev(FX::FXObject*,FX::FXSelector,void*);
-  long onCmdUpdate(FX::FXObject*,FX::FXSelector,void*);
+  long onKeyPress(FXObject*,FXSelector,void*);
+  long onKeyRelease(FXObject*,FXSelector,void*);
+  long onFocusNext(FXObject*,FXSelector,void*);
+  long onFocusPrev(FXObject*,FXSelector,void*);
+  long onCmdUpdate(FXObject*,FXSelector,void*);
 public:
 
   /// Constructor
-  FXComposite(FX::FXComposite* p,FX::FXuint opts=0,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+  FXComposite(FXComposite* p,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 
   /// Create server-side resources
   virtual void create();
@@ -65,16 +65,16 @@ public:
   virtual void layout();
 
   /// Return default width
-  virtual FX::FXint getDefaultWidth();
+  virtual FXint getDefaultWidth();
 
   /// Return default height
-  virtual FX::FXint getDefaultHeight();
+  virtual FXint getDefaultHeight();
 
   /// Return the width of the widest child window
-  FX::FXint maxChildWidth() const;
+  FXint maxChildWidth() const;
 
   /// Return the height of the tallest child window
-  FX::FXint maxChildHeight() const;
+  FXint maxChildHeight() const;
 
   /// Overrides this virtual function to return TRUE
   virtual bool isComposite() const;

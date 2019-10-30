@@ -39,7 +39,7 @@ namespace FX {
 * When activated, a menu check sends a SEL_COMMAND to its target;
 * the void* argument of the message contains the new state.
 */
-class FXMenuCheck : public FXMenuCommand {
+class FXAPI FXMenuCheck : public FXMenuCommand {
   FXDECLARE(FXMenuCheck)
 protected:
   FXuchar check;        // State of menu

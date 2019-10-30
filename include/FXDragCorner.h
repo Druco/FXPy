@@ -35,7 +35,7 @@ namespace FX {
 * A drag corner widget may be placed in the bottom right corner
 * so as to allow the window to be resized more easily.
 */
-class FXDragCorner : public FXWindow {
+class FXAPI FXDragCorner : public FXWindow {
   FXDECLARE(FXDragCorner)
 protected:
   FXColor hiliteColor;

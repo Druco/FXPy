@@ -3,16 +3,22 @@
 %pythonappend FX::FXGLVisual::FXGLVisual %{
   self.thisown = False
 %}
-
-
-%module FXGLVisual
+%pythonappend FX::FXPyGLVisual::FXPyGLVisual %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 %{
-#include "fxdefs2.h"
-#include "fx.h"
 #include "FXGLVisual.h"
 %}
 
 
 %include "include/fxdefs2.h"
 %include "include/FXGLVisual.h"
+
+namespace FX {
+class FXPyGLVisual : public FXGLVisual {
+public:
+    FXPyGLVisual(FXApp* a,FXuint flags);
+};
+}

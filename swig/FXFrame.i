@@ -3,6 +3,10 @@
 %pythonappend FX::FXFrame::FXFrame %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyFrame::FXPyFrame %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXWINDOW_H
 #include "FXWindow.h"
@@ -115,5 +119,10 @@ public:
   /// Load from stream
   virtual void load(FX::FXStream& store);
   };
+
+class FXPyFrame : public FXFrame {
+public:
+    FXPyFrame(FX::FXComposite* p,FX::FXuint opts=FRAME_NORMAL,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0,FX::FXint pl=DEFAULT_PAD,FX::FXint pr=DEFAULT_PAD,FX::FXint pt=DEFAULT_PAD,FX::FXint pb=DEFAULT_PAD);
+};
 
 }

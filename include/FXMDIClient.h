@@ -51,7 +51,7 @@ class FXMDIChild;
 * a menu button connected to the MDI client with the ID_MDI_OVER_X message will be
 * automatically grayed out if there are less than X MDI child windows.
 */
-class FXMDIClient : public FXComposite {
+class FXAPI FXMDIClient : public FXComposite {
   FXDECLARE(FXMDIClient)
   friend class FXMDIChild;
 protected:

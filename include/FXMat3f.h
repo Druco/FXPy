@@ -32,7 +32,7 @@ class FXQuatf;
 
 
 /// Single-precision 3x3 matrix
-class FXMat3f {
+class FXAPI FXMat3f {
 protected:
   FXVec3f m[3];
 public:
@@ -106,10 +106,10 @@ public:
   FXVec2f operator*(const FXVec2f& v) const;
 
   /// Matrix and scalar
-  friend FXMat3f operator*(FXfloat x,const FXMat3f& a);
-  friend FXMat3f operator*(const FXMat3f& a,FXfloat x);
-  friend FXMat3f operator/(const FXMat3f& a,FXfloat x);
-  friend FXMat3f operator/(FXfloat x,const FXMat3f& a);
+  friend FXAPI FXMat3f operator*(FXfloat x,const FXMat3f& a);
+  friend FXAPI FXMat3f operator*(const FXMat3f& a,FXfloat x);
+  friend FXAPI FXMat3f operator/(const FXMat3f& a,FXfloat x);
+  friend FXAPI FXMat3f operator/(FXfloat x,const FXMat3f& a);
 
   /// Set identity matrix
   FXMat3f& eye();
@@ -135,19 +135,19 @@ public:
   FXMat3f invert() const;
 
   /// Save to a stream
-  friend FXStream& operator<<(FXStream& store,const FXMat3f& m);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXMat3f& m);
 
   /// Load from a stream
-  friend FXStream& operator>>(FXStream& store,FXMat3f& m);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXMat3f& m);
   };
 
-extern FXMat3f operator*(FXfloat x,const FXMat3f& a);
-extern FXMat3f operator*(const FXMat3f& a,FXfloat x);
-extern FXMat3f operator/(const FXMat3f& a,FXfloat x);
-extern FXMat3f operator/(FXfloat x,const FXMat3f& a);
+extern FXAPI FXMat3f operator*(FXfloat x,const FXMat3f& a);
+extern FXAPI FXMat3f operator*(const FXMat3f& a,FXfloat x);
+extern FXAPI FXMat3f operator/(const FXMat3f& a,FXfloat x);
+extern FXAPI FXMat3f operator/(FXfloat x,const FXMat3f& a);
 
-extern FXStream& operator<<(FXStream& store,const FXMat3f& m);
-extern FXStream& operator>>(FXStream& store,FXMat3f& m);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXMat3f& m);
+extern FXAPI FXStream& operator>>(FXStream& store,FXMat3f& m);
 
 }
 

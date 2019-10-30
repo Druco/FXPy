@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// X Bitmap icon
-class FXXBMIcon : public FXIcon {
+class FXAPI FXXBMIcon : public FXIcon {
   FXDECLARE(FXXBMIcon)
 protected:
   FXXBMIcon(){}
@@ -64,14 +64,14 @@ public:
 /**
 * Check if stream contains a XBM, return TRUE if so.
 */
-extern bool fxcheckXBM(FXStream& store);
+extern FXAPI bool fxcheckXBM(FXStream& store);
 
 /**
 * Load an XBM (X Bitmap) from pixel array and mask array.
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadXBM(FXColor*& data,const FXuchar *pix,const FXuchar *msk,FXint width,FXint height);
+extern FXAPI bool fxloadXBM(FXColor*& data,const FXuchar *pix,const FXuchar *msk,FXint width,FXint height);
 
 
 /**
@@ -79,20 +79,20 @@ extern bool fxloadXBM(FXColor*& data,const FXuchar *pix,const FXuchar *msk,FXint
 * Upon successful return, the pixel array and size, and hot-spot are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadXBM(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXint& hotx,FXint& hoty);
+extern FXAPI bool fxloadXBM(FXStream& store,FXColor*& data,FXint& width,FXint& height,FXint& hotx,FXint& hoty);
 
 
 /**
 * Save an XBM (X Bitmap) file to a stream; if the parameters hotx and hoty are set
 * to -1, no hotspot location is saved.
 */
-extern bool fxsaveXBM(FXStream& store,const FXColor *data,FXint width,FXint height,FXint hotx=-1,FXint hoty=-1);
+extern FXAPI bool fxsaveXBM(FXStream& store,const FXColor *data,FXint width,FXint height,FXint hotx=-1,FXint hoty=-1);
 
 /**
 * Save a PostScript file to a stream; format the picture to the maximal
 * size that fits within the given margins of the indicated paper size.
 */
-extern bool fxsavePS(FXStream& store,const FXColor *data,FXint width,FXint height,FXint paperw=612,FXint paperh=792,FXint margin=35,bool color=true);
+extern FXAPI bool fxsavePS(FXStream& store,const FXColor *data,FXint width,FXint height,FXint paperw=612,FXint paperh=792,FXint margin=35,bool color=true);
 
 #endif
 

@@ -3,16 +3,19 @@
 %pythonappend FX::FXBitmap::FXBitmap %{
   self.thisown = False
 %}
-
-
-#define __GNUC__
-%module FXBitmap
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyBitmap::FXPyBitmap %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
 
+#define __GNUC__
 
 %include "include/fxdefs2.h"
 %include "include/FXBitmap.h"
+
+namespace FX {
+class FXPyBitmap : public FXBitmap {
+  FXPyBitmap(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
+  };
+
+}

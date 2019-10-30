@@ -3,6 +3,10 @@
 %pythonappend FX::FXImageView::FXImageView %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyImageView::FXPyImageView %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXSCROLLAREA_H
 #include "FXScrollArea.h"
@@ -85,4 +89,9 @@ public:
   virtual ~FXImageView();
   };
 
+class FXPyImageView : public FXImageView {
+public:
+    FXPyImageView(FXComposite* p,FXImage* img=NULL,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
 }
+

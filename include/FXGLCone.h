@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// OpenGL Cone Object
-class FXGLCone : public FXGLShape {
+class FXAPI FXGLCone : public FXGLShape {
   FXDECLARE(FXGLCone)
 public:
   FXfloat height;

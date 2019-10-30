@@ -3,12 +3,22 @@
 %pythonappend FX::FXSeparator::FXSeparator %{
   self.thisown = False
 %}
+%pythonappend FX::FXPySeparator::FXPySeparator %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 %pythonappend FX::FXHorizontalSeparator::FXHorizontalSeparator %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyHorizontalSeparator::FXPyHorizontalSeparator %{
+  self.thisown = False
+%}
 
 %pythonappend FX::FXVerticalSeparator::FXVerticalSeparator %{
+  self.thisown = False
+%}
+%pythonappend FX::FXPyVerticalSeparator::FXPyVerticalSeparator %{
   self.thisown = False
 %}
 
@@ -69,4 +79,20 @@ public:
   FXVerticalSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_Y,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=1,FXint pb=1);
   };
 
+class FXPySeparator : public FXSeparator {
+public:
+    FXPySeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_X,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=0,FXint pb=0);
+};
+
+class FXPyHorizontalSeparator : public FXHorizontalSeparator {
+public:
+    FXPyHorizontalSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_X,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=1,FXint pr=1,FXint pt=0,FXint pb=0);
+    %pragma(python) addtomethod = "__init__:FXPyRegister(self)"
+};
+
+class FXPyVerticalSeparator : public FXVerticalSeparator {
+public:
+    FXPyVerticalSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_Y,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=1,FXint pb=1);
+    %pragma(python) addtomethod = "__init__:FXPyRegister(self)"
+};
 }

@@ -3,15 +3,9 @@
 %pythonappend FX::FXPoint::FXPoint %{
   self.thisown = False
 %}
-
-
-%module FXPoint
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyPoint::FXPyPoint %{
+  self.thisown = False
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXPoint.h"

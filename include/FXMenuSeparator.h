@@ -35,7 +35,7 @@ namespace FX {
 * The menu separator is a simple decorative groove
 * used to delineate items in a popup menu.
 */
-class FXMenuSeparator : public FXWindow {
+class FXAPI FXMenuSeparator : public FXWindow {
   FXDECLARE(FXMenuSeparator)
 protected:
   FXColor hiliteColor;

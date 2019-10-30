@@ -32,7 +32,7 @@
 namespace FX {
 
 /// Codec for UTF-8
-class FXUTF8Codec : public FXTextCodec {
+class FXAPI FXUTF8Codec : public FXTextCodec {
 public:
   FXUTF8Codec(){}
   virtual FXint mb2wc(FXwchar& wc,const FXchar* src,FXint nsrc) const;

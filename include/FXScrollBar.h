@@ -61,7 +61,7 @@ enum {
 * At the end of the interaction, the scroll bar will send a message of type
 * SEL_COMMAND to notify the target of the final position.
 */
-class FXScrollBar : public FXWindow {
+class FXAPI FXScrollBar : public FXWindow {
   FXDECLARE(FXScrollBar)
 protected:
   FXint      range;           // Scrollable range
@@ -207,7 +207,7 @@ public:
 
 
 /// Corner between scroll bars
-class FXScrollCorner : public FXWindow {
+class FXAPI FXScrollCorner : public FXWindow {
   FXDECLARE(FXScrollCorner)
 protected:
   FXScrollCorner();

@@ -32,7 +32,7 @@ class FXSphered;
 
 
 /// Bounds
-class FXRanged {
+class FXAPI FXRanged {
 public:
   FXVec3d lower;
   FXVec3d upper;
@@ -136,32 +136,32 @@ public:
   bool intersect(const FXVec3d& u,const FXVec3d& v);
 
   /// Test if bounds overlap
-  friend bool overlap(const FXRanged& a,const FXRanged& b);
+  friend FXAPI bool overlap(const FXRanged& a,const FXRanged& b);
 
   /// Get corner number 0..7
   FXVec3d corner(FXint c) const { return FXVec3d((&lower)[c&1].x, (&lower)[(c>>1)&1].y, (&lower)[c>>2].z); }
 
   /// Union of two boxes
-  friend FXRanged unite(const FXRanged& a,const FXRanged& b);
+  friend FXAPI FXRanged unite(const FXRanged& a,const FXRanged& b);
 
   /// Intersection of two boxes
-  friend FXRanged intersect(const FXRanged& a,const FXRanged& b);
+  friend FXAPI FXRanged intersect(const FXRanged& a,const FXRanged& b);
 
   /// Save object to a stream
-  friend FXStream& operator<<(FXStream& store,const FXRanged& bounds);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXRanged& bounds);
 
   /// Load object from a stream
-  friend FXStream& operator>>(FXStream& store,FXRanged& bounds);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXRanged& bounds);
   };
 
 
-extern bool overlap(const FXRanged& a,const FXRanged& b);
+extern FXAPI bool overlap(const FXRanged& a,const FXRanged& b);
 
-extern FXRanged unite(const FXRanged& a,const FXRanged& b);
-extern FXRanged intersect(const FXRanged& a,const FXRanged& b);
+extern FXAPI FXRanged unite(const FXRanged& a,const FXRanged& b);
+extern FXAPI FXRanged intersect(const FXRanged& a,const FXRanged& b);
 
-extern FXStream& operator<<(FXStream& store,const FXRanged& bounds);
-extern FXStream& operator>>(FXStream& store,FXRanged& bounds);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXRanged& bounds);
+extern FXAPI FXStream& operator>>(FXStream& store,FXRanged& bounds);
 
 }
 

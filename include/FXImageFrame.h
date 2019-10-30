@@ -36,7 +36,7 @@ namespace FX {
 * an image; the image is not owned by the image frame so
 * it must be explicitly deleted elsewhere.
 */
-class FXImageFrame : public FXFrame {
+class FXAPI FXImageFrame : public FXFrame {
   FXDECLARE(FXImageFrame)
 protected:
   FXImage* image;       // The image being displayed

@@ -41,7 +41,7 @@ class FXCommandGroup;
 * Since commands are derived from FXObject, subclassed commands can
 * both send and receive messages (like ID_GETINTVALUE, for example).
 */
-class FXCommand : public FXObject {
+class FXAPI FXCommand : public FXObject {
   FXDECLARE_ABSTRACT(FXCommand)
   friend class FXUndoList;
   friend class FXCommandGroup;
@@ -114,7 +114,7 @@ public:
 * operation.  Even larger operations may be built by nesting
 * multiple undo groups.
 */
-class FXCommandGroup : public FXCommand {
+class FXAPI FXCommandGroup : public FXCommand {
   FXDECLARE(FXCommandGroup)
   friend class FXUndoList;
 private:
@@ -150,7 +150,7 @@ public:
 /**
 * The Undo List class manages a list of undoable commands.
 */
-class FXUndoList : public FXCommandGroup {
+class FXAPI FXUndoList : public FXCommandGroup {
   FXDECLARE(FXUndoList)
 private:
   FXint      undocount;     // Number of undo records

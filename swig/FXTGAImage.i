@@ -3,15 +3,17 @@
 %pythonappend FX::FXTGAImage::FXTGAImage %{
   self.thisown = False
 %}
-
-
-%module FXTGAImage
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyTGAImage::FXPyTGAImage %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXTGAImage.h"
+
+namespace FX {
+class FXPyTGAImage : public FXTGAImage {
+public:
+    FXPyTGAImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
+};
+}

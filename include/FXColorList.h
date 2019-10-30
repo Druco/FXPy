@@ -32,68 +32,68 @@ namespace FX {
 
 
 /// Color item
-class FXColorItem : public FX::FXListItem {
-  FXDECLARE(FX::FXColorItem)
+class FXAPI FXColorItem : public FXListItem {
+  FXDECLARE(FXColorItem)
 protected:
-  FX::FXColor  color;
+  FXColor  color;
 private:
-  FXColorItem(const FX::FXColorItem&);
-  FXColorItem& operator=(const FX::FXColorItem&);
+  FXColorItem(const FXColorItem&);
+  FXColorItem& operator=(const FXColorItem&);
 protected:
   FXColorItem():color(0){}
-  virtual void draw(const FX::FXList* list,FX::FXDC& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  virtual FX::FXint hitItem(const FX::FXList* list,FX::FXint x,FX::FXint y) const;
+  virtual void draw(const FXList* list,FXDC& dc,FXint x,FXint y,FXint w,FXint h);
+  virtual FXint hitItem(const FXList* list,FXint x,FXint y) const;
 public:
   /// Construct new item with given text, color, and user-data
-  FXColorItem(const FX::FXString& text,FX::FXColor clr,void* ptr=NULL):FX::FXListItem(text,NULL,ptr),color(clr){}
+  FXColorItem(const FXString& text,FXColor clr,void* ptr=NULL):FXListItem(text,NULL,ptr),color(clr){}
 
   /// Change item's color
-  void setColor(FX::FXColor clr){ color=clr; }
+  void setColor(FXColor clr){ color=clr; }
 
   /// Return item's color
-  FX::FXColor getColor() const { return color; }
+  FXColor getColor() const { return color; }
 
   /// Return width of item as drawn in list
-  virtual FX::FXint getWidth(const FX::FXList* list) const;
+  virtual FXint getWidth(const FXList* list) const;
 
   /// Return height of item as drawn in list
-  virtual FX::FXint getHeight(const FX::FXList* list) const;
+  virtual FXint getHeight(const FXList* list) const;
   };
 
 
 /**
 * A ColorList Widget displays a list of colors.
 */
-class FXColorList : public FX::FXList {
-  FXDECLARE(FX::FXColorList)
+class FXAPI FXColorList : public FXList {
+  FXDECLARE(FXColorList)
 protected:
   FXColorList(){}
-  virtual FX::FXListItem *createItem(const FX::FXString& text,FX::FXIcon* icon,void* ptr);
+  virtual FXListItem *createItem(const FXString& text,FXIcon* icon,void* ptr);
 private:
-  FXColorList(const FX::FXColorList&);
-  FXColorList &operator=(const FX::FXColorList&);
+  FXColorList(const FXColorList&);
+  FXColorList &operator=(const FXColorList&);
 public:
 
   /// Construct a list with initially no items in it
-  FXColorList(FX::FXComposite *p,FX::FXObject* tgt=NULL,FX::FXSelector sel=0,FX::FXuint opts=LIST_BROWSESELECT,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+  FXColorList(FXComposite *p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=LIST_BROWSESELECT,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 
   /// Fill list by appending color items from array of strings and array of colors
-  FX::FXint fillItems(const FX::FXchar** strings,FX::FXColor *colors=NULL,void* ptr=NULL,FX::FXbool notify=FALSE);
+  FXint fillItems(const FXchar** strings,FXColor *colors=NULL,void* ptr=NULL,FXbool notify=FALSE);
 
   /// Insert item at index with given text, color, and user-data pointer
-  FX::FXint insertItem(FX::FXint index,const FX::FXString& text,FX::FXColor color=0,void* ptr=NULL,FX::FXbool notify=FALSE);
+  FXint insertItem(FXint index,const FXString& text,FXColor color=0,void* ptr=NULL,FXbool notify=FALSE);
 
   /// Append new item with given text, color, and user-data pointer
-  FX::FXint appendItem(const FX::FXString& text,FX::FXColor color=0,void* ptr=NULL,FX::FXbool notify=FALSE);
+  FXint appendItem(const FXString& text,FXColor color=0,void* ptr=NULL,FXbool notify=FALSE);
 
   /// Prepend new item with given text, color, and user-data pointer
-  FX::FXint prependItem(const FX::FXString& text,FX::FXColor color=0,void* ptr=NULL,FX::FXbool notify=FALSE);
+  FXint prependItem(const FXString& text,FXColor color=0,void* ptr=NULL,FXbool notify=FALSE);
 
   /// Change item color
-  void setItemColor(FX::FXint index,FX::FXColor color);
+  void setItemColor(FXint index,FXColor color);
 
   /// Return item color
-  FX::FXColor getItemColor(FX::FXint index) const;
+  FXColor getItemColor(FXint index) const;
   };
 
 }

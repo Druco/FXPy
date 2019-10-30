@@ -40,7 +40,7 @@ class FXList;
 * When the dialog closes, the index of the selected choice is returned,
 * while a -1 is returned if the dialog was canceled,
 */
-class FXChoiceBox : public FXDialogBox {
+class FXAPI FXChoiceBox : public FXDialogBox {
   FXDECLARE(FXChoiceBox)
 protected:
   FXList *list;

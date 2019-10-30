@@ -35,7 +35,7 @@ namespace FX {
 * in far less "real" memory being used than would otherwise be
 * the case.
 */
-class FXMemMap {
+class FXAPI FXMemMap {
 private:
   void*         mapbase;        // Memory base where it is mapped
   long          maplength;      // Length of the map

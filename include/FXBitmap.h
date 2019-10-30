@@ -54,7 +54,7 @@ class FXDCWindow;
 * The client-side pixel array is of size height x (width+7)/8 bytes, in other
 * words 8 pixels packed into a single byte, starting at bit 0 on the left.
 */
-class FXBitmap : public FXDrawable {
+class FXAPI FXBitmap : public FXDrawable {
   FXDECLARE(FXBitmap)
   friend class FXDC;
   friend class FXDCWindow;

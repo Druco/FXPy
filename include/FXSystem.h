@@ -34,10 +34,10 @@ namespace FXSystem {
 
 
 /// Return current time
-FXTime now();
+FXTime FXAPI now();
 
 /// Convert time value to date-string
-FXString time(FXTime value);
+FXString FXAPI time(FXTime value);
 
 /**
 * Convert time value to date-string as per strftime.
@@ -47,67 +47,67 @@ FXString time(FXTime value);
 *
 * Some systems support additional conversions.
 */
-FXString time(const FXchar *format,FXTime value);
+FXString FXAPI time(const FXchar *format,FXTime value);
 
 
 
 /// Get effective user id
-FXuint user();
+FXuint FXAPI user();
 
 /// Get effective group id
-FXuint group();
+FXuint FXAPI group();
 
 /// Return owner name from uid if available
-FXString userName(FXuint uid);
+FXString FXAPI userName(FXuint uid);
 
 /// Return group name from gid if available
-FXString groupName(FXuint gid);
+FXString FXAPI groupName(FXuint gid);
 
 /// Get current effective user name
-FXString currentUserName();
+FXString FXAPI currentUserName();
 
 /// Get current effective group name
-FXString currentGroupName();
+FXString FXAPI currentGroupName();
 
 
 /// Get permissions string
-FXString modeString(FXuint mode);
+FXString FXAPI modeString(FXuint mode);
 
 
 
 /// Return value of environment variable name
-FXString getEnvironment(const FXString& name);
+FXString FXAPI getEnvironment(const FXString& name);
 
 /// Change value of environment variable name, return true if success
-bool setEnvironment(const FXString& name,const FXString& value);
+bool FXAPI setEnvironment(const FXString& name,const FXString& value);
 
 
 
 /// Get the current working directory
-FXString getCurrentDirectory();
+FXString FXAPI getCurrentDirectory();
 
 /// Set the current working directory
-FXbool setCurrentDirectory(const FXString& path);
+FXbool FXAPI setCurrentDirectory(const FXString& path);
 
 /// Return the current drive (for Win32 systems)
-FXString getCurrentDrive();
+FXString FXAPI getCurrentDrive();
 
 /// Set the current drive (for Win32 systems)
-FXbool setCurrentDrive(const FXString& prefix);
+FXbool FXAPI setCurrentDrive(const FXString& prefix);
 
 
 
 /// Get executable path
-FXString getExecPath();
+FXString FXAPI getExecPath();
 
 /// Return the home directory for the current user
-FXString getHomeDirectory();
+FXString FXAPI getHomeDirectory();
 
 /// Return the home directory for a given user
-FXString getUserDirectory(const FXString& user);
+FXString FXAPI getUserDirectory(const FXString& user);
 
 /// Return temporary directory
-FXString getTempDirectory();
+FXString FXAPI getTempDirectory();
 
 
 
@@ -115,7 +115,7 @@ FXString getTempDirectory();
 * Get DLL name for given base name; for example "png"
 * becomes "libpng.so" on Linux, and "png.dll" on Windows.
 */
-FXString dllName(const FXString& name);
+FXString FXAPI dllName(const FXString& name);
 
 }
 

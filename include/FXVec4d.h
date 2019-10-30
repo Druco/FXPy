@@ -32,7 +32,7 @@ class FXMat4d;
 
 
 /// Double-precision 4-element vector
-class FXVec4d {
+class FXAPI FXVec4d {
 public:
   FXdouble x;
   FXdouble y;
@@ -158,10 +158,10 @@ public:
   friend inline FXVec4d hi(const FXVec4d& a,const FXVec4d& b);
 
   /// Compute normalized plane equation ax+by+cz+d=0
-  friend FXVec4d plane(const FXVec4d& vec);
-  friend FXVec4d plane(const FXVec3d& vec,FXdouble dist);
-  friend FXVec4d plane(const FXVec3d& vec,const FXVec3d& p);
-  friend FXVec4d plane(const FXVec3d& a,const FXVec3d& b,const FXVec3d& c);
+  friend FXAPI FXVec4d plane(const FXVec4d& vec);
+  friend FXAPI FXVec4d plane(const FXVec3d& vec,FXdouble dist);
+  friend FXAPI FXVec4d plane(const FXVec3d& vec,const FXVec3d& p);
+  friend FXAPI FXVec4d plane(const FXVec3d& a,const FXVec3d& b,const FXVec3d& c);
 
   /// Signed distance normalized plane and point
   FXdouble distance(const FXVec3d& p) const;
@@ -170,13 +170,13 @@ public:
   bool crosses(const FXVec3d& a,const FXVec3d& b) const;
 
   /// Normalize vector
-  friend FXVec4d normalize(const FXVec4d& v);
+  friend FXAPI FXVec4d normalize(const FXVec4d& v);
 
   /// Save to a stream
-  friend FXStream& operator<<(FXStream& store,const FXVec4d& v);
+  friend FXAPI FXStream& operator<<(FXStream& store,const FXVec4d& v);
 
   /// Load from a stream
-  friend FXStream& operator>>(FXStream& store,FXVec4d& v);
+  friend FXAPI FXStream& operator>>(FXStream& store,FXVec4d& v);
   };
 
 
@@ -203,15 +203,15 @@ inline bool operator>=(FXdouble n,const FXVec4d& a){return n>=a.x && n>=a.y && n
 inline FXVec4d lo(const FXVec4d& a,const FXVec4d& b){return FXVec4d(FXMIN(a.x,b.x),FXMIN(a.y,b.y),FXMIN(a.z,b.z),FXMIN(a.w,b.w));}
 inline FXVec4d hi(const FXVec4d& a,const FXVec4d& b){return FXVec4d(FXMAX(a.x,b.x),FXMAX(a.y,b.y),FXMAX(a.z,b.z),FXMAX(a.w,b.w));}
 
-extern FXVec4d plane(const FXVec4d& vec);
-extern FXVec4d plane(const FXVec3d& vec,FXdouble dist);
-extern FXVec4d plane(const FXVec3d& vec,const FXVec3d& p);
-extern FXVec4d plane(const FXVec3d& a,const FXVec3d& b,const FXVec3d& c);
+extern FXAPI FXVec4d plane(const FXVec4d& vec);
+extern FXAPI FXVec4d plane(const FXVec3d& vec,FXdouble dist);
+extern FXAPI FXVec4d plane(const FXVec3d& vec,const FXVec3d& p);
+extern FXAPI FXVec4d plane(const FXVec3d& a,const FXVec3d& b,const FXVec3d& c);
 
-extern FXVec4d normalize(const FXVec4d& v);
+extern FXAPI FXVec4d normalize(const FXVec4d& v);
 
-extern FXStream& operator<<(FXStream& store,const FXVec4d& v);
-extern FXStream& operator>>(FXStream& store,FXVec4d& v);
+extern FXAPI FXStream& operator<<(FXStream& store,const FXVec4d& v);
+extern FXAPI FXStream& operator>>(FXStream& store,FXVec4d& v);
 
 }
 

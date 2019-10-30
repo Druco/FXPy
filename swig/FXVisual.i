@@ -3,15 +3,17 @@
 %pythonappend FX::FXVisual::FXVisual %{
   self.thisown = False
 %}
-
-
-%module FXVisual
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyVisual::FXPyVisual %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXVisual.h"
+
+namespace FX {
+class FXPyVisual : public FXVisual {
+public:
+    FXPyVisual(FXApp* a,FXuint flgs,FXuint d=32);
+};
+}

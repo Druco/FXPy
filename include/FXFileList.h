@@ -51,7 +51,7 @@ enum {
 
 
 /// File item
-class FXFileItem : public FXIconItem {
+class FXAPI FXFileItem : public FXIconItem {
   FXDECLARE(FXFileItem)
   friend class FXFileList;
 protected:
@@ -127,7 +127,7 @@ public:
 * display mode.
 * The File list widget supports drags and drops of files.
 */
-class FXFileList : public FXIconList {
+class FXAPI FXFileList : public FXIconList {
   FXDECLARE(FXFileList)
 protected:
   FXString      directory;      // Current directory

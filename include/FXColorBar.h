@@ -49,7 +49,7 @@ class FXImage;
 * The options COLORBAR_HORIZONTAL and COLORBAR_VERTICAL control the orientation
 * of the bar.
 */
-class FXColorBar : public FXFrame {
+class FXAPI FXColorBar : public FXFrame {
   FXDECLARE(FXColorBar)
 protected:
   FXImage  *bar;          // Intensity bar

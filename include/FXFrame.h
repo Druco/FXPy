@@ -58,106 +58,106 @@ enum { DEFAULT_PAD = 2 };
 * The Frame widget is sometimes used by itself as a place holder, but most often is used
 * as a convenient base class for simple controls.
 */
-class FXFrame : public FX::FXWindow {
-  FXDECLARE(FX::FXFrame)
+class FXAPI FXFrame : public FXWindow {
+  FXDECLARE(FXFrame)
 protected:
-  FX::FXColor baseColor;    // Base color
-  FX::FXColor hiliteColor;  // Highlight color
-  FX::FXColor shadowColor;  // Shadow color
-  FX::FXColor borderColor;  // Border color
-  FX::FXint   padtop;       // Top padding
-  FX::FXint   padbottom;    // Bottom padding
-  FX::FXint   padleft;      // Left padding
-  FX::FXint   padright;     // right padding
-  FX::FXint   border;       // Border size
+  FXColor baseColor;    // Base color
+  FXColor hiliteColor;  // Highlight color
+  FXColor shadowColor;  // Shadow color
+  FXColor borderColor;  // Border color
+  FXint   padtop;       // Top padding
+  FXint   padbottom;    // Bottom padding
+  FXint   padleft;      // Left padding
+  FXint   padright;     // right padding
+  FXint   border;       // Border size
 protected:
   FXFrame();
-  void drawBorderRectangle(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  void drawRaisedRectangle(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  void drawSunkenRectangle(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  void drawRidgeRectangle(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  void drawGrooveRectangle(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  void drawDoubleRaisedRectangle(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  void drawDoubleSunkenRectangle(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  void drawFrame(FX::FXDCWindow& dc,FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
+  void drawBorderRectangle(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
+  void drawRaisedRectangle(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
+  void drawSunkenRectangle(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
+  void drawRidgeRectangle(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
+  void drawGrooveRectangle(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
+  void drawDoubleRaisedRectangle(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
+  void drawDoubleSunkenRectangle(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
+  void drawFrame(FXDCWindow& dc,FXint x,FXint y,FXint w,FXint h);
 private:
-  FXFrame(const FX::FXFrame&);
-  FXFrame &operator=(const FX::FXFrame&);
+  FXFrame(const FXFrame&);
+  FXFrame &operator=(const FXFrame&);
 public:
-  long onPaint(FX::FXObject*,FX::FXSelector,void*);
+  long onPaint(FXObject*,FXSelector,void*);
 public:
 
   /// Construct frame window
-  FXFrame(FX::FXComposite* p,FX::FXuint opts=FRAME_NORMAL,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0,FX::FXint pl=DEFAULT_PAD,FX::FXint pr=DEFAULT_PAD,FX::FXint pt=DEFAULT_PAD,FX::FXint pb=DEFAULT_PAD);
+  FXFrame(FXComposite* p,FXuint opts=FRAME_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
 
   /// Return default width
-  virtual FX::FXint getDefaultWidth();
+  virtual FXint getDefaultWidth();
 
   /// Return default height
-  virtual FX::FXint getDefaultHeight();
+  virtual FXint getDefaultHeight();
 
   /// Change frame style
-  void setFrameStyle(FX::FXuint style);
+  void setFrameStyle(FXuint style);
 
   /// Get current frame style
-  FX::FXuint getFrameStyle() const;
+  FXuint getFrameStyle() const;
 
   /// Get border width
-  FX::FXint getBorderWidth() const { return border; }
+  FXint getBorderWidth() const { return border; }
 
   /// Change top padding
-  void setPadTop(FX::FXint pt);
+  void setPadTop(FXint pt);
 
   /// Get top interior padding
-  FX::FXint getPadTop() const { return padtop; }
+  FXint getPadTop() const { return padtop; }
 
   /// Change bottom padding
-  void setPadBottom(FX::FXint pb);
+  void setPadBottom(FXint pb);
 
   /// Get bottom interior padding
-  FX::FXint getPadBottom() const { return padbottom; }
+  FXint getPadBottom() const { return padbottom; }
 
   /// Change left padding
-  void setPadLeft(FX::FXint pl);
+  void setPadLeft(FXint pl);
 
   /// Get left interior padding
-  FX::FXint getPadLeft() const { return padleft; }
+  FXint getPadLeft() const { return padleft; }
 
   /// Change right padding
-  void setPadRight(FX::FXint pr);
+  void setPadRight(FXint pr);
 
   /// Get right interior padding
-  FX::FXint getPadRight() const { return padright; }
+  FXint getPadRight() const { return padright; }
 
   /// Change highlight color
-  void setHiliteColor(FX::FXColor clr);
+  void setHiliteColor(FXColor clr);
 
   /// Get highlight color
-  FX::FXColor getHiliteColor() const { return hiliteColor; }
+  FXColor getHiliteColor() const { return hiliteColor; }
 
   /// Change shadow color
-  void setShadowColor(FX::FXColor clr);
+  void setShadowColor(FXColor clr);
 
   /// Get shadow color
-  FX::FXColor getShadowColor() const { return shadowColor; }
+  FXColor getShadowColor() const { return shadowColor; }
 
   /// Change border color
-  void setBorderColor(FX::FXColor clr);
+  void setBorderColor(FXColor clr);
 
   /// Get border color
-  FX::FXColor getBorderColor() const { return borderColor; }
+  FXColor getBorderColor() const { return borderColor; }
 
   /// Change base gui color
-  void setBaseColor(FX::FXColor clr);
+  void setBaseColor(FXColor clr);
 
   /// Get base gui color
-  FX::FXColor getBaseColor() const { return baseColor; }
+  FXColor getBaseColor() const { return baseColor; }
 
   /// Save to stream
-  virtual void save(FX::FXStream& store) const;
+  virtual void save(FXStream& store) const;
 
   /// Load from stream
-  virtual void load(FX::FXStream& store);
+  virtual void load(FXStream& store);
   };
 
 }

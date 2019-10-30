@@ -52,7 +52,7 @@ enum {
 * height of the current child, instead of the maximum width
 * or height of all of the children.
 */
-class FXSwitcher : public FXPacker {
+class FXAPI FXSwitcher : public FXPacker {
   FXDECLARE(FXSwitcher)
 protected:
   FXint  current;

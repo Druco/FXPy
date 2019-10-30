@@ -7,15 +7,19 @@
 %pythonappend FX::FXBMPImage::FXBMPImage %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyBMPImage::FXPyBMPImage %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 
 #define __GNUC__
-%module FXBMPImage
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
-%}
-
 %include "include/fxdefs2.h"
 %include "include/FXBMPImage.h"
+
+namespace FX {
+class FXBMPImage : public FXImage {
+public:
+  FXBMPImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
+  };
+}

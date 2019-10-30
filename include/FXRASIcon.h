@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// SUN Raster Image format icon
-class FXRASIcon : public FXIcon {
+class FXAPI FXRASIcon : public FXIcon {
   FXDECLARE(FXRASIcon)
 protected:
   FXRASIcon(){}
@@ -61,7 +61,7 @@ public:
 /**
 * Check if stream contains a RAS, return TRUE if so.
 */
-extern bool fxcheckRAS(FXStream& store);
+extern FXAPI bool fxcheckRAS(FXStream& store);
 
 
 /**
@@ -69,13 +69,13 @@ extern bool fxcheckRAS(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadRAS(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadRAS(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an SUN Raster Image format file to a stream.
 */
-extern bool fxsaveRAS(FXStream& store,const FXColor *data,FXint width,FXint height);
+extern FXAPI bool fxsaveRAS(FXStream& store,const FXColor *data,FXint width,FXint height);
 
 }
 

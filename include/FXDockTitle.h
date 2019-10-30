@@ -36,7 +36,7 @@ namespace FX {
 * The dock title is also used simultaneously to provide a
 * caption above the dock bar.
 */
-class FXDockTitle : public FXDockHandler {
+class FXAPI FXDockTitle : public FXDockHandler {
   FXDECLARE(FXDockTitle)
 protected:
   FXString  caption;            // Caption text

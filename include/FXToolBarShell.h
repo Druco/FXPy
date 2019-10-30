@@ -35,7 +35,7 @@ namespace FX {
 * A Tool bar shell is a widget floating around over the Main Window.
 * It typically contains an undocked tool bar.
 */
-class FXToolBarShell : public FXTopWindow {
+class FXAPI FXToolBarShell : public FXTopWindow {
   FXDECLARE(FXToolBarShell)
 protected:
   FXColor   baseColor;

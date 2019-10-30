@@ -39,7 +39,7 @@ namespace FX {
 * 1, 4, and 8 bit paletted bitmaps, 16 and 24 bit RGB bitmaps, and
 * 32 bit RGBA bitmaps.
 */
-class FXBMPImage : public FXImage {
+class FXAPI FXBMPImage : public FXImage {
   FXDECLARE(FXBMPImage)
 protected:
   FXBMPImage(){}
@@ -68,7 +68,7 @@ public:
 /**
 * Check if stream contains a bitmap, return TRUE if so.
 */
-extern bool fxcheckBMP(FXStream& store);
+extern FXAPI bool fxcheckBMP(FXStream& store);
 
 
 /**
@@ -76,13 +76,13 @@ extern bool fxcheckBMP(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadBMP(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadBMP(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an BMP (Microsoft Bitmap) file to a stream.
 */
-extern bool fxsaveBMP(FXStream& store,const FXColor *data,FXint width,FXint height);
+extern FXAPI bool fxsaveBMP(FXStream& store,const FXColor *data,FXint width,FXint height);
 
 }
 

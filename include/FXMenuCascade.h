@@ -38,7 +38,7 @@ class FXPopup;
 * The cascade menu widget is used to bring up a sub menu from a
 * pull down menu.
 */
-class FXMenuCascade : public FXMenuCaption {
+class FXAPI FXMenuCascade : public FXMenuCaption {
   FXDECLARE(FXMenuCascade)
 protected:
   FXPopup *pane;

@@ -3,15 +3,10 @@
 %pythonappend FX::FXIconList::FXIconList %{
   self.thisown = False
 %}
-
-
-%module FXIconList
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyIconList::FXPyIconList %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXIconList.h"

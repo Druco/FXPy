@@ -42,7 +42,7 @@ namespace FX {
 * is supposed to be updated by a common SEL_UPDATE handler to
 * properly maintain the state between them.
 */
-class FXMenuRadio : public FXMenuCommand {
+class FXAPI FXMenuRadio : public FXMenuCommand {
   FXDECLARE(FXMenuRadio)
 protected:
   FXuchar check;        // State of menu

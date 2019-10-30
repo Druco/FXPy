@@ -2,6 +2,70 @@
 %module FXPy
 %{
 #include "fxdefs.h"
+#include "FXString.h"
+#include "fxdefs2.h"
+#include "fx.h"
+#include "FXApp.h"
+#include "FXTranslator.h"
+#include "FXGradientBar.h"
+#include "FXJPGIcon.h"
+#include "FXJPGImage.h"
+#include "FXPNGIcon.h"
+#include "FXPNGImage.h"
+#include "FXVec2d.h"
+#include "FXVec3d.h"
+#include "FXVec4d.h"
+#include "FXQuatd.h"
+#include "FXVec2f.h"
+#include "FXVec3f.h"
+#include "FXVec4f.h"
+#include "FXQuatf.h"
+#include "FXVec2d.h"
+#include "FXVec3d.h"
+#include "FXVec4d.h"
+#include "FXRanged.h"
+#include "FXVec2f.h"
+#include "FXVec3f.h"
+#include "FXVec4f.h"
+#include "FXRangef.h"
+#include "FXSettings.h"
+#include "FXVec2d.h"
+#include "FXVec3d.h"
+#include "FXVec4d.h"
+#include "FXSphered.h"
+#include "FXVec2f.h"
+#include "FXVec3f.h"
+#include "FXVec4f.h"
+#include "FXSpheref.h"
+#include "FXTIFIcon.h"
+#include "FXTIFImage.h"
+#include "FXVec2d.h"
+#include "FXVec2f.h"
+#include "FXVec2d.h"
+#include "FXVec3d.h"
+#include "FXVec2f.h"
+#include "FXVec3f.h"
+#include "FXVec2d.h"
+#include "FXVec3d.h"
+#include "FXVec4d.h"
+#include "FXVec2f.h"
+#include "FXVec3f.h"
+#include "FXVec4f.h"
+#include "FXVec2d.h"
+#include "FXMat3d.h"
+#include "FXMat3f.h"
+#include "FXMat4d.h"
+#include "FXMat4f.h"
+#include "FXMatrix.h"
+#include "FXExtentd.h"
+#include "FXVec2f.h"
+#include "FXExtentf.h"
+#include "FX4Splitter.h"
+#include "FXColorList.h"
+#include "FXComposeContext.h"
+#include "FXMemMap.h"
+#include "FXPy.h"
+
 namespace FX {
 class                          FXObject;
 class                          FXStream;
@@ -56,16 +120,31 @@ typedef FXint                  FXInputHandle;
 
 // Raw event type
 typedef _XEvent                FXRawEvent;
+
+/* This is exposed as a global variable */
+PyObject* messageTypeNames;
+
+/* Adds a new list object, containing the names of FOX message types */
+void FXPy_InitLists(PyObject* dict) {
+  if(!messageTypeNames){
+    /* Create the list */
+    messageTypeNames = PyList_New(SEL_LAST);
+    for (int i = 0; i < SEL_LAST; i++) {
+      PyList_SetItem(messageTypeNames, i, PyString_FromString(FXDebugTarget::messageTypeName[i]));
+      }
+    }
+  }
+
 };
-#include "FXString.h"
+
 %}
+
+// %rename FXMainWindow FX_MainWindow;
+// %rename FXPyMainWindow FXMainWindow;
+
 
 %include pytypemaps.i
-
-%pythonappend FX::FXButton::FXButton %{
-  self.thisown = False
-%}
-
+%include renames.i
 %include fxdefs.i
 %include FXObject.i
 %include FXApp.i
@@ -77,7 +156,6 @@ typedef _XEvent                FXRawEvent;
 %include FXIconSource.i
 %include FXId.i
 %include FXRecentFiles.i
-//%include FXTable.i
 %include FXTranslator.i
 %include FXUndoList.i
 %include FXFileDict.i
@@ -95,17 +173,14 @@ typedef _XEvent                FXRawEvent;
 %include FXDragCorner.i
 %include FXFileDialog.i
 %include FXFont.i
-//%include FXFontSelector.i
 %include FXFrame.i
 %include FXHeader.i
-//%include FXGIFImage.i
 %include FXGradientBar.i
 %include FXIconDict.i
 %include FXImage.i
 %include FXGIFImage.i
 %include FXIcon.i
 %include FXImageFrame.i
-//%include FXImageView.i
 %include FXInputDialog.i
 %include FXJPGIcon.i
 %include FXJPGImage.i
@@ -133,7 +208,6 @@ typedef _XEvent                FXRawEvent;
 %include FXPacker.i
 %include FXFontSelector.i
 %include FXGroupBox.i
-//%include FXPicker.i
 %include FXPipe.i
 %include FXPopup.i
 %include FXPrintDialog.i
@@ -149,7 +223,6 @@ typedef _XEvent                FXRawEvent;
 %include FXRealSlider.i
 %include FXRealSpinner.i
 %include FXRegion.i
-//%include FXRegistry.i
 %include FXReplaceDialog.i
 %include FXRootWindow.i
 %include FXRuler.i
@@ -161,13 +234,11 @@ typedef _XEvent                FXRawEvent;
 %include FXIconList.i
 %include FXTreeList.i
 %include FXScrollBar.i
-//%include FXScrollPane.i
 %include FXScrollWindow.i
 %include FXSearchDialog.i
 %include FXSeparator.i
 %include FXSettings.i
 %include FXShell.i
-//%include FXShutter.i
 %include FXSize.i
 %include FXSlider.i
 %include FXSphered.i
@@ -175,7 +246,6 @@ typedef _XEvent                FXRawEvent;
 %include FXSpinner.i
 %include FXSplashWindow.i
 %include FXSplitter.i
-//%include FXStatusBar.i
 %include FXStatusLine.i
 %include FXStringDict.i
 %include FXSwitcher.i
@@ -189,7 +259,6 @@ typedef _XEvent                FXRawEvent;
 %include FXText.i
 %include FXTextField.i
 %include FXToggleButton.i
-//%include FXToolBarGrip.i
 %include FXToolBarShell.i
 %include FXToolBarTab.i
 %include FXToolTip.i
@@ -270,3 +339,60 @@ typedef _XEvent                FXRawEvent;
 %include FXStream.i
 %include FXRectangle.i
 %include FXRegistry.i
+
+
+extern PyObject* FXPySetDict(PyObject *, PyObject *args);
+
+%pythoncode %{
+FXPySetDict(None, vars())
+        
+def FXMAPTYPES(self, typelo, typehi, func):
+    if not hasattr(self, "FXMSGMAP"):
+        self.FXMSGMAP = []
+    keylo = MKUINT(MINKEY, typelo)
+    keyhi = MKUINT(MAXKEY, typehi)
+    tup = (keylo, keyhi, func)
+    self.FXMSGMAP.append(tup)
+
+def FXMAPTYPE(self, type, func):
+    if not hasattr(self, "FXMSGMAP"):
+        self.FXMSGMAP = []
+    keylo = MKUINT(MINKEY, type)
+    keyhi = MKUINT(MAXKEY, type)
+    tup = (keylo, keyhi, func)
+    self.FXMSGMAP.append(tup)
+
+# Here's how we handle mapping message identifiers to method calls at
+# the Python level. Each object instance has a list member called
+# FXMSGMAP which maps a range of identifiers to a method call.
+def FXMAPFUNC(self, type, id, func):
+    if not hasattr(self, "FXMSGMAP"):
+        self.FXMSGMAP = []
+    keylo = MKUINT(id, type)
+    keyhi = MKUINT(id, type)
+    tup = (keylo, keyhi, func)
+    self.FXMSGMAP.append(tup)
+
+def FXMAPFUNCS(self, type, keylo, keyhi, func):
+    if not hasattr(self, "FXMSGMAP"):
+        self.FXMSGMAP = []
+    keylo = MKUINT(keylo, type)
+    keyhi = MKUINT(keyhi, type)
+    tup = (keylo, keyhi, func)
+    self.FXMSGMAP.append(tup)
+
+%}
+
+%insert("wrapper") %{
+#ifdef __cplusplus
+}
+#endif
+extern PyObject* FXWrapEvent(FX::FXEvent* ptr);
+PyObject* FXWrapEvent(FX::FXEvent* ptr) {
+    PyObject* result = SWIG_NewPointerObj(SWIG_as_voidptr(ptr), SWIGTYPE_p_FX__FXEvent, 0 );
+    return result;
+}
+#ifdef __cplusplus
+extern "C" {
+#endif
+%}

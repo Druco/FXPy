@@ -37,7 +37,7 @@ struct BZBlock;
 
 
 /// BZIP2 compressed file stream
-class FXBZFileStream : public FXFileStream {
+class FXAPI FXBZFileStream : public FXFileStream {
 private:
   BZBlock *bz;
   int      ac;

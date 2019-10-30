@@ -70,7 +70,7 @@ struct FXTableRange {
 
 
 /// Item in table
-class FXTableItem : public FXObject {
+class FXAPI FXTableItem : public FXObject {
   FXDECLARE(FXTableItem)
   friend class FXTable;
 protected:
@@ -218,7 +218,7 @@ public:
 
 
 /// Combobox Item
-class FXComboTableItem : public FXTableItem {
+class FXAPI FXComboTableItem : public FXTableItem {
   FXDECLARE(FXComboTableItem)
 protected:
   FXString selections;
@@ -282,7 +282,7 @@ public:
 * is clicked, double-clicked, or triple-clicked, respectively. 
 * A SEL_COMMAND is sent when an enabled item is clicked inside the table.
 */
-class FXTable : public FXScrollArea {
+class FXAPI FXTable : public FXScrollArea {
   FXDECLARE(FXTable)
 protected:
   FXHeader     *colHeader;              // Column header

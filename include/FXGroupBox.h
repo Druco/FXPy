@@ -47,7 +47,7 @@ enum {
 * Typically, a title is placed over the border to provide some
 * clarification.
 */
-class FXGroupBox : public FXPacker {
+class FXAPI FXGroupBox : public FXPacker {
   FXDECLARE(FXGroupBox)
 protected:
   FXString  label;

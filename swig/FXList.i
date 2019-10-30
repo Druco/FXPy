@@ -3,6 +3,10 @@
 %pythonappend FX::FXList::FXList %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyList::FXPyList %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXSCROLLAREA_H
 #include "FXScrollArea.h"
@@ -420,5 +424,16 @@ public:
   virtual ~FXList();
   };
 
+class FXPyListItem : public FXListItem {
+public:
+    FXPyListItem(const FXString& text,FXIcon* ic=NULL,void* ptr=NULL);
+};
+
+class FXPyList : public FXList {
+public:
+    FXPyList(FXComposite *p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=LIST_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+    %pragma(python) addtomethod = "__init__:FXPyRegister(self)"
+};
 }
+
 

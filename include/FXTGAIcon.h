@@ -32,7 +32,7 @@ namespace FX {
 
 
 /// TARGA image format icon
-class FXTGAIcon : public FXIcon {
+class FXAPI FXTGAIcon : public FXIcon {
   FXDECLARE(FXTGAIcon)
 protected:
   FXTGAIcon(){}
@@ -61,7 +61,7 @@ public:
 /**
 * Check if stream contains a TARGA, return TRUE if so.
 */
-extern bool fxcheckTGA(FXStream& store);
+extern FXAPI bool fxcheckTGA(FXStream& store);
 
 
 /**
@@ -69,13 +69,13 @@ extern bool fxcheckTGA(FXStream& store);
 * Upon successful return, the pixel array and size are returned.
 * If an error occurred, the pixel array is set to NULL.
 */
-extern bool fxloadTGA(FXStream& store,FXColor*& data,FXint& width,FXint& height);
+extern FXAPI bool fxloadTGA(FXStream& store,FXColor*& data,FXint& width,FXint& height);
 
 
 /**
 * Save an TARGA file to a stream.
 */
-extern bool fxsaveTGA(FXStream& store,const FXColor *data,FXint width,FXint height);
+extern FXAPI bool fxsaveTGA(FXStream& store,const FXColor *data,FXint width,FXint height);
 
 }
 

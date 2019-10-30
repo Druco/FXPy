@@ -3,15 +3,16 @@
 %pythonappend FX::FXIFFIcon::FXIFFIcon %{
   self.thisown = False
 %}
-
-
-%module FXIFFIcon
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyIFFIcon::FXPyIFFIcon %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXIFFIcon.h"
+namespace FX {
+class FXPyIFFIcon : public FXIFFIcon {
+public:
+    FXPyIFFIcon(FXApp* a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
+};
+}

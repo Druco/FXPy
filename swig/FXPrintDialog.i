@@ -3,6 +3,10 @@
 %pythonappend FX::FXPrintDialog::FXPrintDialog %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyPrintDialog::FXPyPrintDialog %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXDIALOGBOX_H
 #include "FXDialogBox.h"
@@ -104,4 +108,8 @@ public:
   virtual ~FXPrintDialog();
   };
 
+class FXPyPrintDialog : public FXPrintDialog {
+public:
+    FXPyPrintDialog(FXWindow* owner,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
 }

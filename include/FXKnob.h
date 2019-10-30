@@ -48,7 +48,7 @@ enum {
 * at the end of the interaction, a final SEL_COMMAND message is sent.
 * The message data represents the current knob value, of type FXint.
 */
-class FXKnob : public FXFrame {
+class FXAPI FXKnob : public FXFrame {
   FXDECLARE(FXKnob)
 protected:
   FXint    range[2];            // Reported data range

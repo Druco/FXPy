@@ -3,6 +3,10 @@
 %pythonappend FX::FXComposite::FXComposite %{
   self.thisown = False
 %}
+%pythonappend FX::FXPyComposite::FXPyComposite %{
+  self.thisown = False
+  FXPyRegister(self)
+%}
 
 #ifndef FXWINDOW_H
 #include "FXWindow.h"
@@ -55,4 +59,11 @@ public:
   virtual ~FXComposite();
   };
 
+class FXPyComposite : public FXComposite {
+public:
+  FXPyComposite(FX::FXPyComposite* p,FX::FXuint opts=0,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+};
+
 }
+
+

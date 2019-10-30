@@ -3,15 +3,16 @@
 %pythonappend FX::FXIFFImage::FXIFFImage %{
   self.thisown = False
 %}
-
-
-%module FXIFFImage
-
-%{
-#include "fxdefs2.h"
-#include "fx.h"
+%pythonappend FX::FXPyIFFImage::FXPyIFFImage %{
+  self.thisown = False
+  FXPyRegister(self)
 %}
-
 
 %include "include/fxdefs2.h"
 %include "include/FXIFFImage.h"
+namespace FX {
+class FXPyIFFImage : public FXIFFImage {
+public:
+    FXPyIFFImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
+};
+}

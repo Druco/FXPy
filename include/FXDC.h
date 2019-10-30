@@ -122,13 +122,13 @@ enum FXStipplePattern {
 
 /// Line segment
 struct FXSegment {
-  FX::FXshort x1,y1,x2,y2;
+  FXshort x1,y1,x2,y2;
   };
 
 
 /// Arc
 struct FXArc {
-  FX::FXshort x,y,w,h,a,b;
+  FXshort x,y,w,h,a,b;
   };
 
 
@@ -151,69 +151,69 @@ class FXRegion;
 * WYSYWYG may be obtained by using the same identical drawing code in your
 * application regardless of the actual device surface being utilized.
 */
-class FXDC {
-  friend class FX::FXFont;
+class FXAPI FXDC {
+  friend class FXFont;
 private:
-  FX::FXApp           *app;         // Application
+  FXApp           *app;         // Application
 protected:
   void            *ctx;         // Context handle
-  FX::FXFont          *font;        // Drawing font
-  FX::FXStipplePattern pattern;     // Stipple pattern
-  FX::FXBitmap        *stipple;     // Stipple bitmap
-  FX::FXImage         *tile;        // Tile image
-  FX::FXBitmap        *mask;        // Mask bitmap
-  FX::FXRectangle      clip;        // Clip rectangle
-  FX::FXColor          fg;          // Foreground color
-  FX::FXColor          bg;          // Background color
-  FX::FXuint           width;       // Line width
-  FX::FXCapStyle       cap;         // Line cap style
-  FX::FXJoinStyle      join;        // Line join style
-  FX::FXLineStyle      style;       // Line style
-  FX::FXFillStyle      fill;        // Fill style
-  FX::FXFillRule       rule;        // Fill rule
-  FX::FXFunction       rop;         // RasterOp
-  FX::FXchar           dashpat[32]; // Line dash pattern data
-  FX::FXuint           dashlen;     // Line dash pattern length
-  FX::FXuint           dashoff;     // Line dash pattern offset
-  FX::FXint            tx;          // Tile dx
-  FX::FXint            ty;          // Tile dy
-  FX::FXint            cx;          // Clip x
-  FX::FXint            cy;          // Clip y
+  FXFont          *font;        // Drawing font
+  FXStipplePattern pattern;     // Stipple pattern
+  FXBitmap        *stipple;     // Stipple bitmap
+  FXImage         *tile;        // Tile image
+  FXBitmap        *mask;        // Mask bitmap
+  FXRectangle      clip;        // Clip rectangle
+  FXColor          fg;          // Foreground color
+  FXColor          bg;          // Background color
+  FXuint           width;       // Line width
+  FXCapStyle       cap;         // Line cap style
+  FXJoinStyle      join;        // Line join style
+  FXLineStyle      style;       // Line style
+  FXFillStyle      fill;        // Fill style
+  FXFillRule       rule;        // Fill rule
+  FXFunction       rop;         // RasterOp
+  FXchar           dashpat[32]; // Line dash pattern data
+  FXuint           dashlen;     // Line dash pattern length
+  FXuint           dashoff;     // Line dash pattern offset
+  FXint            tx;          // Tile dx
+  FXint            ty;          // Tile dy
+  FXint            cx;          // Clip x
+  FXint            cy;          // Clip y
 private:
   FXDC();
-  FXDC(const FX::FXDC&);
-  FXDC &operator=(const FX::FXDC&);
+  FXDC(const FXDC&);
+  FXDC &operator=(const FXDC&);
 public:
 
   /// Construct dummy DC
-  FXDC(FX::FXApp* a);
+  FXDC(FXApp* a);
 
   /// Get application
-  FX::FXApp* getApp() const { return app; }
+  FXApp* getApp() const { return app; }
 
   /// Get context handle
   void* context() const { return ctx; }
 
   /// Read back pixel
-  virtual FX::FXColor readPixel(FX::FXint x,FX::FXint y);
+  virtual FXColor readPixel(FXint x,FXint y);
 
   /// Draw points
-  virtual void drawPoint(FX::FXint x,FX::FXint y);
-  virtual void drawPoints(const FX::FXPoint* points,FX::FXuint npoints);
-  virtual void drawPointsRel(const FX::FXPoint* points,FX::FXuint npoints);
+  virtual void drawPoint(FXint x,FXint y);
+  virtual void drawPoints(const FXPoint* points,FXuint npoints);
+  virtual void drawPointsRel(const FXPoint* points,FXuint npoints);
 
   /// Draw lines
-  virtual void drawLine(FX::FXint x1,FX::FXint y1,FX::FXint x2,FX::FXint y2);
-  virtual void drawLines(const FX::FXPoint* points,FX::FXuint npoints);
-  virtual void drawLinesRel(const FX::FXPoint* points,FX::FXuint npoints);
-  virtual void drawLineSegments(const FX::FXSegment* segments,FX::FXuint nsegments);
+  virtual void drawLine(FXint x1,FXint y1,FXint x2,FXint y2);
+  virtual void drawLines(const FXPoint* points,FXuint npoints);
+  virtual void drawLinesRel(const FXPoint* points,FXuint npoints);
+  virtual void drawLineSegments(const FXSegment* segments,FXuint nsegments);
 
   /// Draw rectangles
-  virtual void drawRectangle(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  virtual void drawRectangles(const FX::FXRectangle* rectangles,FX::FXuint nrectangles);
+  virtual void drawRectangle(FXint x,FXint y,FXint w,FXint h);
+  virtual void drawRectangles(const FXRectangle* rectangles,FXuint nrectangles);
 
   /// Draw rounded rectangle with ellipse with ew and ellips height eh
-  virtual void drawRoundRectangle(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h,FX::FXint ew,FX::FXint eh);
+  virtual void drawRoundRectangle(FXint x,FXint y,FXint w,FXint h,FXint ew,FXint eh);
 
   /**
   * Draw arcs.
@@ -223,82 +223,82 @@ public:
   * to the start of the arc, in units of degrees*64.
   * The arguments x,y,w,h specify the bounding rectangle.
   */
-  virtual void drawArc(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h,FX::FXint ang1,FX::FXint ang2);
-  virtual void drawArcs(const FX::FXArc* arcs,FX::FXuint narcs);
+  virtual void drawArc(FXint x,FXint y,FXint w,FXint h,FXint ang1,FXint ang2);
+  virtual void drawArcs(const FXArc* arcs,FXuint narcs);
 
   /// Draw ellipse
-  virtual void drawEllipse(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
+  virtual void drawEllipse(FXint x,FXint y,FXint w,FXint h);
 
   /// Filled rectangles
-  virtual void fillRectangle(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
-  virtual void fillRectangles(const FX::FXRectangle* rectangles,FX::FXuint nrectangles);
+  virtual void fillRectangle(FXint x,FXint y,FXint w,FXint h);
+  virtual void fillRectangles(const FXRectangle* rectangles,FXuint nrectangles);
 
   /// Filled rounded rectangle with ellipse with ew and ellips height eh
-  virtual void fillRoundRectangle(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h,FX::FXint ew,FX::FXint eh);
+  virtual void fillRoundRectangle(FXint x,FXint y,FXint w,FXint h,FXint ew,FXint eh);
 
   /// Fill chord
-  virtual void fillChord(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h,FX::FXint ang1,FX::FXint ang2);
-  virtual void fillChords(const FX::FXArc* chords,FX::FXuint nchords);
+  virtual void fillChord(FXint x,FXint y,FXint w,FXint h,FXint ang1,FXint ang2);
+  virtual void fillChords(const FXArc* chords,FXuint nchords);
 
   /// Fill arcs
-  virtual void fillArc(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h,FX::FXint ang1,FX::FXint ang2);
-  virtual void fillArcs(const FX::FXArc* arcs,FX::FXuint narcs);
+  virtual void fillArc(FXint x,FXint y,FXint w,FXint h,FXint ang1,FXint ang2);
+  virtual void fillArcs(const FXArc* arcs,FXuint narcs);
 
   /// Fill ellipse
-  virtual void fillEllipse(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
+  virtual void fillEllipse(FXint x,FXint y,FXint w,FXint h);
 
   /// Filled polygon
-  virtual void fillPolygon(const FX::FXPoint* points,FX::FXuint npoints);
-  virtual void fillConcavePolygon(const FX::FXPoint* points,FX::FXuint npoints);
-  virtual void fillComplexPolygon(const FX::FXPoint* points,FX::FXuint npoints);
+  virtual void fillPolygon(const FXPoint* points,FXuint npoints);
+  virtual void fillConcavePolygon(const FXPoint* points,FXuint npoints);
+  virtual void fillComplexPolygon(const FXPoint* points,FXuint npoints);
 
   /// Filled polygon with relative points
-  virtual void fillPolygonRel(const FX::FXPoint* points,FX::FXuint npoints);
-  virtual void fillConcavePolygonRel(const FX::FXPoint* points,FX::FXuint npoints);
-  virtual void fillComplexPolygonRel(const FX::FXPoint* points,FX::FXuint npoints);
+  virtual void fillPolygonRel(const FXPoint* points,FXuint npoints);
+  virtual void fillConcavePolygonRel(const FXPoint* points,FXuint npoints);
+  virtual void fillComplexPolygonRel(const FXPoint* points,FXuint npoints);
 
   /// Draw hashed box
-  virtual void drawHashBox(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h,FX::FXint b=1);
+  virtual void drawHashBox(FXint x,FXint y,FXint w,FXint h,FXint b=1);
 
   /// Draw focus rectangle
-  virtual void drawFocusRectangle(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
+  virtual void drawFocusRectangle(FXint x,FXint y,FXint w,FXint h);
 
   /// Draw area from source
-  virtual void drawArea(const FX::FXDrawable* source,FX::FXint sx,FX::FXint sy,FX::FXint sw,FX::FXint sh,FX::FXint dx,FX::FXint dy);
+  virtual void drawArea(const FXDrawable* source,FXint sx,FXint sy,FXint sw,FXint sh,FXint dx,FXint dy);
 
   /// Draw area stretched area from source
-  virtual void drawArea(const FX::FXDrawable* source,FX::FXint sx,FX::FXint sy,FX::FXint sw,FX::FXint sh,FX::FXint dx,FX::FXint dy,FX::FXint dw,FX::FXint dh);
+  virtual void drawArea(const FXDrawable* source,FXint sx,FXint sy,FXint sw,FXint sh,FXint dx,FXint dy,FXint dw,FXint dh);
 
   /// Draw image
-  virtual void drawImage(const FX::FXImage* image,FX::FXint dx,FX::FXint dy);
+  virtual void drawImage(const FXImage* image,FXint dx,FXint dy);
 
   /// Draw bitmap
-  virtual void drawBitmap(const FX::FXBitmap* bitmap,FX::FXint dx,FX::FXint dy);
+  virtual void drawBitmap(const FXBitmap* bitmap,FXint dx,FXint dy);
 
   /// Draw icon
-  virtual void drawIcon(const FX::FXIcon* icon,FX::FXint dx,FX::FXint dy);
-  virtual void drawIconShaded(const FX::FXIcon* icon,FX::FXint dx,FX::FXint dy);
-  virtual void drawIconSunken(const FX::FXIcon* icon,FX::FXint dx,FX::FXint dy);
+  virtual void drawIcon(const FXIcon* icon,FXint dx,FXint dy);
+  virtual void drawIconShaded(const FXIcon* icon,FXint dx,FXint dy);
+  virtual void drawIconSunken(const FXIcon* icon,FXint dx,FXint dy);
 
   /// Draw string with base line starting at x, y
-  virtual void drawText(FX::FXint x,FX::FXint y,const FX::FXString& string);
-  virtual void drawText(FX::FXint x,FX::FXint y,const FX::FXchar* string,FX::FXuint length);
+  virtual void drawText(FXint x,FXint y,const FXString& string);
+  virtual void drawText(FXint x,FXint y,const FXchar* string,FXuint length);
 
   /// Draw text starting at x, y over filled background
-  virtual void drawImageText(FX::FXint x,FX::FXint y,const FX::FXString& string);
-  virtual void drawImageText(FX::FXint x,FX::FXint y,const FX::FXchar* string,FX::FXuint length);
+  virtual void drawImageText(FXint x,FXint y,const FXString& string);
+  virtual void drawImageText(FXint x,FXint y,const FXchar* string,FXuint length);
 
   /// Set foreground drawing color
-  virtual void setForeground(FX::FXColor clr);
+  virtual void setForeground(FXColor clr);
 
   /// Get foreground drawing color
-  FX::FXColor getForeground() const { return fg; }
+  FXColor getForeground() const { return fg; }
 
   /// Set background drawing color
-  virtual void setBackground(FX::FXColor clr);
+  virtual void setBackground(FXColor clr);
 
   /// Get background drawing color
-  FX::FXColor getBackground() const { return bg; }
+  FXColor getBackground() const { return bg; }
 
   /**
   * Set dash pattern and dash offset.
@@ -307,118 +307,118 @@ public:
   * The offset is where in the pattern the system will start counting.
   * The maximum length of the dash pattern is 32.
   */
-  virtual void setDashes(FX::FXuint dashoffset,const FX::FXchar *dashpattern,FX::FXuint dashlength);
+  virtual void setDashes(FXuint dashoffset,const FXchar *dashpattern,FXuint dashlength);
 
   /// Get dash pattern
-  const FX::FXchar* getDashPattern() const { return dashpat; }
+  const FXchar* getDashPattern() const { return dashpat; }
 
   /// Get dash offset
-  FX::FXuint getDashOffset() const { return dashoff; }
+  FXuint getDashOffset() const { return dashoff; }
 
   /// Get dash length
-  FX::FXuint getDashLength() const { return dashlen; }
+  FXuint getDashLength() const { return dashlen; }
 
   /// Set line width:- 0 means thinnest/fastest possible
-  virtual void setLineWidth(FX::FXuint linewidth=0);
+  virtual void setLineWidth(FXuint linewidth=0);
 
   /// Get line width
-  FX::FXuint getLineWidth() const { return width; }
+  FXuint getLineWidth() const { return width; }
 
   /// Set line cap style
-  virtual void setLineCap(FX::FXCapStyle capstyle=CAP_BUTT);
+  virtual void setLineCap(FXCapStyle capstyle=CAP_BUTT);
 
   /// Get line cap style
-  FX::FXCapStyle getLineCap() const { return cap; }
+  FXCapStyle getLineCap() const { return cap; }
 
   /// Set line join style
-  virtual void setLineJoin(FX::FXJoinStyle joinstyle=JOIN_MITER);
+  virtual void setLineJoin(FXJoinStyle joinstyle=JOIN_MITER);
 
   /// Get line join style
-  FX::FXJoinStyle getLineJoin() const { return join; }
+  FXJoinStyle getLineJoin() const { return join; }
 
   /// Set line style
-  virtual void setLineStyle(FX::FXLineStyle linestyle=LINE_SOLID);
+  virtual void setLineStyle(FXLineStyle linestyle=LINE_SOLID);
 
   /// Get line style
-  FX::FXLineStyle getLineStyle() const { return style; }
+  FXLineStyle getLineStyle() const { return style; }
 
   /// Set fill style
-  virtual void setFillStyle(FX::FXFillStyle fillstyle=FILL_SOLID);
+  virtual void setFillStyle(FXFillStyle fillstyle=FILL_SOLID);
 
   /// Get fill style
-  FX::FXFillStyle getFillStyle() const { return fill; }
+  FXFillStyle getFillStyle() const { return fill; }
 
   /// Set fill rule
-  virtual void setFillRule(FX::FXFillRule fillrule=RULE_EVEN_ODD);
+  virtual void setFillRule(FXFillRule fillrule=RULE_EVEN_ODD);
 
   /// Get fill rule
-  FX::FXFillRule getFillRule() const { return rule; }
+  FXFillRule getFillRule() const { return rule; }
 
   /// Set rasterop function
-  virtual void setFunction(FX::FXFunction func=BLT_SRC);
+  virtual void setFunction(FXFunction func=BLT_SRC);
 
   /// Get rasterop function
-  FX::FXFunction getFunction() const { return rop; }
+  FXFunction getFunction() const { return rop; }
 
   /// Set the tile image
-  virtual void setTile(FX::FXImage* image,FX::FXint dx=0,FX::FXint dy=0);
+  virtual void setTile(FXImage* image,FXint dx=0,FXint dy=0);
 
   /// Get the tile image
-  FX::FXImage *getTile() const { return tile; }
+  FXImage *getTile() const { return tile; }
 
   /// Set the stipple pattern
-  virtual void setStipple(FX::FXBitmap *bitmap,FX::FXint dx=0,FX::FXint dy=0);
+  virtual void setStipple(FXBitmap *bitmap,FXint dx=0,FXint dy=0);
 
   /// Get stipple bitmap
-  FX::FXBitmap *getStippleBitmap() const { return stipple; }
+  FXBitmap *getStippleBitmap() const { return stipple; }
 
   /// Set the stipple pattern
-  virtual void setStipple(FX::FXStipplePattern pat,FX::FXint dx=0,FX::FXint dy=0);
+  virtual void setStipple(FXStipplePattern pat,FXint dx=0,FXint dy=0);
 
   /// Get pattern
-  FX::FXStipplePattern getStipplePattern() const { return pattern; }
+  FXStipplePattern getStipplePattern() const { return pattern; }
 
   /// Set clip region
-  virtual void setClipRegion(const FX::FXRegion& region);
+  virtual void setClipRegion(const FXRegion& region);
 
   /// Set clip rectangle
-  virtual void setClipRectangle(FX::FXint x,FX::FXint y,FX::FXint w,FX::FXint h);
+  virtual void setClipRectangle(FXint x,FXint y,FXint w,FXint h);
 
   /// Change clip rectangle
-  virtual void setClipRectangle(const FX::FXRectangle& rectangle);
+  virtual void setClipRectangle(const FXRectangle& rectangle);
 
   /// Return clip rectangle
-  const FX::FXRectangle& getClipRectangle() const { return clip; }
+  const FXRectangle& getClipRectangle() const { return clip; }
 
   /// Return clip x
-  FX::FXint getClipX() const { return clip.x; }
+  FXint getClipX() const { return clip.x; }
 
   /// Return clip y
-  FX::FXint getClipY() const { return clip.y; }
+  FXint getClipY() const { return clip.y; }
 
   /// Return clip width
-  FX::FXint getClipWidth() const { return clip.w; }
+  FXint getClipWidth() const { return clip.w; }
 
   /// Return clip height
-  FX::FXint getClipHeight() const { return clip.h; }
+  FXint getClipHeight() const { return clip.h; }
 
   /// Clear clipping
   virtual void clearClipRectangle();
 
   /// Set clip mask
-  virtual void setClipMask(FX::FXBitmap* bitmap,FX::FXint dx=0,FX::FXint dy=0);
+  virtual void setClipMask(FXBitmap* bitmap,FXint dx=0,FXint dy=0);
 
   /// Clear clip mask
   virtual void clearClipMask();
 
   /// Set font to draw text with
-  virtual void setFont(FX::FXFont *fnt);
+  virtual void setFont(FXFont *fnt);
 
   /// Get text font
-  FX::FXFont* getFont() const { return font; }
+  FXFont* getFont() const { return font; }
 
   /// Clip against child windows
-  virtual void clipChildren(FX::FXbool yes);
+  virtual void clipChildren(FXbool yes);
 
   /// Destructor
   virtual ~FXDC();
