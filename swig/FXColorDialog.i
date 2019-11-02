@@ -12,8 +12,9 @@
 %include "include/FXColorDialog.h"
 
 namespace FX {
-class FXPyColorDialog : public FXColorDialog {
-  FXColorDialog(FXWindow* owner,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+    class FXPyColorDialog : public FXColorDialog {
+    public:
+        FXPyColorDialog(FXWindow* owner,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };
 
 }

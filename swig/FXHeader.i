@@ -367,9 +367,13 @@ public:
   virtual ~FXHeader();
   };
 
-class FXPyHeader : public FXHeader {
+class FXPyHeaderItem : public FXHeaderItem {
 public:
-    FXHeaderItem(const FXString& text,FXIcon* ic=NULL,FXint s=0,void* ptr=NULL);
+    FXPyHeaderItem(const FXString& text,FXIcon* ic=NULL,FXint s=0,void* ptr=NULL);
 };
 
+class FXPyHeader : public FXHeader {
+public:
+    FXPyHeader(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=HEADER_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
+};
 }

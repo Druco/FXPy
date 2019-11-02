@@ -64,6 +64,7 @@
 #include "FXColorList.h"
 #include "FXComposeContext.h"
 #include "FXMemMap.h"
+#include "FXSpring.h"
 #include "FXPy.h"
 
 namespace FX {
@@ -160,7 +161,6 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXUndoList.i
 %include FXFileDict.i
 %include FXString.i
-%include FXId.i
 %include FXDrawable.i
 %include FXWindow.i
 %include FXComposite.i
@@ -238,7 +238,6 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXSearchDialog.i
 %include FXSeparator.i
 %include FXSettings.i
-%include FXShell.i
 %include FXSize.i
 %include FXSlider.i
 %include FXSphered.i
@@ -309,7 +308,6 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXDockHandler.i
 %include FXToolBarGrip.i
 %include FXDockSite.i
-%include FXDrawable.i
 %include FXFileSelector.i
 %include FXFileStream.i
 %include FXFontDialog.i
@@ -339,7 +337,7 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXStream.i
 %include FXRectangle.i
 %include FXRegistry.i
-
+%include FXSpring.i
 
 extern PyObject* FXPySetDict(PyObject *, PyObject *args);
 

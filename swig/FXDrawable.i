@@ -14,7 +14,7 @@
 
 namespace FX {
 class FXPyDrawable : public FXDrawable {
-public:
+protected:
     FXPyDrawable();
     FXPyDrawable(FXApp* a,FXint w,FXint h);
 };

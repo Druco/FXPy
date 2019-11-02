@@ -13,8 +13,8 @@
 %include "include/FXAccelTable.h"
 
 namespace FX {
-class FXPyAccelTable : public FXAccelTable {
-  FXPyAccelTable();
-  };
-
+    class FXPyAccelTable : public FXAccelTable {
+    public:
+        FXPyAccelTable();
+    };
 }

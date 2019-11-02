@@ -12,7 +12,8 @@
 %include "include/FXBitmapView.h"
 
 namespace FX {
-class FXPyBitmapView : public FXBitmapView {
-  FXPyBitmapView(FXComposite* p,FXBitmap* bmp=NULL,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+    class FXPyBitmapView : public FXBitmapView {
+    public:
+        FXPyBitmapView(FXComposite* p,FXBitmap* bmp=NULL,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };
 }

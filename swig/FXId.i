@@ -4,8 +4,16 @@
   self.thisown = False
 %}
 
-
-%module FXId
+%pythonappend FX::FXPyId::FXPyId %{
+  self.thisown = False
+%}
 
 %include "include/fxdefs2.h"
 %include "include/FXId.h"
+
+namespace FX {
+class FXPyId : public FXId {
+protected:
+    FXPyId();
+};
+}

@@ -12,9 +12,9 @@
 %include "include/FXCURCursor.h"
 
 namespace FX {
-class FXPyCURCursor : public FXCURCursor {
-public:
-  FXCURCursor(FXApp* a,const void* pix);
+    class FXPyCURCursor : public FXCURCursor {
+    public:
+        FXPyCURCursor(FXApp* a,const void* pix);
 };
 
 }

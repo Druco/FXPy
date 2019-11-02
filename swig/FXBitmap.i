@@ -14,8 +14,9 @@
 %include "include/FXBitmap.h"
 
 namespace FX {
-class FXPyBitmap : public FXBitmap {
-  FXPyBitmap(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
+    class FXPyBitmap : public FXBitmap {
+    public:
+        FXPyBitmap(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
   };
 
 }

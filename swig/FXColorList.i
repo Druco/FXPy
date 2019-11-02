@@ -12,9 +12,9 @@
 %include "include/FXColorList.h"
 
 namespace FX {
-class FXPyColorList : FXColorList {
-public:
-  FXColorList(FX::FXComposite *p,FX::FXObject* tgt=NULL,FX::FXSelector sel=0,FX::FXuint opts=LIST_BROWSESELECT,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+    class FXPyColorList : FXColorList {
+    public:
+        FXPyColorList(FX::FXComposite *p,FX::FXObject* tgt=NULL,FX::FXSelector sel=0,FX::FXuint opts=LIST_BROWSESELECT,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
 };
 
 }

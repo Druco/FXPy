@@ -4,6 +4,10 @@
   self.thisown = False
 %}
 
+%pythonappend FX::FXPyFont::FXPyFont %{
+  self.thisown = False
+%}
+
 #ifndef FXID_H
 #include "FXId.h"
 #endif
@@ -349,5 +353,8 @@ public:
   virtual ~FXFont();
   };
 
-
+class FXPyFont : public FXFont {
+public:
+  FXPyFont(FXApp* a,const FXString& string);
+};
 }
