@@ -1,4 +1,7 @@
 
+%typemap(out) FXString& %{
+  return PyString_FromString($1->text());
+%}
 %typemap(out) FX::FXString& %{
   return PyString_FromString($1->text());
 %}
@@ -7,6 +10,13 @@
 %}
 %typemap(out) FX::FXString %{
   return PyString_FromString($1.text());
+%}
+
+%typemap(out) FX::FXRegistry& %{
+    $result = SWIG_NewPointerObj($1, SWIGTYPE_p_FX__FXRegistry, 0 |  0 );
+%}
+%typemap(out) FXRegistry& %{
+    $result = SWIG_NewPointerObj($1, SWIGTYPE_p_FX__FXRegistry, 0 |  0 );
 %}
 
 %typemap(out) FX::FXint* "return PyLong_FromLong($1);";
@@ -26,15 +36,44 @@
 %typemap(in) FX::FXdouble "$1 = PyFloat_AsDouble($input);";
 %typemap(in) FXColor "$1 = PyLong_AsUnsignedLong($input);";
 %typemap(in) FX::FXColor "$1 = PyLong_AsUnsignedLong($input);";
+%typemap(out) FXColor "$result = PyLong_FromUnsignedLong($1);";
+%typemap(out) FX::FXColor "$result = PyLong_FromUnsignedLong($1);";
+%typemap(in) FXSelector "$1 = PyLong_AsUnsignedLong($input);";
+%typemap(in) FX::FXSelector "$1 = PyLong_AsUnsignedLong($input);";
 // BAA %typemap(in) FXStipplePattern "$1 = reinterpret_cast<FX::FXStipplePattern>(PyLong_AsLong($input));";
 // BAA %typemap(in) FX::FXStipplePattern "$1 = reinterpret_cast<FX::FXStipplePattern>(PyLong_AsLong($input));";
 
 %typemap(in) const void* "$1 = PyBytes_AsString($input);";
+%typemap(typecheck, precedence=SWIG_TYPECHECK_INTEGER) const void* {
+    $1 = PyBytes_Check($input) ? 1 : 0;
+}
+#if 0
+%typemap(in) void* {
+    if ($input == Py_None || $input == 0)
+        $1 = reinterpret_cast<void*>(NULL);
+    else if (PyUnicode_Check($input)) {
+        char *cstr;
+        Py_ssize_t len;
+        PyBytes_AsStringAndSize(PyUnicode_AsUTF8String($input), &cstr, &len);
+        $1 = reinterpret_cast<void*>(cstr);
+    }
+    else
+        $1 = reinterpret_cast<void*>(PyLong_AsLong($input));
+}
+#endif
 
 %typemap(typecheck, precedence=SWIG_TYPECHECK_INTEGER) FXuint {
   $1 = PyLong_Check($input) ? 1 : 0;
 }
 %typemap(typecheck, precedence=SWIG_TYPECHECK_INTEGER) FX::FXuint {
+  $1 = PyLong_Check($input) ? 1 : 0;
+}
+
+%typemap(typecheck, precedence=SWIG_TYPECHECK_INTEGER) FXSelector {
+  $1 = PyLong_Check($input) ? 1 : 0;
+}
+
+%typemap(typecheck, precedence=SWIG_TYPECHECK_INTEGER) FX::FXSelector {
   $1 = PyLong_Check($input) ? 1 : 0;
 }
 

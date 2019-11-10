@@ -68,6 +68,10 @@
 #include "FXPy.h"
 
 namespace FX {
+extern FXColor makeHiliteColor(FXColor clr);
+extern FXColor makeShadowColor(FXColor clr);
+
+
 class                          FXObject;
 class                          FXStream;
 class                          FXString;
@@ -139,10 +143,6 @@ void FXPy_InitLists(PyObject* dict) {
 };
 
 %}
-
-// %rename FXMainWindow FX_MainWindow;
-// %rename FXPyMainWindow FXMainWindow;
-
 
 %include pytypemaps.i
 %include renames.i
@@ -338,6 +338,12 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXRectangle.i
 %include FXRegistry.i
 %include FXSpring.i
+
+namespace FX {
+/// Get highlight color
+extern FXColor makeHiliteColor(FXColor clr);
+extern FXColor makeShadowColor(FXColor clr);
+}
 
 extern PyObject* FXPySetDict(PyObject *, PyObject *args);
 
