@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyRootWindow : public FXRootWindow {
+    FXDECLARE(FXPyRootWindow)
 public:
     FXPyRootWindow(FXApp* a,FXVisual *vis);
 };

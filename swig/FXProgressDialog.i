@@ -83,6 +83,7 @@ public:
   };
 
 class FXPyProgressDialog : public FXProgressDialog {
+    FXDECLARE(FXPyProgressDialog)
 public:
     FXPyProgressDialog(FXWindow* owner,const FXString& caption,const FXString& label,FXuint opts=PROGRESSDIALOG_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };

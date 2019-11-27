@@ -18,6 +18,7 @@
 
 namespace FX {
 class FXPyGLVisual : public FXGLVisual {
+    FXDECLARE(FXPyGLVisual)
 public:
     FXPyGLVisual(FXApp* a,FXuint flags);
 };

@@ -60,7 +60,7 @@ public:
    struct FXMapEntry { FXSelector keylo; FXSelector keyhi; long (classname::* func)(FXObject*,FXSelector,void*); }; \
    static const FXMetaClass metaClass; \
    static FXObject* manufacture(); \
-   virtual long handle(FXObject* sender,FXSelector sel,void* ptr); \
+   virtual long handle(FXObject* sender,FXSelector sel,void* handle__ptr); \
    virtual const FXMetaClass* getMetaClass() const { return &metaClass; } \
 /*   friend FXStream& operator<<(FXStream& store,const classname* obj){return store.saveObject((FXObjectPtr)(obj));}  */ \
 /*   friend FXStream& operator>>(FXStream& store,classname*& obj){return store.loadObject((FXObjectPtr&)(obj));}  */ \
@@ -158,13 +158,6 @@ public:
 
   /// Load object from stream
   virtual void load(FXStream& store);
-#if 0
-  %extend {
-  void connect(uint type, uint id, void (*func)()) { printf("type: %d", type);
-  }
-}
-
-#endif    
 
   /// Virtual destructor
   virtual ~FXObject();
@@ -175,6 +168,7 @@ public:
 
 namespace FX {
 class FXPyObject : public FXObject {
+    FXDECLARE(FXPyObject)
 public:
   FXPyObject();
 };

@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyRGBIcon : public FXRGBIcon {
+    FXDECLARE(FXPyRGBIcon)
 public:
     FXPyRGBIcon(FXApp* a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 };

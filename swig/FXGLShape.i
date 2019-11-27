@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyGLShape : public FXGLShape {
+    FXDECLARE(FXPyGLShape)
 public:
     FXPyGLShape(FXfloat x,FXfloat y,FXfloat z,FXuint opts);
     FXPyGLShape(FXfloat x,FXfloat y,FXfloat z,FXuint opts,const FXMaterial& front,const FXMaterial& back);

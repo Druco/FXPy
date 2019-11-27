@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyId : public FXId {
+    FXDECLARE(FXPyId)
 protected:
     FXPyId();
 };

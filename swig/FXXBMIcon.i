@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyXBMIcon : public FXXBMIcon {
+    FXDECLARE(FXPyXBMIcon)
 public:
     FXPyXBMIcon(FXApp* a,const FXuchar *pixels=NULL,const FXuchar *mask=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 };

@@ -26,6 +26,7 @@ public:
 
 namespace FX {
 class FXPyScrollCorner : public FXScrollCorner {
+    FXDECLARE(FXPyScrollCorner)
 public:
     FXPyScrollCorner(FXComposite* p);
     %pragma(python) addtomethod = "__init__:FXPyRegister(self)"

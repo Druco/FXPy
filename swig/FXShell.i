@@ -13,6 +13,7 @@
 
 namespace FX {
     class FXPyShell : public FXShell {
+        FXDECLARE(FXPyShell)
     protected:
         FXPyShell();
     };

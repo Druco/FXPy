@@ -12,6 +12,7 @@
 
 namespace FX {
     class FXPyScrollArea : public FXScrollArea {
+        FXDECLARE(FXPyScrollArea)
     protected:
         FXPyScrollArea();
     };

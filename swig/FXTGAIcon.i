@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyTGAIcon : public FXTGAIcon {
+    FXDECLARE(FXPyTGAIcon)
 public:
     FXPyTGAIcon(FXApp* a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 };

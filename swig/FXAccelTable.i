@@ -14,6 +14,7 @@
 
 namespace FX {
     class FXPyAccelTable : public FXAccelTable {
+    FXDECLARE(FXPyAccelTable)
     public:
         FXPyAccelTable();
     };

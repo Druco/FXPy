@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyStatusLine : public FXStatusLine {
+    FXDECLARE(FXPyStatusLine)
 public:
     FXPyStatusLine(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0);
 };

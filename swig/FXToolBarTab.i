@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyToolBarTab : public FXToolBarTab {
+    FXDECLARE(FXPyToolBarTab)
 public:
     FXPyToolBarTab(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };

@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyGLContext : public FXGLContext {
+    FXDECLARE(FXPyGLContext)
 public:
     FXPyGLContext(FXApp* a,FXGLVisual *vis);
     FXPyGLContext(FXApp* a,FXGLVisual *vis,FXGLContext *shared);

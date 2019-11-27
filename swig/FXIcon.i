@@ -90,6 +90,7 @@ public:
   };
 
 class FXPyIcon : public FXIcon {
+    FXDECLARE(FXPyIcon)
 public:
     FXPyIcon(FXApp* a,const FXColor *pix=NULL,FXColor clr=0,FXuint opts=0,FXint w=1,FXint h=1);
 };

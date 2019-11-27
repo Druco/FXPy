@@ -942,17 +942,20 @@ public:
 
 
 class FXPyTableItem : public FXTableItem {
+    FXDECLARE(FXPyTableItem)
 public:
     FXPyTableItem(const FXString& text,FXIcon* ic=NULL,void* ptr=NULL);
 };
 
 class FXPyComboTableItem : public FXComboTableItem {
+    FXDECLARE(FXPyComboTableItem)
 public:
     FXPyComboTableItem(const FXString& text,FXIcon* ic=NULL,void* ptr=NULL);
     %pragma(python) addtomethod = "__init__:FXPyRegister(self)"
 };
 
 class FXPyTable : public FXTable {
+    FXDECLARE(FXPyTable)
 public:
     FXPyTable(FXComposite *p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_MARGIN,FXint pr=DEFAULT_MARGIN,FXint pt=DEFAULT_MARGIN,FXint pb=DEFAULT_MARGIN);
     %pragma(python) addtomethod = "__init__:FXPyRegister(self)"

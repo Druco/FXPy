@@ -15,6 +15,7 @@
 
 namespace FX {
 class FXPyBMPIcon : public FX::FXBMPIcon {
+    FXDECLARE(FXPyBMPIcon)
 public:
   static const FX::FXchar fileExt[];
   static const FX::FXchar mimeType[];

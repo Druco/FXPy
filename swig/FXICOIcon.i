@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyICOIcon : public FXICOIcon {
+    FXDECLARE(FXPyICOIcon)
 public:
     FXICOIcon(FXApp* a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 };

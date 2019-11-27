@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyStringDict : public FXStringDict {
+    FXDECLARE(FXPyStringDict)
 public:
     FXPyStringDict();
 };

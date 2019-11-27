@@ -188,6 +188,7 @@ public:
   };
 
 class FXPyFileDict : public FXFileDict {
+    FXDECLARE(FXPyFileDict)
 public:
   FXPyFileDict(FXApp* app);
   FXPyFileDict(FXApp* app,FXSettings* db);

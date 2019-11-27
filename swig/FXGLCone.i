@@ -13,8 +13,9 @@
 
 namespace FX {
 class FXPyGLCone : public FXGLCone {
+    FXDECLARE(FXPyGLCone)
 public:
-  FXGLCone(FXfloat x,FXfloat y,FXfloat z,FXfloat h=1.0f,FXfloat r=1.0f);
-  FXGLCone(FXfloat x,FXfloat y,FXfloat z,FXfloat h,FXfloat r,const FXMaterial& mtl);
+  FXPyGLCone(FXfloat x,FXfloat y,FXfloat z,FXfloat h=1.0f,FXfloat r=1.0f);
+  FXPyGLCone(FXfloat x,FXfloat y,FXfloat z,FXfloat h,FXfloat r,const FXMaterial& mtl);
 };
 }

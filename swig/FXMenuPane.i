@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyMenuPane : public FXMenuPane {
+    FXDECLARE(FXPyMenuPane)
 public:
     FXPyMenuPane(FXWindow* owner,FXuint opts=0);
 };

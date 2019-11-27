@@ -178,6 +178,7 @@ public:
   };
 
 class FXPyFileDialog : public FXFileDialog {
+    FXDECLARE(FXPyFileDialog)
 public:
     FXPyFileDialog(FXWindow* owner,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=500,FXint h=300);
     FXPyFileDialog(FXApp* a,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=500,FXint h=300);

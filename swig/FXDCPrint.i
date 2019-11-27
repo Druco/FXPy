@@ -4,8 +4,8 @@
   self.thisown = False
 %}
 
-
-%module FXDCPrint
+%ignore FX::FXDCPrint::outhex;
+%ignore FX::FXDCPrint::outf;
 
 %include "include/fxdefs2.h"
 %include "include/FXDCPrint.h"

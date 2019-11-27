@@ -14,6 +14,7 @@
 
 namespace FX {
 class FXPyDrawable : public FXDrawable {
+    FXDECLARE(FXPyDrawable)
 protected:
     FXPyDrawable();
     FXPyDrawable(FXApp* a,FXint w,FXint h);

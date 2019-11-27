@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyCursor : public FXCursor {
+    FXDECLARE(FXPyCursor)
 public:
   FXPyCursor(FXApp* a,FXStockCursor curid=CURSOR_ARROW);
 

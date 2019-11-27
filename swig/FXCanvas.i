@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyCanvas : public FXCanvas {
+    FXDECLARE(FXPyCanvas)
 public:
     FXPyCanvas(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };

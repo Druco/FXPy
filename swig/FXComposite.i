@@ -17,6 +17,7 @@ namespace FX {
 
 /// Base composite
 class FXComposite : public FXWindow {
+    FXDECLARE(FXPyRegister)
 public:
   long onKeyPress(FX::FXObject*,FX::FXSelector,void*);
   long onKeyRelease(FX::FXObject*,FX::FXSelector,void*);
@@ -60,8 +61,9 @@ public:
   };
 
 class FXPyComposite : public FXComposite {
+    FXDECLARE(FXPyComposite)
 public:
-  FXPyComposite(FX::FXPyComposite* p,FX::FXuint opts=0,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+    FXPyComposite(FX::FXComposite* p,FX::FXuint opts=0,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
 };
 
 }

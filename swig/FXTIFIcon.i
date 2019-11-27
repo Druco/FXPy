@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyTIFIcon : public FXTIFIcon {
+    FXDECLARE(FXPyTIFIcon)
 public:
     FXPyTIFIcon(FXApp *a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 };

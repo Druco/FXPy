@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyToolBarShell : public FXToolBarShell {
+    FXDECLARE(FXPyToolBarShell)
 public:
     FXPyToolBarShell(FXWindow* owner,FXuint opts=FRAME_RAISED|FRAME_THICK,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint hs=4,FXint vs=4);
 };

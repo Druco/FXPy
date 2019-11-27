@@ -14,7 +14,8 @@
 %include "pytypemaps.i"
 
 namespace FX {
-class FXPyGIFIcon : FXGIFIcon {
+class FXPyGIFIcon : public FXGIFIcon {
+    FXDECLARE(FXPyGIFIcon)
 public:
     FXPyGIFIcon(FX::FXApp* a,const void *pix=NULL,FX::FXColor clr=FXRGB(192,192,192),FX::FXuint opts=0,FX::FXint w=1,FX::FXint h=1);
 };

@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPySplashWindow : public FXSplashWindow {
+    FXDECLARE(FXPySplashWindow)
 public:
     FXPySplashWindow(FXApp* ap,FXIcon* ic,FXuint opts=SPLASH_SIMPLE,FXuint ms=5000);
     FXPySplashWindow(FXWindow* ow,FXIcon* ic,FXuint opts=SPLASH_SIMPLE,FXuint ms=5000);

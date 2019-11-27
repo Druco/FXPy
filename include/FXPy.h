@@ -80,9 +80,8 @@ PyObject* FXPyGetData(const T* item)
     } 
 
 
-#endif // BAA
+#endif // #ifndef FXPY_H
 
-#if 1 // BAA Duplicates
 namespace FX {
 
 class FXPyObject : public FXObject {
@@ -318,7 +317,7 @@ protected:
     FXPyComposite();
 public:
 public:
-  FXPyComposite(FX::FXPyComposite* p,FX::FXuint opts=0,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
+  FXPyComposite(FX::FXComposite* p,FX::FXuint opts=0,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
 };
 
 class FXPyDataTarget : public FXDataTarget {
@@ -340,20 +339,6 @@ private:
 public:
 
   FXPyDataTarget();
-#if 0 // BAA
-  FXPyDataTarget(FXObject* tgt,FXSelector sel);
-  FXPyDataTarget(FXchar& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXuchar& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXshort& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXushort& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXint& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXuint& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXlong& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXulong& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXfloat& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXdouble& value,FXObject* tgt=NULL,FXSelector sel=0);
-  FXPyDataTarget(FXString& value,FXObject* tgt=NULL,FXSelector sel=0);
-#else
     FXPyDataTarget(PyObject *value, FXObject* tgt=NULL, FXSelector sel=0);
 
     // Return its current value
@@ -361,8 +346,6 @@ public:
 
     // Set a new value
     void setValue(PyObject* value);
-
-#endif
 };
 
 class FXPyDelegator : public FXDelegator {
@@ -580,6 +563,8 @@ protected:
     FXPyFont();
 public:
     FXPyFont(FXApp* a,const FXString& string);
+    FXPyFont(FXApp* a,const FXString& face,FXuint size,FXuint weight=FXFont::Normal,FXuint slant=FXFont::Straight,FXuint encoding=FONTENCODING_DEFAULT,FXuint setwidth=FXFont::NonExpanded,FXuint h=0);
+    FXPyFont(FXApp* a,const FXFontDesc& fontdesc);
 };
 
 class FXPyFontDialog : public FXFontDialog {
@@ -1830,5 +1815,141 @@ public:
     FXPyCURCursor(FXApp* a,const void* pix);
 };
 
+class FXPyGLViewer : public FXGLViewer {
+    FXDECLARE(FXPyGLViewer)
+protected:
+    FXPyGLViewer();
+public:
+    FXPyGLViewer(FXComposite* p,FXGLVisual *vis,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+    FXPyGLViewer(FXComposite* p,FXGLVisual *vis,FXGLViewer* sharegroup,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+class FXPyGLObject : public FXGLObject {
+    FXDECLARE(FXPyGLObject)
+public:
+    FXPyGLObject();
+};
+
+class FXPyGLGroup : public FXGLGroup {
+    FXDECLARE(FXPyGLGroup)
+public:
+    FXPyGLGroup();
+};
+
+/// OpenGL Point Object
+class FXPyGLPoint : public FXGLPoint {
+  FXDECLARE(FXPyGLPoint)
+public:
+
+  /// Default constructor
+  FXPyGLPoint();
+
+  /// Construct with specified coordinates
+  FXPyGLPoint(FXfloat x,FXfloat y,FXfloat z);
+};
+
+/// OpenGL Line Object
+class FXPyGLLine : public FXGLLine {
+  FXDECLARE(FXPyGLLine)
+
+public:
+
+  /// Default constructor
+  FXPyGLLine();
+
+  /// Construct with specified endpoints
+  FXPyGLLine(FXfloat fx,FXfloat fy,FXfloat fz,FXfloat tx,FXfloat ty,FXfloat tz);
+};
+
+/// OpenGL Shape Object
+class FXPyGLShape : public FXGLShape {
+  FXDECLARE(FXPyGLShape)
+
+protected:
+  FXPyGLShape();
+
+public:
+  FXPyGLShape(FXfloat x,FXfloat y,FXfloat z,FXuint opts);
+  FXPyGLShape(FXfloat x,FXfloat y,FXfloat z,FXuint opts,const FXMaterial& front,const FXMaterial& back);
+};
+
+/// OpenGL Cone Object
+class FXPyGLCone : public FXGLCone {
+  FXDECLARE(FXPyGLCone)
+
+protected:
+  FXPyGLCone();
+
+public:
+  FXPyGLCone(FXfloat x,FXfloat y,FXfloat z,FXfloat h=1.0f,FXfloat r=1.0f);
+  FXPyGLCone(FXfloat x,FXfloat y,FXfloat z,FXfloat h,FXfloat r,const FXMaterial& mtl);
+};
+
+class FXPyGLCanvas : public FXGLCanvas {
+  FXDECLARE(FXPyGLCanvas)
+protected:
+  FXPyGLCanvas();
+
+public:
+  FXPyGLCanvas(FXComposite* p,FXGLVisual *vis,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+  FXPyGLCanvas(FXComposite* p,FXGLVisual *vis,FXGLCanvas* sharegroup,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
+};
+
+
+class FXPyGLContext : public FXGLContext {
+    FXDECLARE(FXPyGLContext)
+protected:
+    FXPyGLContext();
+public:
+    FXPyGLContext(FXApp* a,FXGLVisual *vis);
+    FXPyGLContext(FXApp* a,FXGLVisual *vis,FXGLContext *shared);
+};
+
+
+class FXPyGLCube : public FXGLCube {
+    FXDECLARE(FXPyGLCube)
+protected:
+    FXPyGLCube();
+public:
+    FXPyGLCube(FXfloat x,FXfloat y,FXfloat z,FXfloat w=1.0f,FXfloat h=1.0f,FXfloat d=1.0f);
+    FXPyGLCube(FXfloat x,FXfloat y,FXfloat z,FXfloat w,FXfloat h,FXfloat d,const FXMaterial& mtl);
+};
+
+
+class FXPyGLCylinder : public FXGLCylinder {
+    FXDECLARE(FXPyGLCylinder)
+protected:
+    FXPyGLCylinder();
+public:
+    FXPyGLCylinder(FXfloat x,FXfloat y,FXfloat z,FXfloat h=1.0f, FXfloat r=1.0f);
+    FXPyGLCylinder(FXfloat x,FXfloat y,FXfloat z,FXfloat h,FXfloat r,const FXMaterial& mtl);
+};
+
+
+class FXPyGLSphere : public FXGLSphere {
+    FXDECLARE(FXPyGLSphere)
+protected:
+    FXPyGLSphere();
+public:
+    FXPyGLSphere(FXfloat x,FXfloat y,FXfloat z,FXfloat r=1.0f);
+    FXPyGLSphere(FXfloat x,FXfloat y,FXfloat z,FXfloat r,const FXMaterial& mtl);
+};
+
+
+class FXPyGLTriangleMesh : public FXGLTriangleMesh {
+    FXDECLARE(FXPyGLTriangleMesh)
+protected:
+    FXPyGLTriangleMesh();
+public:
+    FXPyGLTriangleMesh(FXfloat x,FXfloat y,FXfloat z,FXint nv,FXfloat *v,FXfloat *n=NULL,FXfloat *c=NULL,FXfloat *t=NULL);
+    FXPyGLTriangleMesh(FXfloat x,FXfloat y,FXfloat z,FXint nv,FXfloat *v,FXfloat *n,FXfloat *c,FXfloat *t,const FXMaterial& mtl);
+};
+
+class FXPyGLVisual : public FXGLVisual {
+    FXDECLARE(FXPyGLVisual)
+protected:
+    FXPyGLVisual();
+public:
+    FXPyGLVisual(FXApp* a,FXuint flags);
+};
 }
-#endif

@@ -172,7 +172,6 @@ public:
     */
     FXApp(const FXchar* name="Application",const FXchar* vendor="FoxDefault"){
       if(FXApp::instance()){
-        // BAA rb_raise(rb_eRuntimeError,"attempted to create more than one FXApp instance");
         return 0;
         }
       else{

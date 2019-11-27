@@ -13,6 +13,7 @@
 
 namespace FX {
     class FXPyColorDialog : public FXColorDialog {
+        FXDECLARE(FXPyColorDialog)
     public:
         FXPyColorDialog(FXWindow* owner,const FXString& name,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };

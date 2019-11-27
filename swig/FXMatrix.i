@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyMatrix : public FXMatrix {
+    FXDECLARE(FXPyMatrix)
 public:
     FXPyMatrix(FXComposite *p,FXint n=1,FXuint opts=MATRIX_BY_ROWS,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_SPACING,FXint pr=DEFAULT_SPACING,FXint pt=DEFAULT_SPACING,FXint pb=DEFAULT_SPACING,FXint hs=DEFAULT_SPACING,FXint vs=DEFAULT_SPACING);
 };

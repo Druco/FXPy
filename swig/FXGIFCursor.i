@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyGIFCursor : public FXGIFCursor {
+    FXDECLARE(FXPyGIFCursor)
 public:
     FXPyGIFCursor(FXApp* a,const void* pix,FXint hx=0,FXint hy=0);
 };

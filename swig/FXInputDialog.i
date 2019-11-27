@@ -101,6 +101,7 @@ public:
   };
 
 class FXPyInputDialog : public FXInputDialog {
+    FXDECLARE(FXPyInputDialog)
 public:
     FXPyInputDialog(FXWindow* owner,const FXString& caption,const FXString& label,FXIcon* icon=NULL,FXuint opts=INPUTDIALOG_STRING,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
     FXPyInputDialog(FXApp* app,const FXString& caption,const FXString& label,FXIcon* icon=NULL,FXuint opts=INPUTDIALOG_STRING,FXint x=0,FXint y=0,FXint w=0,FXint h=0);

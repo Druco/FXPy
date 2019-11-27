@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyGUISignal : public FXGUISignal {
+    FXDECLARE(FXPyGUISignal)
 public:
     FXPyGUISignal(FXApp* a,FXObject* tgt=NULL,FXSelector sel=0,void* ptr=NULL);
 };

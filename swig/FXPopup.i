@@ -149,6 +149,7 @@ public:
   };
 
 class FXPyPopup : public FXPopup {
+    FXDECLARE(FXPyPopup)
 public:
     FXPyPopup(FXWindow* owner,FXuint opts=POPUP_VERTICAL|FRAME_RAISED|FRAME_THICK,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };

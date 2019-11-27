@@ -146,6 +146,7 @@ public:
   };
 
 class FXPyLabel : public FXLabel {
+    FXDECLARE(FXPyLabel)
 public:
     FXPyLabel(FXComposite* p,const FXString& text,FXIcon* ic=0,FXuint opts=LABEL_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
 };

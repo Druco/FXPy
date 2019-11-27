@@ -127,6 +127,7 @@ public:
   };
 
 class FXPyDict : public FXDict {
+    FXDECLARE(FXPyDict)
 public:
     FXPyDict();
 };

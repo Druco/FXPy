@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyPCXImage : public FXPCXImage {
+    FXDECLARE(FXPyPCXImage)
 public:
     FXPyPCXImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
 };

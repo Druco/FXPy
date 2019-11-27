@@ -26,7 +26,7 @@
 %rename FXComposite FX_Composite;
 %rename FXCursor FX_Cursor;
 %rename FXDC FX_DC;
-%rename FXDCWindow FX_DCWindow;
+// %rename FXDCWindow FX_DCWindow;
 %rename FXDate FX_Date;
 %rename FXDataTarget FX_DataTarget;
 %rename FXDelegator FX_Delegator;
@@ -49,11 +49,13 @@
 %rename FXFileDialog FX_FileDialog;
 %rename FXFileDict FX_FileDict;
 %rename FXFileSelector FX_FileSelector;
+%rename FXFoldingItem FX_FoldingItem;
+%rename FXFoldingList FX_FoldingList;
 %rename FXFont FX_Font;
 %rename FXFontDialog FX_FontDialog;
 %rename FXFontSelector FX_FontSelector;
 %rename FXFrame FX_Frame;
-%rename FXPyGIFCursor FXGIFCursor;
+%rename FXGIFCursor FX_GIFCursor;
 %rename FXGIFIcon FX_GIFIcon;
 %rename FXGIFImage FX_GIFImage;
 %rename FXGLCanvas FX_GLCanvas;
@@ -68,7 +70,6 @@
 %rename FXGLViewer FX_GLViewer;
 %rename FXGLVisual FX_GLVisual;
 %rename FXGLContext FX_GLContext;
-%rename FXGLVisual FX_GLVisual;
 %rename FXGUISignal FX_GUISignal;
 %rename FXGradientBar FX_GradientBar;
 %rename FXGroupBox FX_GroupBox;
@@ -212,7 +213,10 @@
 %rename FXXBMImage FX_XBMImage;
 %rename FXXPMIcon FX_XPMIcon;
 %rename FXXPMImage FX_XPMImage;
-;
+%rename FXGLGroup FX_GLGroup;
+%rename FXGLPoint FX_GLPoint;
+%rename FXGLLine FX_GLLine;
+
 %rename FXPy4Splitter FX4Splitter;
 %rename FXPy7Segment FX7Segment;
 %rename FXPyAccelTable FXAccelTable;
@@ -241,7 +245,7 @@
 %rename FXPyComposite FXComposite;
 %rename FXPyCursor FXCursor;
 %rename FXPyDC FXDC;
-%rename FXPyDCWindow FXDCWindow;
+// %rename FXPyDCWindow FXDCWindow;
 %rename FXPyDate FXDate;
 %rename FXPyDataTarget FXDataTarget;
 %rename FXPyDelegator FXDelegator;
@@ -264,6 +268,7 @@
 %rename FXPyFileDialog FXFileDialog;
 %rename FXPyFileDict FXFileDict;
 %rename FXPyFileSelector FXFileSelector;
+%rename FXPyFoldingItem FXFoldingItem;
 %rename FXPyFoldingList FXFoldingList;
 %rename FXPyFont FXFont;
 %rename FXPyFontDialog FXFontDialog;
@@ -425,3 +430,6 @@
 %rename FXPyXBMImage FXXBMImage;
 %rename FXPyXPMIcon FXXPMIcon;
 %rename FXPyXPMImage FXXPMImage;
+%rename FXPyGLGroup FXGLGroup;
+%rename FXPyGLPoint FXGLPoint;
+%rename FXPyGLLine FXGLLine;

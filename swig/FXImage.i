@@ -212,6 +212,7 @@ public:
   };
 
 class FXPyImage : public FXImage {
+    FXDECLARE(FXPyImage)
 public:
     FXPyImage(FXApp* a,const FXColor *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
 };

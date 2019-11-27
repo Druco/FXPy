@@ -77,6 +77,7 @@ public:
   };
 
 class FXPyIconDict : public FXIconDict {
+    FXDECLARE(FXPyIconDict)
 public:
     FXPyIconDict(FXApp* app,const FXString& p=defaultIconPath);
 };

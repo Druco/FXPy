@@ -12,7 +12,8 @@
 %include "include/FXColorList.h"
 
 namespace FX {
-    class FXPyColorList : FXColorList {
+    class FXPyColorList : public FXColorList {
+        FXDECLARE(FXPyColorList)
     public:
         FXPyColorList(FX::FXComposite *p,FX::FXObject* tgt=NULL,FX::FXSelector sel=0,FX::FXuint opts=LIST_BROWSESELECT,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);
 };

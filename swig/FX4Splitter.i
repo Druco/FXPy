@@ -84,6 +84,7 @@ public:
   };
 
 class FXPy4Splitter : public FX4Splitter {
+    FXDECLARE(FXPy4Splitter)
 public:
   // Constructor
   FXPy4Splitter(FX::FXComposite* p,FX::FXuint opts=FOURSPLITTER_NORMAL,FX::FXint x=0,FX::FXint y=0,FX::FXint w=0,FX::FXint h=0);

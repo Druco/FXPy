@@ -159,31 +159,37 @@ public:
   };
 
 class FXPyMDIDeleteButton  : public FXMDIDeleteButton {
+    FXDECLARE(FXPyMDIDeleteButton)
 public:
     FXPyMDIDeleteButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };
 
 class FXPyMDIRestoreButton  : public FXMDIRestoreButton {
+    FXDECLARE(FXPyMDIRestoreButton)
 public:
     FXPyMDIRestoreButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };
 
 class FXPyMDIMaximizeButton  : public FXMDIMaximizeButton {
+    FXDECLARE(FXPyMDIMaximizeButton)
 public:
     FXPyMDIMaximizeButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };
 
 class FXPyMDIMinimizeButton  : public FXMDIMinimizeButton {
+    FXDECLARE(FXPyMDIMinimizeButton)
 public:
     FXPyMDIMinimizeButton(FXComposite* p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=FRAME_RAISED,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };
 
 class FXPyMDIWindowButton  : public FXMDIWindowButton {
+    FXDECLARE(FXPyMDIWindowButton)
 public:
     FXPyMDIWindowButton(FXComposite* p,FXPopup* pup,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };
 
 class FXPyMDIMenu  : public FXMDIMenu {
+    FXDECLARE(FXPyMDIMenu)
 public:
     FXPyMDIMenu(FXWindow *owner,FXObject* tgt=NULL);
 };

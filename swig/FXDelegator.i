@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyDelegator : public FXDelegator {
+    FXDECLARE(FXPyDelegator)
 public:
     FXPyDelegator(FXObject* target=NULL);
 };

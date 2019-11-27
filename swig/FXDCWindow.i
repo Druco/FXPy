@@ -7,5 +7,7 @@
   self.thisown = False
 %}
 
+#include "include/FXDC.h"
+
 %include "include/fxdefs2.h"
 %include "include/FXDCWindow.h"

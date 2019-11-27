@@ -263,7 +263,14 @@ public:
   FXuint getFlags() const { return flags; }
 
   /// Get font description
-  void getFontDesc(FXFontDesc& fontdesc) const;
+  // void getFontDesc(FXFontDesc& fontdesc) const;
+  %extend {
+      FXFontDesc getFontDesc() const {
+          FXFontDesc fontdesc;
+          self->getFontDesc(fontdesc);
+          return fontdesc;
+      }
+  }
 
   /// Change font description
   virtual void setFontDesc(const FXFontDesc& fontdesc);
@@ -354,7 +361,10 @@ public:
   };
 
 class FXPyFont : public FXFont {
+    FXDECLARE(FXPyFont)
 public:
   FXPyFont(FXApp* a,const FXString& string);
+  FXPyFont(FXApp* a,const FXString& face,FXuint size,FXuint weight=FXFont::Normal,FXuint slant=FXFont::Straight,FXuint encoding=FONTENCODING_DEFAULT,FXuint setwidth=FXFont::NonExpanded,FXuint h=0);
+  FXPyFont(FXApp* a,const FXFontDesc& fontdesc);
 };
 }

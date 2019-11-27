@@ -65,6 +65,7 @@ public:
   };
 
 class FXPy7Segment : public FX7Segment {
+    FXDECLARE(FXPy7Segment)
 public:
   FXPy7Segment(FXComposite* p,const FXString& text,FXuint opts=SEVENSEGMENT_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
   };

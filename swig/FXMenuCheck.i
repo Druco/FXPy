@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyMenuCheck : public FXMenuCheck {
+    FXDECLARE(FXPyMenuCheck)
 public:
     FXPyMenuCheck(FXComposite* p,const FXString& text,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0);
 };

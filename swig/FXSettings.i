@@ -14,6 +14,7 @@
 
 namespace FX {
 class FXPySettings : public FXSettings {
+    FXDECLARE(FXPySettings)
 public:
     FXPySettings();
 };

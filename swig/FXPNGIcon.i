@@ -60,6 +60,7 @@ extern bool fxloadPNG(FXStream& store,FXColor*& data,FXint& width,FXint& height)
 extern bool fxsavePNG(FXStream& store,const FXColor* data,FXint width,FXint height);
 
 class FXPyPNGIcon : public FXPNGIcon {
+    FXDECLARE(FXPyPNGIcon)
 public:
     FXPyPNGIcon(FXApp *a,const void *pix=NULL,FXColor clr=FXRGB(192,192,192),FXuint opts=0,FXint w=1,FXint h=1);
 };

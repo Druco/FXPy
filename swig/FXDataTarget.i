@@ -82,6 +82,7 @@ public:
 };
 
 class FXPyDataTarget : public FXDataTarget {
+    FXDECLARE(FXPyDataTarget)
 private:
   // Associated integer value (if it's an integer)
   FXint intValue;
@@ -97,28 +98,13 @@ private:
 
 public:
 
-//  FXPyDataTarget():target(NULL),data(NULL),message(0),type(DT_VOID){}
-#if 0
-  FXPyDataTarget(FXObject* tgt,FXSelector sel):target(tgt),data(NULL),message(sel),type(DT_VOID){}
-  FXPyDataTarget(FXchar& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_CHAR){}
-  FXPyDataTarget(FXuchar& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_UCHAR){}
-  FXPyDataTarget(FXshort& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_SHORT){}
-  FXPyDataTarget(FXushort& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_USHORT){}
-  FXPyDataTarget(FXint& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_INT){}
-  FXPyDataTarget(FXuint& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_UINT){}
-  FXPyDataTarget(FXlong& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_LONG){}
-  FXPyDataTarget(FXulong& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_ULONG){}
-  FXPyDataTarget(FXfloat& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_FLOAT){}
-  FXPyDataTarget(FXdouble& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_DOUBLE){}
-  FXPyDataTarget(FXString& value,FXObject* tgt=NULL,FXSelector sel=0):target(tgt),data(&value),message(sel),type(DT_STRING){}
-#endif
   FXPyDataTarget(PyObject *value,FXObject* tgt,FXSelector sel);
   void setValue(PyObject *obj);
 };
 }
 
 
-%extend FXPyDataTarget {
+//%extend FXPyDataTarget {
 
 // Initialize a data target with this value
 FX::FXPyDataTarget::FXPyDataTarget(PyObject *value,FXObject* tgt,FXSelector sel) : FXDataTarget(tgt,sel), intValue(0), doubleValue(0.0), boolValue(FALSE) {
@@ -126,7 +112,7 @@ FX::FXPyDataTarget::FXPyDataTarget(PyObject *value,FXObject* tgt,FXSelector sel)
   }
 
 // Set new value for data target
-void setValue(PyObject *obj){
+void FX::FXPyDataTarget::setValue(PyObject *obj){
     if (PyLong_Check(obj)) {
         intValue=PyLong_AsLong(obj);
         connect(intValue);
@@ -147,5 +133,3 @@ void setValue(PyObject *obj){
         connect();
     }
 }
-//       FXPyDataTarget(PyObject* value = Py_None, PyObject* tgt = NULL, FXSelector sel = 0);
-   }

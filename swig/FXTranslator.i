@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyTranslator : public FXTranslator {
+    FXDECLARE(FXPyTranslator)
 public:
     FXPyTranslator(FXApp* a);
 };

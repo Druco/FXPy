@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyScrollPane : public FXScrollPane {
+    FXDECLARE(FXPyScrollPane)
 public:
     FXPyScrollPane(FXWindow* owner,FXint nvis,FXuint opts=0);
 };

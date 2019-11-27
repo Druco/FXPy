@@ -13,6 +13,7 @@
 %template(FXGLObjectList) FX::FXObjectListOf<FXGLObject>;
 
 namespace FX {
+    FXDECLARE(FXPyRegister)
 class FXPyObjectList : public FXObjectList {
 public:
     FXPyObjectList(FXObject* object);

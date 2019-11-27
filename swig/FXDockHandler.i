@@ -14,6 +14,7 @@
 
 namespace FX {
 class FXPyDockHandler : public FXDockHandler {
+    FXDECLARE(FXPyDockHandler)
 protected:
     FXPyDockHandler(FXComposite* p,FXObject* tgt,FXSelector sel,FXuint opts,FXint x,FXint y,FXint w,FXint h,FXint pl,FXint pr,FXint pt,FXint pb);
 };

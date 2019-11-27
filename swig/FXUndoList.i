@@ -20,6 +20,7 @@
 
 namespace FX {
 class FXPyCommandGroup : public FXCommandGroup {
+    FXDECLARE(FXPyCommandGroup)
 public:
     FXPyCommandGroup();
 
@@ -29,6 +30,7 @@ public:
 
 namespace FX {
 class FXPyUndoList : public FXUndoList {
+    FXDECLARE(FXPyUndoList)
 public:
     FXPyUndoList();
     %pragma(python) addtomethod = "__init__:FXPyRegister(self)"

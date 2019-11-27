@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyToolTip : public FXToolTip {
+    FXDECLARE(FXPyToolTip)
 public:
     FXPyToolTip(FXApp* a,FXuint opts=TOOLTIP_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 };

@@ -60,6 +60,7 @@ extern bool fxsaveGIF(FXStream& store,const FXColor *data,FXint width,FXint heig
 #endif
 
 class FXPyGIFImage : public FXGIFImage {
+    FXDECLARE(FXPyGIFImage)
 public:
     FXPyGIFImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
 };

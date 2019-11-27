@@ -12,6 +12,7 @@
 %include "include/FXIFFImage.h"
 namespace FX {
 class FXPyIFFImage : public FXIFFImage {
+    FXDECLARE(FXPyIFFImage)
 public:
     FXPyIFFImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
 };

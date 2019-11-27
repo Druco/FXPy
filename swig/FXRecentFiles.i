@@ -115,6 +115,7 @@ public:
   };
 
 class FXPyRecentFiles : public FXRecentFiles {
+    FXDECLARE(FXPyRecentFiles)
 public:
     FXPyRecentFiles();
     FXPyRecentFiles(FXApp* a);

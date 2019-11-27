@@ -2,6 +2,7 @@
 %module FXPy
 %{
 #include "fxdefs.h"
+#include "fxkeys.h"
 #include "FXString.h"
 #include "fxdefs2.h"
 #include "fx.h"
@@ -65,6 +66,19 @@
 #include "FXComposeContext.h"
 #include "FXMemMap.h"
 #include "FXSpring.h"
+#include "FXGLViewer.h"
+#include "FXGLObject.h"
+#include "FXGLShape.h"
+#include "FXGLCone.h"
+#include "FXGLCanvas.h"
+#include "FXGLContext.h"
+#include "FXGLCube.h"
+#include "FXGLCylinder.h"
+#include "FXGLSphere.h"
+#include "FXGLTriangleMesh.h"
+#include "FXGLVisual.h"
+#include "FXPoint.h"
+
 #include "FXPy.h"
 
 namespace FX {
@@ -144,6 +158,8 @@ void FXPy_InitLists(PyObject* dict) {
 
 %}
 
+%ignore FXMapEntry;
+
 %include pytypemaps.i
 %include renames.i
 %include fxdefs.i
@@ -168,6 +184,7 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXTopWindow.i
 %include FXMainWindow.i
 %include FXComposite.i
+%include FXDC.i
 %include FXDCWindow.i
 %include FXDialogBox.i
 %include FXDragCorner.i
@@ -186,11 +203,14 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXJPGImage.i
 %include FXKnob.i
 %include FXLabel.i
+%include FXButton.i
+%include FXMenuButton.i
+%include FXPopup.i
+%include FXMenuPane.i
 %include FXMDIButton.i
 %include FXMDIChild.i
 %include FXMDIClient.i
 %include FXMemoryStream.i
-%include FXMenuButton.i
 %include FXMenuCaption.i
 %include FXMenuCascade.i
 %include FXMenuCommand.i
@@ -209,12 +229,9 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXFontSelector.i
 %include FXGroupBox.i
 %include FXPipe.i
-%include FXPopup.i
 %include FXPrintDialog.i
 %include FXProgressBar.i
 %include FXProgressDialog.i
-%include FXQuatd.i
-%include FXQuatf.i
 %include FXRGBIcon.i
 %include FXRGBImage.i
 %include FXRadioButton.i
@@ -269,6 +286,8 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXVec3f.i
 %include FXVec4d.i
 %include FXVec4f.i
+%include FXQuatd.i
+%include FXQuatf.i
 %include FXHorizontalFrame.i
 %include FXStatusBar.i
 %include FXVerticalFrame.i
@@ -283,7 +302,6 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXExtentd.i
 %include FXExtentf.i
 %include FXMainWindow.i
-%include FXButton.i
 %include FXPicker.i
 %include FX4Splitter.i
 %include FXAccelTable.i
@@ -318,7 +336,6 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXBMPIcon.i
 %include FXCURCursor.i
 %include FXComboBox.i
-%include FXDC.i
 %include FXDCPrint.i
 %include FXDial.i
 %include FXDirBox.i
@@ -332,12 +349,23 @@ void FXPy_InitLists(PyObject* dict) {
 %include FXMatrix.i
 %include FXMenuBar.i
 %include FXMenuCheck.i
-%include FXMenuPane.i
 %include FXScrollPane.i
 %include FXStream.i
 %include FXRectangle.i
 %include FXRegistry.i
 %include FXSpring.i
+%include FXGLCanvas.i
+%include FXGLViewer.i
+%include FXGLObject.i
+%include FXGLShape.i
+%include FXGLCone.i
+%include FXGLContext.i
+%include FXGLCube.i
+%include FXGLCylinder.i
+%include FXGLSphere.i
+%include FXGLTriangleMesh.i
+%include FXGLVisual.i
+%include FXPoint.i
 
 namespace FX {
 /// Get highlight color

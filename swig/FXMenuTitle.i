@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyMenuTitle : public FXMenuTitle {
+    FXDECLARE(FXPyMenuTitle)
 public:
     FXPyMenuTitle(FXComposite* p,const FXString& text,FXIcon* ic=NULL,FXPopup* pup=NULL,FXuint opts=0);
 };

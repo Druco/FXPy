@@ -15,6 +15,7 @@
 
 namespace FX {
     class FXPyBitmap : public FXBitmap {
+        FXDECLARE(FXPyBitmap)
     public:
         FXPyBitmap(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
   };

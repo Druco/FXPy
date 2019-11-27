@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyGLCube : public FXGLCube {
+    FXDECLARE(FXPyGLCube)
 public:
     FXPyGLCube(FXfloat x,FXfloat y,FXfloat z,FXfloat w=1.0f,FXfloat h=1.0f,FXfloat d=1.0f);
     FXPyGLCube(FXfloat x,FXfloat y,FXfloat z,FXfloat w,FXfloat h,FXfloat d,const FXMaterial& mtl);

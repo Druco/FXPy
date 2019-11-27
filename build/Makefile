@@ -186,9 +186,7 @@ AUXSRCS =	FXObject.i \
 		FXMainWindow.i \
 		FXTopWindow.i \
 		FXColorList.i \
-		FXApp.i 
-
-FXGLSRCS = 	FXObjectList.i \
+		FXGLViewer.i \
 		FXGLObject.i \
 		FXGLShape.i \
 		FXGLCone.i \
@@ -199,7 +197,13 @@ FXGLSRCS = 	FXObjectList.i \
 		FXGLSphere.i \
 		FXGLTriangleMesh.i \
 		FXGLVisual.i \
-		FXGLViewer.i
+		FXString.i \
+		FXApp.i 
+
+FXGLSRCS = 	FXObjectList.i
+
+INCLUDEDSRCS = pytypemaps.i \
+			   renames.i
 
 vpath %.i ../swig
 vpath %.h ../include
@@ -212,7 +216,7 @@ default: _FXPy.so
 %_wrap.cxx: %.i %.h
 	swig -c++ -python -keyword -I.. -o $@ $< 
 
-FXPy_wrap.cxx: ${SRCS} ${AUXSRCS} Makefile
+FXPy_wrap.cxx: ${SRCS} ${AUXSRCS} ${INCLUDEDSRCS} Makefile
 	swig -c++ -python -keyword -I.. -o $@ $< 
 
 %.o: %.cxx

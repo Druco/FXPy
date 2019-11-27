@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyMessageBox : public FXMessageBox {
+    FXDECLARE(FXPyMessageBox)
 public:
     FXPyMessageBox(FXWindow* owner,const FXString& caption,const FXString& text,FXIcon* ic=NULL,FXuint opts=0,FXint x=0,FXint y=0);
     FXPyMessageBox(FXApp* app,const FXString& caption,const FXString& text,FXIcon* ic=NULL,FXuint opts=0,FXint x=0,FXint y=0);

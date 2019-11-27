@@ -12,6 +12,7 @@
 
 namespace FX {
 class FXPyIO : public FXIO {
+    FXDECLARE(FXPyIO)
 public:
     FXPyIO();
     %pragma(python) addtomethod = "__init__:FXPyRegister(self)"

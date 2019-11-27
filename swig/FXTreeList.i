@@ -20,6 +20,7 @@
 
 namespace FX {
 class FXPyTreeItem : public FXTreeItem {
+    FXDECLARE(FXPyTreeItem)
 public:
     FXPyTreeItem(const FXString& text,FXIcon* oi=NULL,FXIcon* ci=NULL,void* ptr=NULL);
 
@@ -28,6 +29,7 @@ public:
 
 namespace FX {
 class FXPyTreeList : public FXTreeList {
+    FXDECLARE(FXPyTreeList)
 public:
     FXPyTreeList(FXComposite *p,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=TREELIST_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0);
 

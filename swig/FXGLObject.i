@@ -13,8 +13,8 @@
 
 namespace FX {
 class FXPyGLObject : public FXGLObject {
+    FXDECLARE(FXPyGLObject)
 public:
     FXPyGLObject();
-    FXPyGLObject(const FXGLObject& orig);
 };
 }

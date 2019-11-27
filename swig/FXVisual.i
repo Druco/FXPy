@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyVisual : public FXVisual {
+    FXDECLARE(FXPyVisual)
 public:
     FXPyVisual(FXApp* a,FXuint flgs,FXuint d=32);
 };

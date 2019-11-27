@@ -14,6 +14,8 @@
 
 namespace FX {
 class FXPyComposeContext : public FXComposeContext {
+    FXDECLARE(FXPyComposeContext)
+public:
   FXComposeContext(FXApp* a,FXWindow* win=NULL,FXSelector sel=0);
 };
 

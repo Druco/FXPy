@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyGLSphere : public FXGLSphere {
+    FXDECLARE(FXPyGLSphere)
 public:
     FXPyGLSphere(FXfloat x,FXfloat y,FXfloat z,FXfloat r=1.0f);
     FXPyGLSphere(FXfloat x,FXfloat y,FXfloat z,FXfloat r,const FXMaterial& mtl);

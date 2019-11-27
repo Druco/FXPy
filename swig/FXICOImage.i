@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyICOImage : public FXICOImage {
+    FXDECLARE(FXPyICOImage)
 public:
     FXPyICOImage(FXApp* a,const void *pix=NULL,FXuint opts=0,FXint w=1,FXint h=1);
 };

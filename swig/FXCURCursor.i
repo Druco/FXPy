@@ -13,6 +13,7 @@
 
 namespace FX {
     class FXPyCURCursor : public FXCURCursor {
+        FXDECLARE(FXPyCURCursor)
     public:
         FXPyCURCursor(FXApp* a,const void* pix);
 };

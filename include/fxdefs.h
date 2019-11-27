@@ -370,12 +370,9 @@ typedef FXint                  FXInputHandle;
 // Raw event type
 typedef _XEvent                FXRawEvent;
 
-#if 0  // BAA
-
 /**********************************  Macros  ***********************************/
 
-
-/// Abolute value
+/// Absolute value
 #define FXABS(val) (((val)>=0)?(val):-(val))
 
 /// Return the maximum of a or b
@@ -776,8 +773,6 @@ extern FXint nc2utfs(FXchar* dst,const FXnchar *src,FXint n);
 
 /// Copy narrow character string to dst
 extern FXint nc2utfs(FXchar* dst,const FXnchar *src);
-
-#endif
 
 }
 

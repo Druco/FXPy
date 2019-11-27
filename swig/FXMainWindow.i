@@ -31,9 +31,8 @@ void FXPyRegister(PyObject *pPyObject)
 {
 	Py_INCREF(pPyObject); // FIXME: Artificially increments refcount
 	FXObject *pFXObject = 0;
-#if 1 // BAA *** Very Important
 	SWIG_ConvertPtr(pPyObject, (void**) &pFXObject, SWIGTYPE_p_FX__FXObject, 0);
-#endif
+
 	FXString key = FXStringFormat("%p", pFXObject);
 //	FXbool doSave = FXPyRestoreThread();
 	FXPyGetObjectDict().insert(key.text(), pPyObject);
@@ -58,10 +57,8 @@ void FXPyUnregister(FXObject *pFXObject)
 FXObject *FXPyGetFXObject(PyObject *pPyObject)
 {
 	FXObject *obj = 0;
-#if 1 // BAA ***** Very Important
  	SWIG_ConvertPtr(pPyObject, (void**) &obj, SWIGTYPE_p_FX__FXObject, 0);
  	assert(obj != 0);
-#endif
  	return obj;
 }
 /*
@@ -107,6 +104,7 @@ public:
 
 
 class FXPyMainWindow : public FXMainWindow {
+    FXDECLARE(FXPyMainWindow)
 public:
   // Constructor
   FXPyMainWindow(FXApp* app,const FXString& name,FXIcon *ic=NULL,FXIcon *mi=NULL,FXuint opts=DECOR_ALL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=0,FXint pb=0,FXint hs=4,FXint vs=4);

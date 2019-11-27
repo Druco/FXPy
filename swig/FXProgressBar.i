@@ -123,6 +123,7 @@ public:
   };
 
 class FXPyProgressBar : public FXProgressBar {
+    FXDECLARE(FXPyProgressBar)
 public:
     FXPyProgressBar(FXComposite* p,FXObject* target=NULL,FXSelector sel=0,FXuint opts=PROGRESSBAR_NORMAL,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=DEFAULT_PAD,FXint pr=DEFAULT_PAD,FXint pt=DEFAULT_PAD,FXint pb=DEFAULT_PAD);
 };

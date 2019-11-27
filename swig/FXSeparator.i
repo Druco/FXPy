@@ -80,17 +80,20 @@ public:
   };
 
 class FXPySeparator : public FXSeparator {
+    FXDECLARE(FXPySeparator)
 public:
     FXPySeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_X,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=0,FXint pb=0);
 };
 
 class FXPyHorizontalSeparator : public FXHorizontalSeparator {
+    FXDECLARE(FXPyHorizontalSeparator)
 public:
     FXPyHorizontalSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_X,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=1,FXint pr=1,FXint pt=0,FXint pb=0);
     %pragma(python) addtomethod = "__init__:FXPyRegister(self)"
 };
 
 class FXPyVerticalSeparator : public FXVerticalSeparator {
+    FXDECLARE(FXPyVerticalSeparator)
 public:
     FXPyVerticalSeparator(FXComposite* p,FXuint opts=SEPARATOR_GROOVE|LAYOUT_FILL_Y,FXint x=0,FXint y=0,FXint w=0,FXint h=0,FXint pl=0,FXint pr=0,FXint pt=1,FXint pb=1);
     %pragma(python) addtomethod = "__init__:FXPyRegister(self)"

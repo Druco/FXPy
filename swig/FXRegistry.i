@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyRegistry : public FXRegistry {
+    FXDECLARE(FXPyRegistry)
 public:
     FXPyRegistry(const FXString& akey=FXString::null,const FXString& vkey=FXString::null);
 };

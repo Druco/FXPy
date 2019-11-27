@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyMenuRadio : public FXMenuRadio {
+    FXDECLARE(FXPyMenuRadio)
 public:
     FXPyMenuRadio(FXComposite* p,const FXString& text,FXObject* tgt=NULL,FXSelector sel=0,FXuint opts=0);
 };

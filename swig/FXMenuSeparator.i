@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyMenuSeparator : public FXMenuSeparator {
+    FXDECLARE(FXPyMenuSeparator)
 public:
     FXPyMenuSeparator(FXComposite* p,FXuint opts=0);
 };

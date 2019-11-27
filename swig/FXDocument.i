@@ -13,6 +13,7 @@
 
 namespace FX {
 class FXPyDocument : public FXDocument {
+    FXDECLARE(FXPyDocument)
 public:
     FXPyDocument();
 };
